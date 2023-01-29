@@ -34,6 +34,10 @@
 >
 >4.Notion
 
+## Doc Proposal 
+>**`แบบเสนอโครงงาน`**
+**[Click link](https://docs.google.com/document/d/1EzVPB6YLDf4kQk4kVJB7YfQUwglbAbSl-rT2hqW1Zx4/edit)**
+
 ## Developer
 | Student ID | Name - Surname |  Responsible | Github |
 | :-------- | :-------- | :--------- |:--------- |
