@@ -43,5 +43,5 @@
 ## Developer
 | Student ID | Name - Surname |  Responsible | Github |
 | :-------- | :-------- | :--------- |:--------- |
-| 64070149 | นางสาวดวงกมล พบสูงเนิน | Ux/Ui design, Frontend, Backend | [Dnuangkamon](https://github.com/Dnuangkamon) |
+| 64070149 | นางสาวดวงกมล พบสูงเนิน | Ux/Ui design, Frontend, Backend | [DuangkamonPhobsungnoen](https://github.com/DuangkamonPhobsungnoen) |
 | 64070153 | นางสาวทัตพร ตันนารัตน์ | Ux/Ui design, Frontend, Backend | [Tadphorn](https://github.com/Tadphorn) |
