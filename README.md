@@ -33,6 +33,8 @@
 >3.Github
 >
 >4.Notion
+>
+>5.Doc
 
 ## Doc Proposal 
 >**`แบบเสนอโครงงาน`**
