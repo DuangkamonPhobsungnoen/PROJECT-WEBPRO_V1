@@ -10,6 +10,7 @@ body {
 
 .input {
     border-radius: 2rem;
+    border: 2px solid var(--color-blue);
 }
 
 .input::placeholder {
@@ -31,12 +32,20 @@ body {
     border-color: var(--color-blue);
 }
 
-.card {
+.card1 {
     border-color: var(--color-blue);
     border-color: var(--color-blue);
     border: 2px solid var(--color-blue);
     border-radius: 1.5rem;
     width: 305px;
+}
+
+.card2 {
+    border-color: var(--color-blue);
+    border-color: var(--color-blue);
+    border: 2px solid var(--color-blue);
+    border-radius: 1.5rem;
+    width: 450px;
 }
 
 .input_username {
@@ -50,6 +59,24 @@ body {
 
 .input_password {
     background: url("https://media.discordapp.net/attachments/1072181252964233328/1073651392939573410/9263996.png") no-repeat left;
+    background-size: 20px;
+    padding-left: 40px;
+    background-position: 12px;
+    color: var(--color-blue);
+    border: 2px solid var(--color-blue);
+}
+
+.input_phone {
+    background: url("https://media.discordapp.net/attachments/1072181252964233328/1076193459842580571/9751538.png") no-repeat left;
+    background-size: 23px;
+    padding-left: 40px;
+    background-position: 12px;
+    color: var(--color-blue);
+    border: 2px solid var(--color-blue);
+}
+
+.input_email {
+    background: url("https://media.discordapp.net/attachments/1072181252964233328/1076193060255432704/747483.png") no-repeat left;
     background-size: 20px;
     padding-left: 40px;
     background-position: 12px;
