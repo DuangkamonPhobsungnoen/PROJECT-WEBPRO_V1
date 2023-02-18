@@ -8,10 +8,49 @@
     <title>index</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
-
 <body>
+    <div id="app">
+        <div class="column is-8 pt-6">
+            <div class="container is-max-desktop">
+                <div class="is-multiline columns is-variable is-2">
+
+                    <!-- Card element start here------------------------------------------>
+                    <div v-for="item in cars" id="card_product" class="column is-one-quarter">
+                        <div  class="card">
+                            <div class="card-image">
+                                <figure class="image is-1by1">
+                                    <img :src= 'item.img'
+                                        alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p id="title" class="title is-4">{{item.brand}} {{item.model}}</p>
+                                        <p id="brand" class="subtitle is-6">{{item.seat}} ที่นั้ง {{item.bag}} กระเป๋า</p>
+                                        <p id="brand" class="subtitle is-6">ราคาสำหรับ 1 วัน</p>
+                                        <p class="subtitle is-6 has-text-success">{{item.price}} ฿</p>
+                                    </div>
+                                </div>                   
+
+                            </div>
+                            <footer class="card-footer">
+                                <a href="#" class="card-footer-item has-background-primary has-text-white">จองคันนี้</a>
+                
+                              </footer>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+            
+    </div>
+
 </body>
 
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="car_demo.js"></script>
 </html>
 
-</html>
+
