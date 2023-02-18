@@ -2,6 +2,7 @@
     --color-blue: #008FBA;
     --color-background: #EEF3F8;
     --color-gradient: linear-gradient(90deg, var(--color-blue) 0%, #6DDEAA 100%);
+    --color-green: #6DDEAA;
 }
 
 body {
