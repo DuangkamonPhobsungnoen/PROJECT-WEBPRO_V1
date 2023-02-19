@@ -145,4 +145,8 @@
     height: 40;
     width: 40;
 }
-   
+#ibar:hover{
+    background-color: hsl(152, 63%, 65%, 50%);
+    transition:  0.5s background-color;
+    
+}   
