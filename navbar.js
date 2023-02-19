@@ -3,10 +3,9 @@ Vue.component('navbar-div', {
     template: `
     <nav class="navbar" role="navigation" aria-label="main navigation" style="background: var(--color-gradient);">
     <div class="navbar-brand">
-        <a class="navbar-item has-text-white is-size-4 has-text-weight-bold" href="">
+        <a class="navbar-item has-text-white is-size-5 has-text-weight-bold" href="">
             Cha<img src="https://media.discordapp.net/attachments/1072181252964233328/1076461183864934431/9611156.png"> CarHUB
         </a>
-
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu">
