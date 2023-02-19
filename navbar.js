@@ -7,20 +7,21 @@ Vue.component('navbar-div', {
             Cha<img src="https://media.discordapp.net/attachments/1072181252964233328/1076461183864934431/9611156.png"> CarHUB
         </a>
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-end ">
             <div class="navbar-item">
-                <img src="https://media.discordapp.net/attachments/1072181252964233328/1073627391571808316/1177455.png">
+                <a href="home.html">
+                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1073627391571808316/1177455.png">
+                </a>
+                
             </div>
             <div class="navbar-item">
-                <img src="https://media.discordapp.net/attachments/1072181252964233328/1073627928706949120/9610755.png">
+                <a href="view_car.html">
+                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1073627928706949120/9610755.png">
+                </a>
+                
             </div>
             <div class="navbar-item has-dropdown is-hoverable has-text-centered">
                 <a class="navbar-link">
@@ -28,12 +29,12 @@ Vue.component('navbar-div', {
                 </a>
                 <div class="navbar-dropdown">
                     <a class="navbar-item">
-                        <a>
+                        <a href="sign_in.html">
                             <strong>Sign in</strong>
                         </a>
                     </a>
                     <a class="navbar-item">
-                        <a>
+                        <a href="sign_up.html">
                             <strong>Sign up</strong>
                         </a>
                     </a>
