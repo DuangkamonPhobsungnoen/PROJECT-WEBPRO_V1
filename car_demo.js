@@ -17,14 +17,29 @@ var app = new Vue({
                 seat: 7,
                 bag: 3,
                 price: 3500
+            }, {
+                brand: 'Toyota',
+                model: 'Camry',
+                img: 'https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/Car_with_Driver_210304_29.jpg',
+                seat: 4,
+                bag: 2,
+                price: 3500
             },
             {
                 brand: 'Toyota',
-                model: 'Vios',
-                img: 'https://cdn2.rcstatic.com/images/car_images/web/toyota/vios_lrg.jpg',
-                seat: 5,
-                bag: 2,
-                price: 1269
+                model: 'Alphard',
+                img: 'https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/Toyota_Alphard_2018_yJyb1bM.png',
+                seat: 7,
+                bag: 5,
+                price: 9900
+            },
+            {
+                brand: 'Toyota',
+                model: 'Commuter',
+                img: 'https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/Toyota_Commuter__z4uZ6f8.png',
+                seat: 9,
+                bag: 5,
+                price: 3000
             },
             {
                 brand: 'Nissan',
@@ -41,6 +56,38 @@ var app = new Vue({
                 seat: 4,
                 bag: 1,
                 price: 975
+            },
+            {
+                brand: 'Nissan',
+                model: 'Kicks',
+                img: 'https://www.car250.com/wp-content/uploads/2019/07/Nissan-Kicks-2019-23.png',
+                seat: 5,
+                bag: 1,
+                price: 2190
+            },
+            {
+                brand: 'Nissan',
+                model: 'Leaf',
+                img: 'https://blog.hamrobazaar.com/wp-content/uploads/2020/12/Nissan-Leaf.png',
+                seat: 4,
+                bag: 1,
+                price: 1990
+            },
+            {
+                brand: 'Nissan',
+                model: 'Teana',
+                img: 'https://fj.lnwfile.com/_/fj/_raw/hb/al/m9.png',
+                seat: 5,
+                bag: 1,
+                price: 1150
+            },
+            {
+                brand: 'Nissan',
+                model: 'Urvan',
+                img: 'https://media.discordapp.net/attachments/1072181252964233328/1077292220387958934/77-772232_01-nv350-urvan-exterior-hd-png-download-removebg-preview.png',
+                seat: 4,
+                bag: 1,
+                price: 19900
             },
             {
                 brand: 'Honda',
