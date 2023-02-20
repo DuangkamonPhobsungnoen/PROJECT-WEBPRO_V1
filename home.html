@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script defer src=" https://use.fontawesome.com/releases/v5.14.0/js/all.js "></script>
 </head>
 
 <body>
@@ -155,7 +156,7 @@
     </section>
     </div>
     <!-- status bar-->
-    <div class="hero-body has-background-primary-light">
+    <div id="app" class="hero-body has-background-primary-light">
         <div class="columns is-5 has-text-centered">
             <div class="column">
                 <img src="https://media.discordapp.net/attachments/1072181252964233328/1077065590067433612/image_33.png" alt="">
@@ -171,7 +172,7 @@
             </div>
             <div class="column">
                 <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993666101278/image_38.png" alt="">
-                <p><b>มีประกันค่าเสียหาย</b>></p>
+                <p><b>มีประกันค่าเสียหาย</b></p>
             </div>
             <div class="column">
                 <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993452195952/image_37.png" alt="">
@@ -188,35 +189,73 @@
                 <div class="container is-max-desktop "> <b>
                         รุ่นรถ/ช่วงราคา/จำนวนที่นั่ง<br><br>
                     </b>
-                    <div class="is-multiline is-variable columns is-3">
-                        <!-- <div class="column is-6 "></div> -->
-                        <!-- Card element start here------------------------------------------>
-                        <div v-for="item in cars " id="card_product " class="column is-one-quarter">
-                            <!-- <div class="column is-4 "></div> -->
-                            <div class="card has-text-centered is-border-radius ">
-                                <div class="card-image px-5 pt-2 ">
-                                    <figure class="image is-4by3 ">
-                                        <img :src='item.img' alt="Placeholder image ">
+                    <div class="columns is-half">
+                        <div class="column is-two-fifths">
+                            <div class="column px-6">
+                                <div class="card-image has-text-centered ">
+                                    <p>
+                                        <b class="is-size-5">Toyota</b></p><br><br>
+                                    <figure class="image is-3by3">
+                                        <img src="https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png" alt="Placeholder image ">
                                     </figure>
                                 </div>
-                                <div class="card-content ">
-                                    <div class="media ">
-                                        <div class="media-content ">
-                                            <p class="title is-size-6 limit_text ">{{item.brand}} {{item.model}}</p>
-                                            <p class="subtitle is-size-7 "> <img src="https://media.discordapp.net/attachments/1072181252964233328/1077073362708332614/image_18.png " alt=" ">
-                                                <b>{{item.seat}} ที่นั้ง
-                                                    <br> เริ่มต้น {{item.price}} บาท/วัน</b>
-                                            </p>
-                                        </div>
-                                    </div>
-
+                                <div class="card-image has-text-centered"><br><br>
+                                    <p>
+                                        <b class="is-size-5">Nissan</b></p><br>
+                                    <figure class="image is-3by3">
+                                        <img src="https://media.discordapp.net/attachments/1072181252964233328/1077263056326889543/gqdupg.png?width=1180&height=663" alt="Placeholder image ">
+                                    </figure><br><br>
                                 </div>
-                                <footer class="card-footer ">
-                                    <a href="# " class="card-footer-item is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
-                                </footer>
+                                <div class="card-image has-text-centered">
+                                    <p>
+                                        <b class="is-size-5">Toyota</b></p>
+                                    <figure class="image is-3by3">
+                                        <img src="https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/yaris_2016-2019.png" alt="Placeholder image ">
+                                    </figure><br><br>
+                                </div>
+                                <div class="card-image has-text-centered">
+                                    <p>
+                                        <b class="is-size-5">Toyota</b></p>
+                                    <figure class="image is-3by3">
+                                        <img src="https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/yaris_2016-2019.png" alt="Placeholder image ">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" column">
+                            <div class="is-multiline is-variable columns is-1 ">
+                                <!-- <div class="column is-6 "></div> -->
+                                <!-- Card element start here------------------------------------------>
+                                <div v-for="item in cars " id="card_product " class="column is-one-third">
+                                    <!-- <div class="column is-4 "></div> -->
+                                    <div class="card has-text-centered is-border-radius ">
+                                        <div class="card-image px-5 pt-2 ">
+                                            <figure class="image is-4by3 ">
+                                                <img :src='item.img' alt="Placeholder image ">
+                                            </figure>
+                                        </div>
+                                        <div class="card-content ">
+                                            <div class="media ">
+                                                <div class="media-content ">
+                                                    <p class="title is-size-6 limit_text ">{{item.brand}} {{item.model}}</p>
+                                                    <p class="subtitle is-size-7 "> <img src="https://media.discordapp.net/attachments/1072181252964233328/1077073362708332614/image_18.png " alt=" ">
+                                                        <b>{{item.seat}} ที่นั้ง
+                                                    <br> เริ่มต้น {{item.price}} บาท/วัน</b>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <footer class="card-footer ">
+                                            <a href="# " class="card-footer-item is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
+                                        </footer>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+
                 </div>
             </div>
         </div>
