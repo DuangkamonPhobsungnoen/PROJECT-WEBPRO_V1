@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card_car</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="column is-8 pt-6">
+            <div class="container is-max-desktop">
+                <div class="is-multiline columns is-variable is-2">
+
+                    <!-- Card element start here------------------------------------------>
+                    <div v-for="item in cars" id="card_product" class="column is-one-quarter ">
+                        <div class="card has-text-centered is-border-radius">
+                            <div class="card-image px-5 pt-2 ">
+                                <figure class="image is-4by3">
+                                    <img :src='item.img' alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-size-5 limit_text">{{item.brand}} {{item.model}}</p>
+                                        <p class="subtitle is-size-6"> <img src="https://media.discordapp.net/attachments/1072181252964233328/1077073362708332614/image_18.png" alt="">
+                                            <b>{{item.seat}} ที่นั้ง
+                                            <br> เริ่มต้น {{item.price}} บาท/วัน</b></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <footer class="card-footer">
+                                <a href="#" class="card-footer-item is-size-5 is-color-green3 has-text-white">จองคันนี้</a>
+                            </footer>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="car_demo.js"></script>
+
+</html>

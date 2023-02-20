@@ -3,9 +3,10 @@
         --color-blue: #008FBA;
         --color-background: #EEF3F8;
         --color-gradient: linear-gradient(90deg, var(--color-blue) 0%, #6DDEAA 100%);
-        --color-green: #6DDEAA;        
-        --color-greenbtn: #3DB2BD;        
+        --color-green: #6DDEAA;
+        --color-greenbtn: #3DB2BD;
         --color-green2: #CAEFE7;
+        --color-green3: #41BEB1;
     }
     
     body {
@@ -128,6 +129,10 @@
         background: var(--color-green2);
     }
     
+    .is-color-green3 {
+        background: var(--color-green3);
+    }
+    
     .is-color-blue {
         background: var(--color-blue);
     }
@@ -140,13 +145,32 @@
         border-color: var(--color-blue);
         font-family: 'Kanit', sans-serif;
     }
-/* me */
-.icon{
-    height: 40;
-    width: 40;
-}
-#ibar:hover{
-    background-color: hsl(152, 63%, 65%, 50%);
-    transition:  0.5s background-color;
+    /* me */
     
-}   
+    .icon {
+        height: 40;
+        width: 40;
+    }
+    
+    #ibar:hover {
+        background-color: hsl(152, 63%, 65%, 50%);
+        transition: 0.5s background-color;
+    }
+    
+    hr.new1 {
+        border-bottom: 3px solid rgb(207, 63, 63);
+    }
+    
+    .limit_text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    
+    .is-border-radius {
+        overflow: hidden;
+        border: 2px solid var(--color-green3);
+        border-radius: 15px;
+    }

@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,214 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
+
 <body>
     <div id="navbar">
         <navbar-div :links="links"></navbar-div>
-      </div>
-      <h2>welcom home</h2>
-    
+    </div>
+    <div>
+        <section class="hero is-gradient  is-medium">
+            <div class="columns">
+                <div class="column is-half ">
+                    <div class="hero-body">
+                        <div class="">
+                            <p class="title has-text-white">
+                                ขั้นตอนง่ายๆในการใช้บริการเช่ารถ </p><br>
+                            <p class="subtitle is-size-4 has-text-white">
+                                <img src="https://media.discordapp.net/attachments/1072181252964233328/1076538656891871343/8921537.png" height="30" width="30"> ระบุวันเดินทาง
+                            </p>
+                            <p class="subtitle is-size-4 has-text-white">
+                                <img src="https://media.discordapp.net/attachments/1072181252964233328/1076542459863105676/8921602.png" height="30" width="30"> ระบุรุ่นรถ/ช่วงราคา/จำนวนที่นั่งที่ต้องการ
+                            </p>
+                            <p class="subtitle is-size-4 has-text-white">
+                                <img src="https://media.discordapp.net/attachments/1072181252964233328/1076542609008365669/8921657.png" height="30" width="30"> กดค้นหารถ
+                            </p>
+                            <p class="subtitle is-size-4 has-text-white">
+                                <img src="https://media.discordapp.net/attachments/1072181252964233328/1076542525931802734/8921717.png" height="30" width="30"> กดจองรถที่ต้องการ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-half px-1">
+                    <div class="hero-body  ">
+                        <div class="card p-5 is-color-green2">
+                            <p class="title is-size-5">
+                                1. ระบุวันเดินทาง
+                            </p>
+                            <p class="subtitle is-size-6">
+                                <div class="columns">
+                                    <div class="column is-6">
+                                        วันและเวลารับรถ
+                                        <input class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019">
+                                        <input class="cololr_input_card" type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+                                    </div>
+                                    <div class="column is-6">
+                                        วันและเวลาคืนรถ
+                                        <input class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019">
+                                        <input class="cololr_input_card" type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+                                    </div>
+                                </div>
+                                <p class="title is-size-5">
+                                    2. ระบุรุ่นรถ/ช่วงราคา/จำนวนที่นั่งที่ต้องการ
+                                </p>
+                                <p class="subtitle is-size-6">
+                                    <div class="columns">
+                                        <div class="column is-4">
+                                            <div :class="[{'dropdown' : isBrand}, 'is-active']">
+                                                <div class=" dropdown-trigger ">
+                                                    <button class="button cololr_input_card" aria-haspopup="true " aria-controls="dropdown-menu " @click="isBrand =! isBrand">
+                                                <span>รุ่นรถที่ต้องการ</span>
+                                                <span class=" icon is-small ">
+                                                    <i class="fas fa-angle-down " aria-hidden="true "></i>
+                                                </span>
+                                            </button>
+                                                </div>
+                                                <div class="dropdown-menu " id="dropdown-menu " role="menu ">
+                                                    <div class="dropdown-content ">
+                                                        <a class="dropdown-item cololr_input_card" v-for="item in cars " id="card_product ">
+                                                    {{item.brand}} {{item.model}}
+                                                </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column is-3">
+                                            <div :class="[{'dropdown' : isPrice}, 'is-active'] ">
+                                                <div class="dropdown-trigger ">
+                                                    <button class="button cololr_input_card" aria-haspopup="true " aria-controls="dropdown-menu " @click="isPrice=! isPrice ">
+                                                <span>ช่วงราคา</span>
+                                                <span class=" icon is-small ">
+                                                    <i class="fas fa-angle-down " aria-hidden="true "></i>
+                                                </span>
+                                            </button>
+                                                </div>
+                                                <div class="dropdown-menu " id="dropdown-menu " role="menu ">
+                                                    <div class="dropdown-content ">
+                                                        <a class="dropdown-item cololr_input_card">
+                                                    ราคา 1000-2000 ฿
+                                                </a>
+                                                        <a class="dropdown-item cololr_input_card ">
+                                                    ราคา 2000-3000 ฿
+                                                </a>
+                                                        <a class="dropdown-item cololr_input_card ">
+                                                    ราคา 3000-4000 ฿
+                                                </a>
+                                                        <a class="dropdown-item cololr_input_card ">
+                                                    ราคา 4000-5000 ฿
+                                                </a>
+                                                        <a class="dropdown-item cololr_input_card ">
+                                                    ราคา 5000 ฿ ขึ้นไป
+                                                </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column is-3">
+                                            <div :class="[{'dropdown' : isSeat}, 'is-active']">
+                                                <div class=" dropdown-trigger ">
+                                                    <button class="button cololr_input_card" aria-haspopup="true " aria-controls="dropdown-menu " @click="isSeat=! isSeat ">
+                                                <span>จำนวนที่นั่ง</span>
+                                                <span class=" icon is-small ">
+                                                    <i class="fas fa-angle-down " aria-hidden="true "></i>
+                                                </span>
+                                            </button>
+                                                </div>
+                                                <div class="dropdown-menu " id="dropdown-menu " role="menu ">
+                                                    <div class="dropdown-content cololr_input_card">
+                                                        <a class="dropdown-item cololr_input_card ">
+                                                    2
+                                                </a>
+                                                        <a class="dropdown-item cololr_input_card ">
+                                                    4
+                                                </a>
+                                                        <a class="dropdown-item cololr_input_card ">
+                                                    5
+                                                </a>
+                                                        <a class="dropdown-item cololr_input_card ">
+                                                    6
+                                                </a>
+                                                        <a class="dropdown-item cololr_input_card ">
+                                                    7
+                                                </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="columnm">
+                                        <button class="button is-fullwidth is-color-blue has-text-white font " type="submit ">ค้นหา</button>
+                                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    </section>
+    </div>
+    <!-- status bar-->
+    <div class="hero-body has-background-primary-light">
+        <div class="columns is-5 has-text-centered">
+            <div class="column">
+                <img src="https://media.discordapp.net/attachments/1072181252964233328/1077065590067433612/image_33.png" alt="">
+                <p><b>รถเช่าคุณภาพมาตราฐาน<br> พร้อมให้บริการ</b>
+                </p>
+            </div>
+            <div class="column">
+                <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993867436202/image_34.png" alt="">
+                <p><b>ราคาเข้าถึงง่าย
+                        <br>สบายกระเป๋า </b>
+                </p>
+
+            </div>
+            <div class="column">
+                <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993666101278/image_38.png" alt="">
+                <p><b>มีประกันค่าเสียหาย</b>></p>
+            </div>
+            <div class="column">
+                <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993452195952/image_37.png" alt="">
+                <p><b>มีเจ้าหน้าที่พร้อมดูแลคุณ
+                        <br> ตลอดการเดินทาง
+                    </b>
+                </p>
+            </div>
+        </div>
+        <div id="app">
+            <div class="">
+                <div class="container is-max-desktop">
+                    <div class="is-multiline is-variable">
+                        <!-- <div class="column is-6 "></div> -->
+                        <!-- Card element start here------------------------------------------>
+                        <div v-for="item in cars" id="card_product">
+                            <div class="column is-4"></div>
+                            <div class="card has-text-centered is-border-radius ">
+                                <div class="card-image px-5 pt-2">
+                                    <figure class="image is-4by3">
+                                        <img :src='item.img' alt="Placeholder image">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-content">
+                                            <p class="title is-size-6 limit_text">{{item.brand}} {{item.model}}</p>
+                                            <p class="subtitle is-size-7"> <img src="https://media.discordapp.net/attachments/1072181252964233328/1077073362708332614/image_18.png" alt="">
+                                                <b>{{item.seat}} ที่นั้ง
+                                                    <br> เริ่มต้น {{item.price}} บาท/วัน</b>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <footer class="card-footer">
+                                    <a href="#" class="card-footer-item is-size-6 is-color-green3 has-text-white">จองคันนี้</a>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 </body>
 
 
