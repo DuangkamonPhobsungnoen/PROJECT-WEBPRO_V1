@@ -5,8 +5,9 @@
         --color-gradient: linear-gradient(90deg, var(--color-blue) 0%, #6DDEAA 100%);
         --color-green: #6DDEAA;
         --color-greenbtn: #3DB2BD;
-        --color-green2: #CAEFE7;
+        --color-blue2: #CAEFE7;
         --color-green3: #41BEB1;
+        --color-blue3: #E5F2FE;
     }
     
     body {
