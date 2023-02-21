@@ -12,10 +12,10 @@
 </head>
 
 <body>
-    <div id="navbar">
-        <navbar-div :links="links"></navbar-div>
-    </div>
-    <div>
+    <div id="app">
+        <div id="navbar">
+            <navbar-div :links="links"></navbar-div>
+        </div>
         <section class="hero is-gradient  is-medium">
             <div class="columns">
                 <div class="column is-half ">
@@ -47,12 +47,12 @@
                             <p class="subtitle is-size-6">
                                 <div class="columns">
                                     <div class="column is-6">
-                                        วันและเวลารับรถ
+                                        วันและเวลารับรถ<br>
                                         <input class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019">
                                         <input class="cololr_input_card" type="time" id="appt" name="appt" min="09:00" max="18:00" required>
                                     </div>
                                     <div class="column is-6">
-                                        วันและเวลาคืนรถ
+                                        วันและเวลาคืนรถ<br>
                                         <input class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019">
                                         <input class="cololr_input_card" type="time" id="appt" name="appt" min="09:00" max="18:00" required>
                                     </div>
@@ -149,46 +149,39 @@
                                     </div>
                         </div>
                     </div>
+        </section>
+        <!-- status bar-->
+        <div class="hero-body has-background-primary-light">
+            <div class="columns is-5 has-text-centered">
+                <div class="column">
+                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077065590067433612/image_33.png" alt="">
+                    <p><b>รถเช่าคุณภาพมาตราฐาน<br> พร้อมให้บริการ</b>
+                    </p>
                 </div>
-            </div>
-    </div>
-    </div>
-    </section>
-    </div>
-    <!-- icon bar-->
-    <div class="hero-body Hbar">
-        <div class="columns is-5 has-text-centered">
-            <div class="column">
-                <img src="https://media.discordapp.net/attachments/1072181252964233328/1077065590067433612/image_33.png" alt="">
-                <p><b>รถเช่าคุณภาพมาตราฐาน<br> พร้อมให้บริการ</b>
-                </p>
-            </div>
-            <div class="column">
-                <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993867436202/image_34.png" alt="">
-                <p><b>ราคาเข้าถึงง่าย
+                <div class="column">
+                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993867436202/image_34.png" alt="">
+                    <p><b>ราคาเข้าถึงง่าย
                         <br>สบายกระเป๋า </b>
-                </p>
+                    </p>
 
-            </div>
-            <div class="column">
-                <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993666101278/image_38.png" alt="">
-                <p><b>มีประกันค่าเสียหาย</b></p>
-            </div>
-            <div class="column">
-                <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993452195952/image_37.png" alt="">
-                <p><b>มีเจ้าหน้าที่พร้อมดูแลคุณ
+                </div>
+                <div class="column">
+                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993666101278/image_38.png" alt="">
+                    <p><b>มีประกันค่าเสียหาย</b></p>
+                </div>
+                <div class="column">
+                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993452195952/image_37.png" alt="">
+                    <p><b>มีเจ้าหน้าที่พร้อมดูแลคุณ
                         <br> ตลอดการเดินทาง
                     </b>
-                </p>
+                    </p>
+                </div>
             </div>
-        </div>
-    </div>
 
-        <div id="app">
             <!-- card Toyota -->
             <div class="column">
                 <div class="container is-max-desktop "> <b>
-                        รุ่นรถ/ช่วงราคา/จำนวนที่นั่ง<br><br>
+                        รถเช่ายอดฮิต<br><br>
                     </b>
                     <div class="columns is-half">
                         <div class="column is-two-fifths">
@@ -362,8 +355,25 @@
                 </div>
             </div>
         </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer is-gradient ">
+            <div class="content  has-text-white ">
+                <div class="columns">
+                    <div class="column is-9">
+                        <div class="is-size-5 has-text-weight-bold"> <img src="https://media.discordapp.net/attachments/1072181252964233328/1076461183864934431/9611156.png" height="25" width="25"> ChaoCarHUB <br><br></div>
+                        <p>
+                            จัดทำโดย <br> 64070149 ดวงกมล พบสูงเนิน <br>64070153 ทัตพร ตันนารัตน <br>เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา Web Programming <br>คณะเทคโนโลยีสารสนเทศสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+                        </p>
+                    </div>
+                    <div class="column">
+                        <p>ติดตามเรา</p>
+                        <img src="https://media.discordapp.net/attachments/1072181252964233328/1077598053269254274/face_ig_tw.png">
+                    </div>
 
-    
+
+                </div>
+        </footer>
 </body>
 
 

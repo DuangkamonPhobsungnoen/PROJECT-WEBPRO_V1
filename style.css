@@ -138,15 +138,12 @@
     }
     
     .cololr_input_card {
-        color: var(--color-blue);
         font-size: 15px;
-        background: var(--color-background);
-        border-radius: 0.2rem;
-        border-color: var(--color-blue);
         font-family: 'Kanit', sans-serif;
     }
     /* home */
-    .Hbar{
+    
+    .Hbar {
         background-color: #E5F2FE;
     }
     /* me */
