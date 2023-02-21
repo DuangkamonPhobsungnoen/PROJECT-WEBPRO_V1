@@ -145,6 +145,10 @@
         border-color: var(--color-blue);
         font-family: 'Kanit', sans-serif;
     }
+    /* home */
+    .Hbar{
+        background-color: #E5F2FE;
+    }
     /* me */
     
     .icon {
