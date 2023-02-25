@@ -47,25 +47,20 @@
                     </div>
                 </div>
                 <div class="hero-body  ">
-                    <div class="card column  p-5 has-background-primary-light">
+                    <div class="card column  p-5 has-background-primary-light ">
                         <p class="title is-size-6">
                             1. ระบุวันเดินทาง
                         </p>
                         <p class="subtitle is-size-6">
                             <div class="columns">
-                                <div class="column">
+                                <div class="column is-6">
                                     วันและเวลารับรถ<br>
                                     <input class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019">
-                                </div>
-                                <div class="column"><br>
                                     <input class="cololr_input_card" type="time" id="appt" name="appt" min="09:00" max="18:00" required>
                                 </div>
-                                <div class="column"></div>
-                                <div class="column ">
+                                <div class="column is-6">
                                     วันและเวลาคืนรถ<br>
                                     <input class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019">
-                                </div>
-                                <div class="column"><br>
                                     <input class="cololr_input_card" type="time" id="appt" name="appt" min="09:00" max="18:00" required>
                                 </div>
                             </div>
@@ -77,48 +72,48 @@
                             <div class="column">
                                 <div class="select">
                                     <select class="font">
-                                            <option>รุ่นรถที่ต้องการ</option>
-                                            <option v-for="item in cars" :key="item.id " :value="item.id ">
-                                                {{item.brand}} {{item.model}}
-                                            </option>
-                                        </select>
+                                        <option>รุ่นรถที่ต้องการ</option>
+                                        <option v-for="item in cars" :key="item.id " :value="item.id ">
+                                            {{item.brand}} {{item.model}}
+                                        </option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="column">
                                 <div class="select">
                                     <select class="font">
-                                            <option>ช่วงราคา</option>
-                                            <option>500-999 ฿</option>
-                                            <option>1000-1999 ฿</option>
-                                            <option>2000-2999 ฿</option>
-                                            <option>3000-3999 ฿</option>
-                                            <option>4000-4999 ฿</option>
-                                            <option>5000 ฿ ขึ้นไป</option>
-                                        </select>
+                                        <option>ช่วงราคา</option>
+                                        <option>500-999 ฿</option>
+                                        <option>1000-1999 ฿</option>
+                                        <option>2000-2999 ฿</option>
+                                        <option>3000-3999 ฿</option>
+                                        <option>4000-4999 ฿</option>
+                                        <option>5000 ฿ ขึ้นไป</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="column">
                                 <div class="select">
                                     <select class="font">
-                                            <option>จำนวนที่นั่ง</option>
-                                            <option>2 ที่นั่ง</option>
-                                            <option>4 ที่นั่ง</option>
-                                            <option>5 ที่นั่ง</option>
-                                            <option>6 ที่นั่ง</option>
-                                            <option>7 ที่นั่ง</option>
-                                            <option>9 ที่นั่ง</option>
-                                        </select>
+                                        <option>จำนวนที่นั่ง</option>
+                                        <option>2 ที่นั่ง</option>
+                                        <option>4 ที่นั่ง</option>
+                                        <option>5 ที่นั่ง</option>
+                                        <option>6 ที่นั่ง</option>
+                                        <option>7 ที่นั่ง</option>
+                                        <option>9 ที่นั่ง</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                        <button class="button is-color-blue has-text-white font" type="submit ">ค้นหา</button>
+                        <button class=" font" style="width: 100%;" type="submit ">ค้นหา</button>
                     </div>
                 </div>
             </div>
         </section>
         <!-- status bar-->
         <div class="hero-body">
-            <div class="columns is-5 ">
+            <div class="columns is-5 is-size-6 has-text-centered">
                 <div class="column">
                     <img src="https://media.discordapp.net/attachments/1072181252964233328/1077065590067433612/image_33.png" alt="">
                     <p><b>รถเช่าคุณภาพมาตราฐาน<br> พร้อมให้บริการ</b>
@@ -322,21 +317,24 @@
         </div>
     </div>
     <!-- Q&A -->
-    <div class="">
-        <div id="ques" class="columns p-6">
-            <div class="column is-2"></div>
+    <div class="columns">
+        <div id="ques" class="container is-max-desktop">
+            <!-- <div class="column is-2"></div> -->
             <div class="column">
                 <p>คำถามและข้อสงสัย ในการใช้บริการเช่ารถยนตู้</p>
                 <div class="select column" v-for="quess in content" :key="quess.id " :value="quess.id ">
-                    <select class="font">
-                        <option >
+                    <select class="font" style="width: 100%">
+                        <option  >
                             {{quess.ask}}
                         </option>
+                        <option >
+                            {{quess.ans}}
+                        </option>
                     </select>
+
                 </div>
             </div>
-            <div class="column is-2"></div>
-            <br>
+            <!-- <div class="column is-2"></div> -->
             <!-- <div class="column">
                 <div v-for="(item, index) in content">
                     <div class="dropdown " :class="{'is-active': item.active}">
