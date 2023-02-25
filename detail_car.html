@@ -15,31 +15,32 @@
     <div id="navbar">
         <navbar-div :links="links"></navbar-div>
     </div>
-    <div class="container is-max-desktop p-5">
+    <div id="app">
+    <div class="container is-max-widescreen p-5">
         <!-- All other tile elements -->
         <div class="box">
             <div class="columns">
                 <div class="column is-4">
-                    <h1 class="is-size-3 ml-6">Toyota Yaris</h1>
-                    <img src="https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/yaris_2016-2019.png" alt="">
+                    <h1 class="is-size-3 ml-6">{{store.brand}} {{store.model}}</h1>
+                    <img :src="store.img" alt="">
                 </div>
                 <!-- icon -->
                 <div class="column mt-6 is-3 is-size-5">
                     <img class="icon1"
                         src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607802408990/user.png"
                         alt="">
-                    4<br>
+                    {{store.seat}}<br>
                     <img class="icon1 mt-2"
                         src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607567540294/bag.png"
                         alt="">
-                    1 <br>
+                    {{store.bag}} <br>
                     <img class="icon1 mt-2"
                         src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607286509598/car-gear.png"
                         alt="">
-                    auto
+                    Auto
                 </div>
                 <!-- sidecard -->
-                <div class="column is-3">
+                <div class="column is-3 is-size-5">
                     <div class="box">
                         <h1>ราคานี้รวม</h1>
                         <h2>- ประกันที่มีค่าเสียหายส่วนแรก (CDW) แบบมีค่าเสียหายส่วนแรก ฿21,400</h2>
@@ -52,10 +53,10 @@
         </div>
         <!--show price -->
         <div class="box">
-            <div class="columns p-5">
+            <div class="columns p-5 is-size-5">
                 <div class="column is-6">
                     <p><b>รายละเอียดราคารถ</b></p>
-                    <p>ค่าบริการรถยนต์เช่า 10768 บาท</p>
+                    <p>ค่าบริการรถยนต์เช่า {{store.price}} บาท</p>
                 </div>
                 <div class="column is-6">
                     <p><b>ราคาสำหรับ 3 วัน 10768 บาท</b></p>
@@ -64,7 +65,7 @@
             </div>
         </div>
         <div class="box">
-            <div class="columns p-5">
+            <div class="columns p-5 is-size-5">
                 <div class="column is-6">
                     <p><b>การรับรถ</b></p>
                     <p>ส. 11 ก.พ. 10.00 น.</p>
@@ -77,6 +78,21 @@
         </div>
       
     </div>
+</div>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data:{
+            store:{}
+        },
+        // store:{},
+        created(){
+            const text = JSON.parse(localStorage.getItem("mycart"))
+            this.store = text
+            console.log(this.store.model)
+        }
+    })
+</script>
 
 
 </body>

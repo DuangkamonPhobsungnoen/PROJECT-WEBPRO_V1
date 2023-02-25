@@ -198,7 +198,7 @@
                     </div>
                     <div class="column">
                         <div class="is-multiline is-variable columns is-1 ">
-                            <div v-for="item in cars " id="card_product " class="column is-one-third" v-if="item.show_toyota === true">
+                            <div v-for="(item, index) in cars " id="card_product " class="column is-one-third" v-if="item.show_toyota === true">
                                 <div class="card has-text-centered is-border-radius ">
                                     <div class="card-image px-5 pt-2 ">
                                         <figure class="image is-4by3 ">
@@ -217,7 +217,7 @@
                                         </div>
                                     </div>
                                     <footer class="card-footer ">
-                                        <a href="# " class="card-footer-item is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
+                                        <a @click="detailCar(item)" class="card-footer-item is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
                                     </footer>
                                 </div>
                             </div>
@@ -263,7 +263,7 @@
                                         </div>
                                     </div>
                                     <footer class="card-footer ">
-                                        <a href="# " class="card-footer-item is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
+                                        <a @click="detailCar(item)" class="card-footer-item is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
                                     </footer>
                                 </div>
                             </div>
@@ -310,7 +310,7 @@
                                         </div>
                                     </div>
                                     <footer class="card-footer ">
-                                        <a href="# " class="card-footer-item is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
+                                        <a @click="detailCar(item)" class="card-footer-item is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
                                     </footer>
                                 </div>
                             </div>
@@ -346,7 +346,7 @@
                                     </div>
                                 </div>
                                 <footer class="card-footer ">
-                                    <a href="# " class="card-footer-item is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
+                                    <a @click="detailCar(item)" class="card-footer-item is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
                                 </footer>
                             </div>
                         </div>
