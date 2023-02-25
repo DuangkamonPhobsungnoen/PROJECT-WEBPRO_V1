@@ -183,10 +183,6 @@
         transition: 0.5s background-color;
     }
     
-    hr.new1 {
-        border-bottom: 3px solid rgb(207, 63, 63);
-    }
-    
     .limit_text {
         overflow: hidden;
         text-overflow: ellipsis;
@@ -199,6 +195,12 @@
         overflow: hidden;
         border: 1.5px solid var(--color-green3);
         border-radius: 10px;
+    }
+    
+    .is-border-radius:hover {
+        opacity: 80%;
+        border-radius: 10px;
+        border: 1.5px solid var(--color-green3);
     }
     /* deltail_car */
     
