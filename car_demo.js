@@ -190,4 +190,12 @@ var app = new Vue({
         isPrice: false,
         isSeat: false,
     },
+    methods:{
+        detailCar(item){
+            console.log(item)
+            const myjson = JSON.stringify(item)
+            localStorage.setItem("mycart", myjson)
+            location.href = "./detail_car.html"
+        }
+    }
 })
