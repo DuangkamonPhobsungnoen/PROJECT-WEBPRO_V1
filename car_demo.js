@@ -2,7 +2,7 @@ var app = new Vue({
     el: '#app',
     data: {
         cars: [{
-                id:1,
+                id: 1,
                 brand: 'Toyota',
                 model: 'Yaris',
                 img: 'https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/yaris_2016-2019.png',

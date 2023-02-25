@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script defer src=" https://use.fontawesome.com/releases/v5.14.0/js/all.js "></script>
+
+</head>
+
+<body>
+    <!-- card other -->
+    <div id="app">
+        <div class="column is-6 px-1">
+            <div class="hero-body ">
+                <div class="card p-5 has-background-primary-light">
+                    <p class="subtitle is-size-6">
+                        <div class="columns">
+                            <div class="select">
+                                <select>
+                                    <option>รุ่นรถที่ต้องการ</option>
+                                    <option v-for="item in cars" :key="item.id " :value="item.id ">
+                                        {{item.brand}} {{item.model}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="select">
+                                <select>
+                                <option>ช่วงราคา</option>
+                                <option>ระหว่าง 500-999 ฿</option>
+                                <option>ระหว่าง 1000-1999 ฿</option>
+                                <option>ระหว่าง 2000-2999 ฿</option>
+                                <option>ระหว่าง 3000-3999 ฿</option>
+                                <option>ระหว่าง 4000-4999 ฿</option>
+                                <option>ระหว่าง 5000 ฿ ขึ้นไป</option>
+                            </select>
+                            </div>
+                            <div class="select">
+                                <select>
+                                <option>จำนวนที่นั่ง</option>
+                                <option>2 ที่นั่ง</option>
+                                <option>4 ที่นั่ง</option>
+                                <option>5 ที่นั่ง</option>
+                                <option>6 ที่นั่ง</option>
+                                <option>7 ที่นั่ง</option>
+                                <option>9 ที่นั่ง</option>
+                            </select>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="">
+                <button class="button is-fullwidth is-color-blue has-text-white font has-text-justified" type="submit ">ค้นหา</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+<script src="car_demo.js "></script>
+<script src="navbar.js "></script>
+<script src="Q&A.js "></script>
+
+</html>
