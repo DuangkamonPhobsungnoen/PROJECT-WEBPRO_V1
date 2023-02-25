@@ -355,6 +355,32 @@
             </div>
         </div>
         </div>
+        <!-- Q&A -->
+        <div id="ques" class="">
+            <div v-for="(item, index) in content" class="columns ">
+                <div class="dropdown " :class="{'is-active': item.active}">
+                    <div class="dropdown-trigger">
+                        <!-- change = index; content[change].active = false -->
+                        <button @click="item.active = !item.active; content.change = content.change + 1;" class="button" aria-haspopup="true" aria-controls="dropdown-menu5">
+                <span>{{item.ask}} {{item.active}} {{content.change}}</span>
+                <p></p>
+                <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                </span>
+            </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu5" role="menu">
+                        <div class="dropdown-content">
+                            <div class="dropdown-item">
+                                <p>{{item.ans}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
         <!-- footer -->
         <footer class="footer is-gradient ">
             <div class="content  has-text-white ">
@@ -373,6 +399,7 @@
 
                 </div>
         </footer>
+
 </body>
 
 
