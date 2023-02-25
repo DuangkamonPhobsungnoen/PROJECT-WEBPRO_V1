@@ -16,143 +16,109 @@
         <div id="navbar">
             <navbar-div></navbar-div>
         </div>
-        <section class="hero is-gradient  is-medium">
+        <section class="hero is-gradient is-medium">
             <div class="columns">
-                <div class="column is-half ">
-                    <div class="hero-body">
-                        <div class="">
-                            <p class="title has-text-white">
-                                ขั้นตอนง่ายๆในการใช้บริการเช่ารถ </p><br>
-                            <p class="subtitle is-size-4 has-text-white">
-                                <img src="https://media.discordapp.net/attachments/1072181252964233328/1076538656891871343/8921537.png" height="30" width="30"> ระบุวันเดินทาง
-                            </p>
-                            <p class="subtitle is-size-4 has-text-white">
-                                <img src="https://media.discordapp.net/attachments/1072181252964233328/1076542459863105676/8921602.png" height="30" width="30"> ระบุรุ่นรถ/ช่วงราคา/จำนวนที่นั่งที่ต้องการ
-                            </p>
-                            <p class="subtitle is-size-4 has-text-white">
-                                <img src="https://media.discordapp.net/attachments/1072181252964233328/1076542609008365669/8921657.png" height="30" width="30"> กดค้นหารถ
-                            </p>
-                            <p class="subtitle is-size-4 has-text-white">
-                                <img src="https://media.discordapp.net/attachments/1072181252964233328/1076542525931802734/8921717.png" height="30" width="30"> กดจองรถที่ต้องการ
-                            </p>
+                <div class="columns">
+                    <div class="hero-body ">
+                        <div class="column pl-6">
+                            <p class="title is-size-4 has-text-white">
+                                ขั้นตอนง่ายๆในการใช้บริการเช่ารถ </p>
+                            <div class="column">
+                                <p class="subtitle is-size-5 has-text-white">
+                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1076538656891871343/8921537.png" height="30" width="30"> ระบุวันเดินทาง
+                                </p>
+                            </div>
+                            <div class="column">
+                                <p class="subtitle is-size-5 has-text-white">
+                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1076542459863105676/8921602.png" height="30" width="30"> ระบุรุ่นรถ/ช่วงราคา/จำนวนที่นั่งที่ต้องการ
+                                </p>
+                            </div>
+                            <div class="column">
+                                <p class="subtitle is-size-5 has-text-white">
+                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1076542609008365669/8921657.png" height="30" width="30"> กดค้นหารถ
+                                </p>
+                            </div>
+                            <div class="column">
+                                <p class="subtitle is-size-5 has-text-white">
+                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1076542525931802734/8921717.png" height="30" width="30"> กดจองรถที่ต้องการ
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="column is-half px-1">
-                    <div class="hero-body  ">
-                        <div class="card p-5 has-background-primary-light">
-                            <p class="title is-size-5">
-                                1. ระบุวันเดินทาง
-                            </p>
-                            <p class="subtitle is-size-6">
-                                <div class="columns">
-                                    <div class="column is-6">
-                                        วันและเวลารับรถ<br>
-                                        <input class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019">
-                                        <input class="cololr_input_card" type="time" id="appt" name="appt" min="09:00" max="18:00" required>
-                                    </div>
-                                    <div class="column is-6">
-                                        วันและเวลาคืนรถ<br>
-                                        <input class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019">
-                                        <input class="cololr_input_card" type="time" id="appt" name="appt" min="09:00" max="18:00" required>
-                                    </div>
+                <div class="hero-body  ">
+                    <div class="card column  p-5 has-background-primary-light">
+                        <p class="title is-size-6">
+                            1. ระบุวันเดินทาง
+                        </p>
+                        <p class="subtitle is-size-6">
+                            <div class="columns">
+                                <div class="column">
+                                    วันและเวลารับรถ<br>
+                                    <input class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019">
                                 </div>
-                                <p class="title is-size-5">
-                                    2. ระบุรุ่นรถ/ช่วงราคา/จำนวนที่นั่งที่ต้องการ
-                                </p>
-                                <p class="subtitle is-size-6">
-                                    <div class="columns">
-                                        <div class="column is-4">
-                                            <div :class="[{'dropdown' : isBrand}, 'is-active']">
-                                                <div class=" dropdown-trigger ">
-                                                    <button class="button cololr_input_card" aria-haspopup="true " aria-controls="dropdown-menu " @click="isBrand =! isBrand">
-                                                <span>รุ่นรถที่ต้องการ</span>
-                                                <span class=" icon is-small ">
-                                                    <i class="fas fa-angle-down " aria-hidden="true "></i>
-                                                </span>
-                                            </button>
-                                                </div>
-                                                <div class="dropdown-menu " id="dropdown-menu " role="menu ">
-                                                    <div class="dropdown-content ">
-                                                        <a class="dropdown-item cololr_input_card" v-for="item in cars " id="card_product ">
-                                                    {{item.brand}} {{item.model}}
-                                                </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column is-3">
-                                            <div :class="[{'dropdown' : isPrice}, 'is-active'] ">
-                                                <div class="dropdown-trigger ">
-                                                    <button class="button cololr_input_card" aria-haspopup="true " aria-controls="dropdown-menu " @click="isPrice=! isPrice ">
-                                                <span>ช่วงราคา</span>
-                                                <span class=" icon is-small ">
-                                                    <i class="fas fa-angle-down " aria-hidden="true "></i>
-                                                </span>
-                                            </button>
-                                                </div>
-                                                <div class="dropdown-menu " id="dropdown-menu " role="menu ">
-                                                    <div class="dropdown-content ">
-                                                        <a class="dropdown-item cololr_input_card">
-                                                    ราคา 1000-2000 ฿
-                                                </a>
-                                                        <a class="dropdown-item cololr_input_card ">
-                                                    ราคา 2000-3000 ฿
-                                                </a>
-                                                        <a class="dropdown-item cololr_input_card ">
-                                                    ราคา 3000-4000 ฿
-                                                </a>
-                                                        <a class="dropdown-item cololr_input_card ">
-                                                    ราคา 4000-5000 ฿
-                                                </a>
-                                                        <a class="dropdown-item cololr_input_card ">
-                                                    ราคา 5000 ฿ ขึ้นไป
-                                                </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="column is-3">
-                                            <div :class="[{'dropdown' : isSeat}, 'is-active']">
-                                                <div class=" dropdown-trigger ">
-                                                    <button class="button cololr_input_card" aria-haspopup="true " aria-controls="dropdown-menu " @click="isSeat=! isSeat ">
-                                                <span>จำนวนที่นั่ง</span>
-                                                <span class=" icon is-small ">
-                                                    <i class="fas fa-angle-down " aria-hidden="true "></i>
-                                                </span>
-                                            </button>
-                                                </div>
-                                                <div class="dropdown-menu " id="dropdown-menu " role="menu ">
-                                                    <div class="dropdown-content cololr_input_card">
-                                                        <a class="dropdown-item cololr_input_card ">
-                                                    2
-                                                </a>
-                                                        <a class="dropdown-item cololr_input_card ">
-                                                    4
-                                                </a>
-                                                        <a class="dropdown-item cololr_input_card ">
-                                                    5
-                                                </a>
-                                                        <a class="dropdown-item cololr_input_card ">
-                                                    6
-                                                </a>
-                                                        <a class="dropdown-item cololr_input_card ">
-                                                    7
-                                                </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="columnm">
-                                        <button class="button is-fullwidth is-color-blue has-text-white font " type="submit ">ค้นหา</button>
-                                    </div>
+                                <div class="column"><br>
+                                    <input class="cololr_input_card" type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+                                </div>
+                                <div class="column"></div>
+                                <div class="column ">
+                                    วันและเวลาคืนรถ<br>
+                                    <input class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019">
+                                </div>
+                                <div class="column"><br>
+                                    <input class="cololr_input_card" type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+                                </div>
+                            </div>
+                        </p>
+                        <p class="title is-size-6">
+                            2. ระบุรุ่นรถ/ช่วงราคา/จำนวนที่นั่งที่ต้องการ
+                        </p>
+                        <div class="columns">
+                            <div class="column">
+                                <div class="select">
+                                    <select class="font">
+                                            <option>รุ่นรถที่ต้องการ</option>
+                                            <option v-for="item in cars" :key="item.id " :value="item.id ">
+                                                {{item.brand}} {{item.model}}
+                                            </option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="select">
+                                    <select class="font">
+                                            <option>ช่วงราคา</option>
+                                            <option>500-999 ฿</option>
+                                            <option>1000-1999 ฿</option>
+                                            <option>2000-2999 ฿</option>
+                                            <option>3000-3999 ฿</option>
+                                            <option>4000-4999 ฿</option>
+                                            <option>5000 ฿ ขึ้นไป</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="select">
+                                    <select class="font">
+                                            <option>จำนวนที่นั่ง</option>
+                                            <option>2 ที่นั่ง</option>
+                                            <option>4 ที่นั่ง</option>
+                                            <option>5 ที่นั่ง</option>
+                                            <option>6 ที่นั่ง</option>
+                                            <option>7 ที่นั่ง</option>
+                                            <option>9 ที่นั่ง</option>
+                                        </select>
+                                </div>
+                            </div>
                         </div>
+                        <button class="button is-color-blue has-text-white font" type="submit ">ค้นหา</button>
                     </div>
+                </div>
+            </div>
         </section>
         <!-- status bar-->
         <div class="hero-body">
-            <div class="columns is-5 has-text-centered">
+            <div class="columns is-5 ">
                 <div class="column">
                     <img src="https://media.discordapp.net/attachments/1072181252964233328/1077065590067433612/image_33.png" alt="">
                     <p><b>รถเช่าคุณภาพมาตราฐาน<br> พร้อมให้บริการ</b>
@@ -161,7 +127,7 @@
                 <div class="column">
                     <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993867436202/image_34.png" alt="">
                     <p><b>ราคาเข้าถึงง่าย
-                        <br>สบายกระเป๋า </b>
+                            <br>สบายกระเป๋า </b>
                     </p>
 
                 </div>
@@ -172,8 +138,8 @@
                 <div class="column">
                     <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993452195952/image_37.png" alt="">
                     <p><b>มีเจ้าหน้าที่พร้อมดูแลคุณ
-                        <br> ตลอดการเดินทาง
-                    </b>
+                            <br> ตลอดการเดินทาง
+                        </b>
                     </p>
                 </div>
             </div>
@@ -181,8 +147,8 @@
         <!-- card Toyota -->
         <div class="column">
             <div class="container is-max-desktop "> <b>
-                        รถเช่ายอดฮิต<br><br>
-                    </b>
+                    รถเช่ายอดฮิต<br><br>
+                </b>
                 <div class="columns is-half">
                     <div class="column is-two-fifths">
                         <div class="column px-6">
@@ -211,7 +177,7 @@
                                                 <p class="title is-size-6 limit_text ">{{item.brand}} {{item.model}}</p>
                                                 <p class="subtitle is-size-7 "> <img src="https://media.discordapp.net/attachments/1072181252964233328/1077073362708332614/image_18.png " alt=" ">
                                                     <b>{{item.seat}} ที่นั้ง
-                                                            <br> เริ่มต้น {{item.price}} บาท/วัน</b>
+                                                        <br> เริ่มต้น {{item.price}} บาท/วัน</b>
                                                 </p>
                                             </div>
                                         </div>
@@ -257,7 +223,7 @@
                                                 <p class="title is-size-6 limit_text ">{{item.brand}} {{item.model}}</p>
                                                 <p class="subtitle is-size-7 "> <img src="https://media.discordapp.net/attachments/1072181252964233328/1077073362708332614/image_18.png " alt=" ">
                                                     <b>{{item.seat}} ที่นั้ง
-                                                            <br> เริ่มต้น {{item.price}} บาท/วัน</b>
+                                                        <br> เริ่มต้น {{item.price}} บาท/วัน</b>
                                                 </p>
                                             </div>
                                         </div>
@@ -304,7 +270,7 @@
                                                 <p class="title is-size-6 limit_text ">{{item.brand}} {{item.model}}</p>
                                                 <p class="subtitle is-size-7 "> <img src="https://media.discordapp.net/attachments/1072181252964233328/1077073362708332614/image_18.png " alt=" ">
                                                     <b>{{item.seat}} ที่นั้ง
-                                                            <br> เริ่มต้น {{item.price}} บาท/วัน</b>
+                                                        <br> เริ่มต้น {{item.price}} บาท/วัน</b>
                                                 </p>
                                             </div>
                                         </div>
@@ -340,7 +306,7 @@
                                             <p class="title is-size-6 limit_text ">{{item.brand}} {{item.model}}</p>
                                             <p class="subtitle is-size-7 "> <img src="https://media.discordapp.net/attachments/1072181252964233328/1077073362708332614/image_18.png " alt=" ">
                                                 <b>{{item.seat}} ที่นั้ง
-                                                        <br> เริ่มต้น {{item.price}} บาท/วัน</b>
+                                                    <br> เริ่มต้น {{item.price}} บาท/วัน</b>
                                             </p>
                                         </div>
                                     </div>
@@ -354,49 +320,68 @@
                 </div>
             </div>
         </div>
-        </div>
-        <!-- Q&A -->
-        <div id="ques" class="">
-            <div v-for="(item, index) in content" class="columns ">
-                <div class="dropdown " :class="{'is-active': item.active}">
-                    <div class="dropdown-trigger">
-                        <!-- change = index; content[change].active = false -->
-                        <button @click="item.active = !item.active; content.change = content.change + 1;" class="button" aria-haspopup="true" aria-controls="dropdown-menu5">
-                <span>{{item.ask}} {{item.active}} {{content.change}}</span>
-                <p></p>
-                <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-            </button>
-                    </div>
-                    <div class="dropdown-menu" id="dropdown-menu5" role="menu">
-                        <div class="dropdown-content">
-                            <div class="dropdown-item">
-                                <p>{{item.ans}}</p>
+    </div>
+    <!-- Q&A -->
+    <div class="">
+        <div id="ques" class="columns p-6">
+            <div class="column is-2"></div>
+            <div class="column">
+                <p>คำถามและข้อสงสัย ในการใช้บริการเช่ารถยนตู้</p>
+                <div class="select column" v-for="quess in content" :key="quess.id " :value="quess.id ">
+                    <select class="font">
+                        <option >
+                            {{quess.ask}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="column is-2"></div>
+            <br>
+            <!-- <div class="column">
+                <div v-for="(item, index) in content">
+                    <div class="dropdown " :class="{'is-active': item.active}">
+                        <div class="dropdown-trigger">
+                            change = index; content[change].active = false
+                            <button @click="item.active = !item.active; content.change = content.change + 1;" class="button" aria-haspopup="true" aria-controls="dropdown-menu5">
+                        <span>{{item.ask}} {{item.active}} {{content.change}}</span>
+                        <p></p>
+                        <span class="icon is-small">
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu5" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <p>{{item.ans}}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
+            </div> -->
 
         </div>
-        <!-- footer -->
-        <footer class="footer is-gradient ">
-            <div class="content  has-text-white ">
-                <div class="columns">
-                    <div class="column is-9">
-                        <div class="is-size-5 has-text-weight-bold"> <img src="https://media.discordapp.net/attachments/1072181252964233328/1076461183864934431/9611156.png" height="25" width="25"> ChaoCarHUB <br><br></div>
-                        <p>
-                            จัดทำโดย <br> 64070149 ดวงกมล พบสูงเนิน <br>64070153 ทัตพร ตันนารัตน <br>เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา Web Programming <br>คณะเทคโนโลยีสารสนเทศสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-                        </p>
-                    </div>
-                    <div class="column">
-                        <p>ติดตามเรา</p>
-                        <img src="https://media.discordapp.net/attachments/1072181252964233328/1077598053269254274/face_ig_tw.png">
-                    </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer is-gradient ">
+        <div class="content  has-text-white ">
+            <div class="columns">
+                <div class="column is-9">
+                    <div class="is-size-5 has-text-weight-bold"> <img src="https://media.discordapp.net/attachments/1072181252964233328/1076461183864934431/9611156.png" height="25" width="25"> ChaoCarHUB <br><br></div>
+                    <p>
+                        จัดทำโดย <br> 64070149 ดวงกมล พบสูงเนิน <br>64070153 ทัตพร ตันนารัตน
+                        <br>เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา Web Programming
+                        <br>คณะเทคโนโลยีสารสนเทศสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+                    </p>
                 </div>
-        </footer>
+                <div class="column">
+                    <p>ติดตามเรา</p>
+                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077598053269254274/face_ig_tw.png">
+                </div>
+            </div>
+    </footer>
 
 </body>
 
