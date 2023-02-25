@@ -1,5 +1,4 @@
 Vue.component('navbar-div', {
-    props: ['links'],
     template: `
     <nav class="navbar" role="navigation" aria-label="main navigation" style="background: var(--color-gradient);">
     <div class="navbar-brand">
@@ -48,20 +47,33 @@ Vue.component('navbar-div', {
 </nav>
     `
   })
-  
+
   new Vue({
     el: "#navbar",
-    // data: {
-    //   links: [{
-    //       id: 1,
-    //       name: "Item 1",
-    //       link: "link1"
-    //     },
-    //     {
-    //       id: 2,
-    //       name: "Item 2",
-    //       link: "link2"
-    //     }
-    //   ],
-    // },
+    data: {
+    },
   })
+
+//   Vue.component('footer',{
+//     template:`
+//     <footer class="footer is-gradient ">
+//     <div class="content  has-text-white ">
+//         <div class="columns">
+//             <div class="column is-9">
+//                 <div class="is-size-5 has-text-weight-bold"> <img src="https://media.discordapp.net/attachments/1072181252964233328/1076461183864934431/9611156.png" height="25" width="25"> ChaoCarHUB <br><br></div>
+//                 <p>
+//                     จัดทำโดย <br> 64070149 ดวงกมล พบสูงเนิน <br>64070153 ทัตพร ตันนารัตน <br>เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา Web Programming <br>คณะเทคโนโลยีสารสนเทศสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+//                 </p>
+//             </div>
+//             <div class="column">
+//                 <p>ติดตามเรา</p>
+//                 <img src="https://media.discordapp.net/attachments/1072181252964233328/1077598053269254274/face_ig_tw.png">
+//             </div>
+//         </div>
+// </footer>`
+//   })
+//   new Vue({
+//     el: "#footer",
+//     data: {
+//     },
+//   })

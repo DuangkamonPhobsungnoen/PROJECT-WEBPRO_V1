@@ -5,6 +5,7 @@
         --color-background: #EEF3F8;
         --color-gradient: linear-gradient(90deg, var(--color-blue) 0%, #6DDEAA 100%);
         --color-green: #6DDEAA;
+        --color-transgreen:hsl(152, 63%, 65%, 50%);
         --color-greenbtn: #3DB2BD;
         --color-blue2: #CAEFE7;
         --color-green3: #41BEB1;
@@ -158,8 +159,8 @@
     .dropdown-trigger {
         width: 100%
     }
-
-    .button {
+/* edit */
+    .button1 {
         display: flex;
         width: 100%;
         justify-content: space-between
@@ -199,3 +200,20 @@
         border: 2px solid var(--color-green3);
         border-radius: 15px;
     }
+
+/* deltail_car */
+.tobottom{
+   margin-top: 100%;    
+}
+.tobottom1{
+    margin-top: 30%;
+    background-color: var(--color-transgreen);     
+ }
+ .btn{
+    background-color: var( --color-green3);
+    border-radius: 10px;
+    text-align: center;
+ }
+ .box{
+    box-shadow: none;
+ }

@@ -18,30 +18,30 @@
     <div id="app">
     <div class="container is-max-widescreen p-5">
         <!-- All other tile elements -->
-        <div class="box">
+        <div class=" p-5">
             <div class="columns">
-                <div class="column is-4">
-                    <h1 class="is-size-3 ml-6">{{store.brand}} {{store.model}}</h1>
+                <div class="column is-5 ml-5">
+                    <h1 class="is-size-2 ml-6">{{store.brand}} {{store.model}}</h1>
                     <img :src="store.img" alt="">
                 </div>
                 <!-- icon -->
-                <div class="column mt-6 is-3 is-size-5">
-                    <img class="icon1"
+                <div class="column ml-4 mt-4 is-2 is-size-5">
+                    <img class="icon1 tobottom"
                         src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607802408990/user.png"
                         alt="">
-                    {{store.seat}}<br>
-                    <img class="icon1 mt-2"
+                    {{store.seat}} ที่นั้ง<br>
+                    <img class="icon1 mt-3"
                         src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607567540294/bag.png"
                         alt="">
-                    {{store.bag}} <br>
-                    <img class="icon1 mt-2"
+                    {{store.bag}} กระเป๋า<br>
+                    <img class="icon1 mt-3"
                         src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607286509598/car-gear.png"
                         alt="">
                     Auto
                 </div>
                 <!-- sidecard -->
-                <div class="column is-3 is-size-5">
-                    <div class="box">
+                <div class="column is-4 is-size-5 mt-2">
+                    <div class="box tobottom1">
                         <h1>ราคานี้รวม</h1>
                         <h2>- ประกันที่มีค่าเสียหายส่วนแรก (CDW) แบบมีค่าเสียหายส่วนแรก ฿21,400</h2>
                         <h2>- ไม่จำกัดการจำกัดเลขไมล์</h2>
@@ -52,7 +52,7 @@
 
         </div>
         <!--show price -->
-        <div class="box">
+        <div class="box is-border-radius">
             <div class="columns p-5 is-size-5">
                 <div class="column is-6">
                     <p><b>รายละเอียดราคารถ</b></p>
@@ -64,7 +64,7 @@
                 </div>
             </div>
         </div>
-        <div class="box">
+        <div class="box is-border-radius">
             <div class="columns p-5 is-size-5">
                 <div class="column is-6">
                     <p><b>การรับรถ</b></p>
@@ -76,7 +76,11 @@
                 </div>
             </div>
         </div>
-      
+        <!-- rent button -->
+        <div class="my-6">
+            <button class="button is-fullwidth is-large has-text-white font btn" type="submit ">ทำการจอง</button>
+        </div>
+        
     </div>
 </div>
 <script>
