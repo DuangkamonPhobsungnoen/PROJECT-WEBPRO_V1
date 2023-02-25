@@ -5,10 +5,12 @@
         --color-gradient: linear-gradient(90deg, var(--color-blue) 0%, #6DDEAA 100%);
         --color-green: #6DDEAA;
         --color-transgreen: hsl(152, 63%, 65%, 50%);
+        --color-green2: #E5F2FE;
         --color-greenbtn: #3DB2BD;
         --color-blue2: #CAEFE7;
         --color-green3: #41BEB1;
         --color-blue3: #E5F2FE;
+        --color-card-search: #24A9B5;
     }
     
     body {
@@ -158,6 +160,10 @@
     
     .dropdown-trigger {
         width: 100%
+    }
+    
+    .color-card-search {
+        background-color: var(--color-card-search);
     }
     /* edit */
     

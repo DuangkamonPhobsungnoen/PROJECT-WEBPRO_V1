@@ -24,7 +24,7 @@
                             <p class="title is-size-4 has-text-white">
                                 ขั้นตอนง่ายๆในการใช้บริการเช่ารถ </p>
                             <div class="column">
-                                <p class="subtitle is-size-5 has-text-white">
+                                <p class="subtitle is-size-5 has-text-white" style="justify-content: center;">
                                     <img src="https://media.discordapp.net/attachments/1072181252964233328/1076538656891871343/8921537.png" height="30" width="30"> ระบุวันเดินทาง
                                 </p>
                             </div>
@@ -106,13 +106,13 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="button is-color-blue has-text-white font" style="width: 100%;" type="submit ">ค้นหา</button>
+                        <button class="button color-card-search has-text-white font" style="width: 100%;" type="submit ">ค้นหารถว่าง</button>
                     </div>
                 </div>
             </div>
         </section>
         <!-- status bar-->
-        <div class="hero-body">
+        <div class="hero-body is-color-green2">
             <div class="columns is-5 is-size-6 has-text-centered">
                 <div class="column">
                     <img src="https://media.discordapp.net/attachments/1072181252964233328/1077065590067433612/image_33.png" alt="">
@@ -317,9 +317,8 @@
         </div>
     </div>
     <!-- Q&A -->
-    <div class="columns">
+    <div class="columns pl-6">
         <div id="ques" class="container is-max-desktop">
-            <!-- <div class="column is-2"></div> -->
             <div class="column">
                 <p>คำถามและข้อสงสัย ในการใช้บริการเช่ารถยนตู้</p>
                 <div class="select column" v-for="quess in content" :key="quess.id " :value="quess.id ">
@@ -334,31 +333,6 @@
 
                 </div>
             </div>
-            <!-- <div class="column is-2"></div> -->
-            <!-- <div class="column">
-                <div v-for="(item, index) in content">
-                    <div class="dropdown " :class="{'is-active': item.active}">
-                        <div class="dropdown-trigger">
-                            change = index; content[change].active = false
-                            <button @click="item.active = !item.active; content.change = content.change + 1;" class="button" aria-haspopup="true" aria-controls="dropdown-menu5">
-                        <span>{{item.ask}} {{item.active}} {{content.change}}</span>
-                        <p></p>
-                        <span class="icon is-small">
-                            <i class="fas fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                    </button>
-                        </div>
-                        <div class="dropdown-menu" id="dropdown-menu5" role="menu">
-                            <div class="dropdown-content">
-                                <div class="dropdown-item">
-                                    <p>{{item.ans}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
         </div>
     </div>
 
