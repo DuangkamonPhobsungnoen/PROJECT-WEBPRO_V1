@@ -189,13 +189,19 @@ var app = new Vue({
         isBrand: false,
         isPrice: false,
         isSeat: false,
+        vmodel_brand: '',
     },
-    methods:{
-        detailCar(item){
+    methods: {
+        detailCar(item) {
             console.log(item)
             const myjson = JSON.stringify(item)
             localStorage.setItem("mycart", myjson)
             location.href = "./detail_car.html"
-        }
+        },
+        // search() {
+        //     if (this.vmodel_brand === "") {
+        //         return 'yes!'
+        //     }
+        // }
     }
 })

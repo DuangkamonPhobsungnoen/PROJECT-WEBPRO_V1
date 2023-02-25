@@ -1,6 +1,6 @@
 Vue.component('navbar-div', {
     template: `
-    <nav class="navbar" role="navigation" aria-label="main navigation" style="background: var(--color-gradient);">
+    <nav class="navbar border_t" role="navigation" aria-label="main navigation" style="background: var(--color-gradient);">
     <div class="navbar-brand">
         <a class="navbar-item has-text-white is-size-5 has-text-weight-bold" href="">
             Cha<img src="https://media.discordapp.net/attachments/1072181252964233328/1076461183864934431/9611156.png"> CarHUB
@@ -46,13 +46,12 @@ Vue.component('navbar-div', {
     </div>
 </nav>
     `
-  })
+})
 
-  new Vue({
+new Vue({
     el: "#navbar",
-    data: {
-    },
-  })
+    data: {},
+})
 
 //   Vue.component('footer',{
 //     template:`
