@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detail_car</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script defer src=" https://use.fontawesome.com/releases/v5.14.0/js/all.js "></script>
+</head>
+
+<body>
+    <div id="navbar">
+        <navbar-div :links="links"></navbar-div>
+    </div>
+    <div class="container is-max-desktop p-5">
+        <!-- All other tile elements -->
+        <div class="box">
+            <div class="columns">
+                <div class="column is-4">
+                    <h1 class="is-size-3 ml-6">Toyota Yaris</h1>
+                    <img src="https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/yaris_2016-2019.png" alt="">
+                </div>
+                <!-- icon -->
+                <div class="column mt-6 is-3 is-size-5">
+                    <img class="icon1"
+                        src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607802408990/user.png"
+                        alt="">
+                    4<br>
+                    <img class="icon1 mt-2"
+                        src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607567540294/bag.png"
+                        alt="">
+                    1 <br>
+                    <img class="icon1 mt-2"
+                        src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607286509598/car-gear.png"
+                        alt="">
+                    auto
+                </div>
+                <!-- sidecard -->
+                <div class="column is-3">
+                    <div class="box">
+                        <h1>ราคานี้รวม</h1>
+                        <h2>- ประกันที่มีค่าเสียหายส่วนแรก (CDW) แบบมีค่าเสียหายส่วนแรก ฿21,400</h2>
+                        <h2>- ไม่จำกัดการจำกัดเลขไมล์</h2>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!--show price -->
+        <div class="box">
+            <div class="columns p-5">
+                <div class="column is-6">
+                    <p><b>รายละเอียดราคารถ</b></p>
+                    <p>ค่าบริการรถยนต์เช่า 10768 บาท</p>
+                </div>
+                <div class="column is-6">
+                    <p><b>ราคาสำหรับ 3 วัน 10768 บาท</b></p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="columns p-5">
+                <div class="column is-6">
+                    <p><b>การรับรถ</b></p>
+                    <p>ส. 11 ก.พ. 10.00 น.</p>
+                </div>
+                <div class="column is-6">
+                    <p><b>การคืนรถ</b></p>
+                    <p>อ. 14 ก.พ. 10.00 น.</p>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+
+
+</body>
+<script src="car_demo.js "></script>
+<script src="navbar.js "></script>
+
+</html>
