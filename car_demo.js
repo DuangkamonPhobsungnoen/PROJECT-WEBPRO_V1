@@ -22,7 +22,7 @@ var app = new Vue({
                 id: 3,
                 brand: 'Toyota',
                 model: 'Camry',
-                img: 'https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/Car_with_Driver_210304_29.jpg',
+                img: 'https://media.discordapp.net/attachments/1072181252964233328/1079086476169588766/Car_with_Driver_210304_29-removebg-preview.png',
                 seat: 4,
                 bag: 2,
                 price: 3500,
@@ -49,7 +49,7 @@ var app = new Vue({
                 id: 6,
                 brand: 'Nissan',
                 model: 'Almera',
-                img: 'https://cdn2.rcstatic.com/images/car_images/web/nissan/almera_lrg.jpg',
+                img: 'https://media.discordapp.net/attachments/1072181252964233328/1079086719644737586/almera_lrg-removebg-preview.png',
                 seat: 5,
                 bag: 1,
                 price: 1141
@@ -58,7 +58,7 @@ var app = new Vue({
                 id: 7,
                 brand: 'Nissan',
                 model: 'March',
-                img: 'https://cdn2.rcstatic.com/images/car_images/web/nissan/micra_lrg.jpg',
+                img: 'https://media.discordapp.net/attachments/1072181252964233328/1079087743126208582/micra_lrg-removebg-preview.png',
                 seat: 4,
                 bag: 1,
                 price: 975
@@ -103,7 +103,7 @@ var app = new Vue({
                 id: 12,
                 brand: 'Honda',
                 model: 'City',
-                img: 'https://cdn2.rcstatic.com/images/car_images/web/honda/city_lrg.jpg',
+                img: 'https://media.discordapp.net/attachments/1072181252964233328/1079086989908918322/city_lrg-removebg-preview.png',
                 seat: 4,
                 bag: 1,
                 price: 1259
@@ -112,7 +112,7 @@ var app = new Vue({
                 id: 13,
                 brand: 'Honda',
                 model: 'BRV',
-                img: 'https://cdn2.rcstatic.com/images/car_images/web/honda/brv_lrg.jpg',
+                img: 'https://media.discordapp.net/attachments/1072181252964233328/1079087141314908170/brv_lrg-removebg-preview.png',
                 seat: 5,
                 bag: 3,
                 price: 2805
@@ -121,7 +121,7 @@ var app = new Vue({
                 id: 14,
                 brand: 'Honda',
                 model: 'Civic',
-                img: 'https://cdn2.rcstatic.com/images/car_images/new_images/honda/civic_sedan_lrg.jpg',
+                img: 'https://media.discordapp.net/attachments/1072181252964233328/1079087308881526885/civic_sedan_lrg-removebg-preview.png',
                 seat: 5,
                 bag: 2,
                 price: 1579
@@ -139,7 +139,7 @@ var app = new Vue({
                 id: 16,
                 brand: 'Hyundai',
                 model: 'H1',
-                img: 'https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/Car_with_Driver_210304_71.jpg',
+                img: 'https://media.discordapp.net/attachments/1072181252964233328/1079086066998452304/Car_with_Driver_210304_71-removebg-preview.png',
                 seat: 7,
                 bag: 3,
                 price: 3300
