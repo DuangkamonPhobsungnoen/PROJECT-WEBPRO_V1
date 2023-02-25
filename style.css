@@ -1,0 +1,218 @@
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+    :root {
+        --color-blue: #008FBA;
+        --color-background: #EEF3F8;
+        --color-gradient: linear-gradient(90deg, var(--color-blue) 0%, #6DDEAA 100%);
+        --color-green: #6DDEAA;
+        --color-transgreen:hsl(152, 63%, 65%, 50%);
+        --color-greenbtn: #3DB2BD;
+        --color-blue2: #CAEFE7;
+        --color-green3: #41BEB1;
+        --color-blue3: #E5F2FE;
+    }
+
+    body {
+        background: var(--color-background);
+        font-family: 'Kanit', sans-serif;
+    }
+
+    .font {
+        font-family: 'Kanit', sans-serif;
+    }
+
+    .input {
+        border-radius: 2rem;
+        border: 2px solid var(--color-blue);
+    }
+
+    .input::placeholder {
+        color: var(--color-blue);
+        opacity: 50%;
+    }
+
+    .color_sign_in {
+        color: white;
+        background-color: var(--color-blue);
+        border-radius: 2rem;
+    }
+
+    .color_sign_up {
+        color: var(--color-blue);
+        background-color: white;
+        border-radius: 2rem;
+        border: 2px solid var(--color-blue);
+        border-color: var(--color-blue);
+    }
+
+    .card1 {
+        border-color: var(--color-blue);
+        border-color: var(--color-blue);
+        border: 2px solid var(--color-blue);
+        border-radius: 1.5rem;
+        width: 305px;
+    }
+
+    .card2 {
+        border-color: var(--color-blue);
+        border-color: var(--color-blue);
+        border: 2px solid var(--color-blue);
+        border-radius: 1.5rem;
+        width: 450px;
+    }
+
+    .input_username {
+        background: url("https://media.discordapp.net/attachments/1072181252964233328/1073651595889356931/747545.png") no-repeat left;
+        background-size: 20px;
+        padding-left: 40px;
+        background-position: 12px;
+        color: var(--color-blue);
+        border: 2px solid var(--color-blue);
+    }
+
+    .input_password {
+        background: url("https://media.discordapp.net/attachments/1072181252964233328/1073651392939573410/9263996.png") no-repeat left;
+        background-size: 20px;
+        padding-left: 40px;
+        background-position: 12px;
+        color: var(--color-blue);
+        border: 2px solid var(--color-blue);
+    }
+
+    .input_phone {
+        background: url("https://media.discordapp.net/attachments/1072181252964233328/1076193459842580571/9751538.png") no-repeat left;
+        background-size: 23px;
+        padding-left: 40px;
+        background-position: 12px;
+        color: var(--color-blue);
+        border: 2px solid var(--color-blue);
+    }
+
+    .input_email {
+        background: url("https://media.discordapp.net/attachments/1072181252964233328/1076193060255432704/747483.png") no-repeat left;
+        background-size: 20px;
+        padding-left: 40px;
+        background-position: 12px;
+        color: var(--color-blue);
+        border: 2px solid var(--color-blue);
+    }
+
+    .line {
+        position: relative;
+        height: 2px;
+        width: 100%;
+        background-color: var(--color-blue);
+        opacity: 50%;
+    }
+
+    .line::before {
+        content: 'or';
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #EEF3F8;
+        color: var(--color-blue);
+        padding: 0 8px;
+    }
+
+    .th1 {
+        background: var(--color-gradient);
+        color: white;
+        padding: 13px;
+        font-size: 1.4rem;
+        border-top-left-radius: 1.3rem;
+        border-top-right-radius: 1.3rem;
+    }
+
+    .is-gradient {
+        background: var(--color-gradient);
+    }
+
+    .is-color-green2 {
+        background: var(--color-green2);
+    }
+
+    .is-color-green3 {
+        background: var(--color-green3);
+    }
+
+    .is-color-blue {
+        background: var(--color-blue);
+    }
+
+    .cololr_input_card {
+        font-size: 15px;
+        font-family: 'Kanit', sans-serif;
+    }
+
+    /* home */
+    
+    .Hbar {
+        background-color: #E5F2FE;
+    }
+
+    .dropdown {
+        width: 50%;
+    }
+
+    .dropdown-trigger {
+        width: 100%
+    }
+/* edit */
+    .button1 {
+        display: flex;
+        width: 100%;
+        justify-content: space-between
+    }
+
+
+    /* me */
+
+    .icon {
+        height: 40;
+        width: 40;
+    }
+    .icon1{
+        height: 25;
+        width: 25;
+    }
+
+    #ibar:hover {
+        background-color: hsl(152, 63%, 65%, 50%);
+        transition: 0.5s background-color;
+    }
+
+    hr.new1 {
+        border-bottom: 3px solid rgb(207, 63, 63);
+    }
+
+    .limit_text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+
+    .is-border-radius {
+        overflow: hidden;
+        border: 2px solid var(--color-green3);
+        border-radius: 15px;
+    }
+
+/* deltail_car */
+.tobottom{
+   margin-top: 100%;    
+}
+.tobottom1{
+    margin-top: 30%;
+    background-color: var(--color-transgreen);     
+ }
+ .btn{
+    background-color: var( --color-green3);
+    border-radius: 10px;
+    text-align: center;
+ }
+ .box{
+    box-shadow: none;
+ }
