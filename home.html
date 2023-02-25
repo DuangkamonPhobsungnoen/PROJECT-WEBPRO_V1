@@ -159,7 +159,7 @@
                     </div>
                     <div class="column">
                         <div class="is-multiline is-variable columns is-1 ">
-                            <div v-for="(item, index) in cars " id="card_product " class="column is-one-third" v-if="item.show_toyota === true">
+                            <div v-for="(item, index) in cars " id="card_product " class="column is-one-third" v-if="item.id <= 3">
                                 <div class="card has-text-centered is-border-radius ">
                                     <div class="card-image px-5 pt-2 ">
                                         <figure class="image is-4by3 ">
@@ -205,7 +205,7 @@
                     </div>
                     <div class="column">
                         <div class="is-multiline is-variable columns is-1 ">
-                            <div v-for="item in cars " id="card_product " class="column is-one-third" v-if="item.show_nissan === true">
+                            <div v-for="item in cars " id="card_product " class="column is-one-third" v-if="item.id >= 9 && item.id <= 11">
                                 <div class="card has-text-centered is-border-radius ">
                                     <div class="card-image px-5 pt-2 ">
                                         <figure class="image is-4by4 ">
@@ -252,7 +252,7 @@
                     <div class="column">
                         <div class="is-multiline is-variable columns is-1 ">
 
-                            <div v-for="item in cars " id="card_product " class="column is-one-third" v-if="item.brand == 'Honda'">
+                            <div v-for="item in cars " id="card_product " class="column is-one-third" v-if="item.id >= 12 && item.id <= 14">
                                 <div class="card has-text-centered is-border-radius ">
                                     <div class="card-image px-5 pt-2 ">
                                         <figure class="image is-4by4 ">
@@ -288,7 +288,7 @@
                         <b class="is-size-3">Other</b>
                     </p><br>
                     <div class="is-multiline is-variable columns is-1 pl-6">
-                        <div v-for="item in cars " id="card_product " class="column is-one-quarter " v-if="(item.other === true )">
+                        <div v-for="item in cars " id="card_product " class="column is-one-quarter " v-if="(item.id >= 15 )">
                             <div class="card has-text-centered is-border-radius ">
                                 <div class="card-image">
                                     <figure class="image is-4by4 ">

@@ -9,8 +9,6 @@ var app = new Vue({
                 seat: 4,
                 bag: 1,
                 price: 1190,
-                other: false,
-                show_toyota: true
             },
             {
                 id: 2,
@@ -19,8 +17,7 @@ var app = new Vue({
                 img: 'https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/Fortuner_2016-2018_VbSeQ0L.png',
                 seat: 7,
                 bag: 3,
-                price: 3500,
-                other: false
+                price: 3500
             }, {
                 id: 3,
                 brand: 'Toyota',
@@ -29,8 +26,6 @@ var app = new Vue({
                 seat: 4,
                 bag: 2,
                 price: 3500,
-                other: false,
-                show_toyota: true
             },
             {
                 id: 4,
@@ -40,8 +35,6 @@ var app = new Vue({
                 seat: 7,
                 bag: 5,
                 price: 9900,
-                other: false,
-                show_toyota: true
             },
             {
                 id: 5,
@@ -50,8 +43,7 @@ var app = new Vue({
                 img: 'https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/Toyota_Commuter__z4uZ6f8.png',
                 seat: 9,
                 bag: 5,
-                price: 3000,
-                other: false
+                price: 3000
             },
             {
                 id: 6,
@@ -60,8 +52,7 @@ var app = new Vue({
                 img: 'https://cdn2.rcstatic.com/images/car_images/web/nissan/almera_lrg.jpg',
                 seat: 5,
                 bag: 1,
-                price: 1141,
-                other: false
+                price: 1141
             },
             {
                 id: 7,
@@ -70,8 +61,7 @@ var app = new Vue({
                 img: 'https://cdn2.rcstatic.com/images/car_images/web/nissan/micra_lrg.jpg',
                 seat: 4,
                 bag: 1,
-                price: 975,
-                other: false
+                price: 975
             },
             {
                 id: 8,
@@ -81,8 +71,6 @@ var app = new Vue({
                 seat: 5,
                 bag: 1,
                 price: 2190,
-                other: false,
-                show_nissan: true
             },
             {
                 id: 9,
@@ -92,8 +80,6 @@ var app = new Vue({
                 seat: 4,
                 bag: 1,
                 price: 8900,
-                other: false,
-                show_nissan: true
             },
             {
                 id: 10,
@@ -103,8 +89,6 @@ var app = new Vue({
                 seat: 4,
                 bag: 1,
                 price: 7150,
-                other: false,
-                show_nissan: true
             },
             {
                 id: 11,
@@ -113,8 +97,7 @@ var app = new Vue({
                 img: 'https://media.discordapp.net/attachments/1072181252964233328/1077292220387958934/77-772232_01-nv350-urvan-exterior-hd-png-download-removebg-preview.png',
                 seat: 9,
                 bag: 5,
-                price: 9900,
-                other: false
+                price: 9900
             },
             {
                 id: 12,
@@ -123,8 +106,7 @@ var app = new Vue({
                 img: 'https://cdn2.rcstatic.com/images/car_images/web/honda/city_lrg.jpg',
                 seat: 4,
                 bag: 1,
-                price: 1259,
-                other: false
+                price: 1259
             },
             {
                 id: 13,
@@ -133,8 +115,7 @@ var app = new Vue({
                 img: 'https://cdn2.rcstatic.com/images/car_images/web/honda/brv_lrg.jpg',
                 seat: 5,
                 bag: 3,
-                price: 2805,
-                other: false
+                price: 2805
             },
             {
                 id: 14,
@@ -143,8 +124,7 @@ var app = new Vue({
                 img: 'https://cdn2.rcstatic.com/images/car_images/new_images/honda/civic_sedan_lrg.jpg',
                 seat: 5,
                 bag: 2,
-                price: 1579,
-                other: false
+                price: 1579
             },
             {
                 id: 15,
@@ -153,8 +133,7 @@ var app = new Vue({
                 img: 'https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/02.png',
                 seat: 2,
                 bag: 2,
-                price: 14900,
-                other: true
+                price: 14900
             },
             {
                 id: 16,
@@ -163,8 +142,7 @@ var app = new Vue({
                 img: 'https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/Car_with_Driver_210304_71.jpg',
                 seat: 7,
                 bag: 3,
-                price: 3300,
-                other: true
+                price: 3300
             }, {
                 id: 17,
                 brand: 'MG',
@@ -172,8 +150,7 @@ var app = new Vue({
                 img: 'https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/MG_HS_2021.png',
                 seat: 7,
                 bag: 2,
-                price: 2553,
-                other: true
+                price: 2553
             },
             {
                 id: 18,
@@ -182,14 +159,9 @@ var app = new Vue({
                 img: 'https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/bmw_series_7.png',
                 seat: 4,
                 bag: 2,
-                price: 15000,
-                other: true
+                price: 15000
             },
         ],
-        isBrand: false,
-        isPrice: false,
-        isSeat: false,
-        vmodel_brand: '',
     },
     methods: {
         detailCar(item) {
@@ -198,10 +170,5 @@ var app = new Vue({
             localStorage.setItem("mycart", myjson)
             location.href = "./detail_car.html"
         },
-        // search() {
-        //     if (this.vmodel_brand === "") {
-        //         return 'yes!'
-        //     }
-        // }
     }
 })
