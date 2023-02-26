@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>bill</title>
+
+</head>
+
+<body>
+    <div id="navbar">
+        <navbar-div :links="links"></navbar-div>
+    </div>
+    <div class="columns pt-5">
+        <div class="column is-8 is-offset-4">
+            <div class="columns is-flex is-flex-direction-column card font " style="width: 52%;">
+                <h1 class="card_bill">ช่องทางการชำระเงิน</h1>
+                <div class="column px-6">
+                    <div class="control is-size-5">
+                        <label class="radio">
+                              <input type="radio" name="answer">
+                              โอนผ่านบัญชีธนาคาร
+                            </label><br>
+                        <label class="radio">
+                              <input type="radio" name="answer">
+                              บัตรเครดิต
+                            </label>
+                    </div>
+                </div>
+                <div class="column px-6">
+                    <label>ชื่อบนบัตรเครดิต *</label>
+                    <input class="input input_username" type="text " placeholder="Name">
+                </div>
+                <div class="column px-6">
+                    <label>หมายเลขบัตร *</label>
+                    <input class="input input_kd" type="text" placeholder="0123456789012345 ">
+                </div>
+
+                <div class="columns px-6 pt-2">
+                    <div class="column">
+                        <label>วันหมดอายุ *</label>
+                        <input class="input input_calendar " type="text " placeholder="xx-xx-xxxx ">
+                    </div>
+                    <div class="column">
+                        <label>CVC *</label>
+                        <input class="input " type="text " placeholder="xxxx ">
+                    </div>
+
+                </div>
+
+                <div class="column px-6">
+
+                    <button class="button is-fullwidth color_sign_in font " type="submit ">ยืนยันการชำระเงิน</button>
+                    <p class="is-size-7 has-text-danger has-text-centered ">หมายเหตุ : หากยืนยันการชำระเงินสำเร็จแล้ว คุณจะไม่สามารถยกเลิกการจองได้</p>
+                </div>
+                <div class="column px-6 ">
+                    <p class="line "></p>
+                </div>
+                <div class="column px-6 ">
+                    <button class="button is-fullwidth color_sign_up font " type="submit ">ยกเลิกการชำระเงิน</button>
+
+                </div>
+            </div>
+</body>
+<script src="navbar.js "></script>
+
+</html>

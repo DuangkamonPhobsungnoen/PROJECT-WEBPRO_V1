@@ -242,3 +242,29 @@
     .border_td {
         border-bottom: 1px solid var(--color-greenbtn);
     }
+    /* bill */
+    
+    .card_bill {
+        background: var(--color-gradient);
+        color: white;
+        padding: 13px;
+        font-size: 1.4rem;
+    }
+    
+    .input_kd {
+        background: url("https://cdn.discordapp.com/attachments/1072181252964233328/1079429539974873098/656874.png") no-repeat left;
+        background-size: 20px;
+        padding-left: 40px;
+        background-position: 12px;
+        color: var(--color-blue);
+        border: 2px solid var(--color-blue);
+    }
+    
+    .input_calendar {
+        background: url("https://media.discordapp.net/attachments/1072181252964233328/1079430738249777203/747479.png") no-repeat left;
+        background-size: 20px;
+        padding-left: 40px;
+        background-position: 12px;
+        color: var(--color-blue);
+        border: 2px solid var(--color-blue);
+    }
