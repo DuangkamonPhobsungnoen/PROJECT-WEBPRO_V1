@@ -144,6 +144,10 @@
         background: var(--color-blue);
     }
     
+    .is-color-transgreen {
+        background-color: hsl(152, 63%, 65%, 50%);
+    }
+    
     .cololr_input_card {
         font-size: 15px;
         font-family: 'Kanit', sans-serif;
@@ -192,6 +196,7 @@
     #ibar:hover {
         background-color: hsl(152, 63%, 65%, 50%);
         transition: 0.5s background-color;
+        opacity: 50%;
     }
     
     .limit_text {

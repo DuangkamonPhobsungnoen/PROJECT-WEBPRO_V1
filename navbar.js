@@ -23,7 +23,7 @@ Vue.component('navbar-div', {
                 
             </div>
             <div class="navbar-item has-dropdown is-hoverable has-text-centered">
-                <a class="navbar-link" href="me.html">
+                <a class="navbar-link" href="me_checkout.html">
                     <img src="https://media.discordapp.net/attachments/1072181252964233328/1073622193784754257/1177568.png">
                 </a>
                 <div class="navbar-dropdown">
