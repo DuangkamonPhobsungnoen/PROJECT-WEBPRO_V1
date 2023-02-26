@@ -1,4 +1,5 @@
 Vue.component('navbar-div', {
+    name: 'navbarN',
     template: `
     <nav class="navbar border_t" role="navigation" aria-label="main navigation" style="background: var(--color-gradient);">
     <div class="navbar-brand">

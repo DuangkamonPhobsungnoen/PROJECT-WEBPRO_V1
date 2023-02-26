@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Test Home</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -14,7 +14,7 @@
 <body>
     <div id="app">
         <div id="navbar">
-            <navbar-div :links="links"></navbar-div>
+            <navbar-div></navbar-div>
         </div>
         <section class="hero is-gradient  is-medium">
             <div class="columns">
@@ -179,27 +179,26 @@
             </div>
         </div>
         <!-- card Toyota -->
-        <div class="column">
-            <div class="container is-max-desktop "> <b>
-                        รถเช่ายอดฮิต<br><br>
-                    </b>
-                <div class="columns is-half">
+        <div class="container is-max-desktop ">
+        <div v-for="hitem in hothit" class="columns">
+            <b>รถเช่ายอดฮิต<br><br></b>
+                <!-- <div class="columns is-half"> -->
                     <div class="column is-two-fifths">
                         <div class="column px-6">
                             <div class="card-image">
                                 <p>
-                                    <b class="is-size-3">Toyota</b>
+                                    <b class="is-size-3">{{hitem.brand}}</b>
                                 </p><br><br>
                                 <figure class="image is-3by3">
-                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png" alt="Placeholder image ">
+                                    <img :src="hitem.img" alt="Placeholder image ">
                                 </figure>
                             </div>
                         </div>
                     </div>
                     <div class="column">
                         <div class="is-multiline is-variable columns is-1 ">
-                            <div v-for="item in cars " id="card_product " class="column is-one-third" v-if="item.show_toyota === true">
-                                <div class="card has-text-centered is-border-radius ">
+                            <div v-for="(item, index) in cars" id="card_product " class="column is-one-third" >
+                                <div v-if="item.brand === hitem.brand" class="card has-text-centered is-border-radius ">
                                     <div class="card-image px-5 pt-2 ">
                                         <figure class="image is-4by3 ">
                                             <img :src='item.img' alt="Placeholder image ">
@@ -217,7 +216,7 @@
                                         </div>
                                     </div>
                                     <footer class="card-footer ">
-                                        <a href="# " class="card-footer-item is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
+                                        <a class="card-footer-item is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
                                     </footer>
                                 </div>
                             </div>
@@ -225,8 +224,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- card Nissan -->
+        
+        <!-- card Nissan
         <div class="column">
             <div class="container is-max-desktop ">
                 <div class="columns is-half">
@@ -272,7 +271,7 @@
                 </div>
             </div>
         </div>
-        <!-- card Honda -->
+        card Honda
         <div class="column">
             <div class="container is-max-desktop ">
                 <div class="columns is-half">
@@ -318,9 +317,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- card other -->
-        <div class="column">
+        <!-- <div class="column">
             <div class="container is-max-desktop px-6">
                 <div class="column">
                     <P>
@@ -354,7 +353,7 @@
                 </div>
             </div>
         </div>
-        </div>
+        </div> -->
         <!-- Q&A -->
         <div id="ques" class="">
             <div v-for="(item, index) in content" class="columns ">

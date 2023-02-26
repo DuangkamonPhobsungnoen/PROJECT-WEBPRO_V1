@@ -162,6 +162,20 @@ var app = new Vue({
                 price: 15000
             },
         ],
+        hothit:[{
+            brand: 'Toyota',
+            img: 'https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png',
+            count: 0,
+        },{
+            brand: 'Honda',
+            img: 'https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png',
+            count: 0,
+        } ,{
+            brand: 'Nisson',
+            img: 'https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png',
+            count: 0,
+        }],
+        // check: 0
     },
     methods: {
         detailCar(item) {
@@ -170,5 +184,16 @@ var app = new Vue({
             localStorage.setItem("mycart", myjson)
             location.href = "./detail_car.html"
         },
-    }
+        // hotcar(index){
+        //     // console.log(index)
+        //     console.log(this.hothit[index].count)
+        //     this.hothit[index].count += 1
+        //     return true
+        // }
+    },
+    // computed:{
+    //     hotcar(){
+    //         this.check += 1
+    //     }
+    // }
 })
