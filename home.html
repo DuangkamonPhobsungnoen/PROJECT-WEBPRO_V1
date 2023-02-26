@@ -55,13 +55,13 @@
                             <div class="columns ">
                                 <div class="column is-6 ">
                                     วันและเวลารับรถ<br>
-                                    <input class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019 ">
-                                    <input class="cololr_input_card" type="time" id="appt " name="appt" min="09:00" max="18:00" required>
+                                    <input v-model="rent_dsend" class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019">
+                                    <input v-model="rent_time" class="cololr_input_card" type="time" id="appt " name="appt" min="09:00" max="18:00" required>
                                 </div>
                                 <div class="column is-6 ">
                                     วันและเวลาคืนรถ<br>
-                                    <input class="cololr_input_card" type="date" value="01/01/2023 " data-start-date="10/24/2019 ">
-                                    <input class="cololr_input_card" type="time" id="appt " name="appt" min="09:00" max="18:00" required>
+                                    <input v-model="rent_dreturn" class="cololr_input_card" type="date" value="01/01/2023 " data-start-date="10/24/2019">
+                                    <input v-model="rent_time" class="cololr_input_card" type="time" id="appt " name="appt" min="09:00" max="18:00" required>
                                 </div>
                             </div>
                         </p>
@@ -70,38 +70,38 @@
                         </p>
                         <div class="columns ">
                             <div class="column ">
+                                รุ่นรถที่ต้องการ<br>
                                 <div class="select ">
-                                    <select class="font ">
-                                        <option>รุ่นรถที่ต้องการ</option>
-                                        <option v-for="item in cars " :key="item.id " :value="item.id ">
+                                    <select v-model="sbrand" class="font ">                                
+                                        <option v-for="item in cars " :key="item.id " :value="item.brand ">
                                             {{item.brand}} {{item.model}}
                                         </option>
                                     </select>
                                 </div>
                             </div>
                             <div class="column ">
-                                <div class="select ">
-                                    <select class="font ">
-                                        <option>ช่วงราคา</option>
-                                        <option>500-999 ฿</option>
-                                        <option>1000-1999 ฿</option>
-                                        <option>2000-2999 ฿</option>
-                                        <option>3000-3999 ฿</option>
-                                        <option>4000-4999 ฿</option>
-                                        <option>5000 ฿ ขึ้นไป</option>
+                                ช่วงราคา<br>
+                                <div class="select ">                                    
+                                    <select v-model="sprice" class="font">                                        
+                                        <option value="500-999">500-999 ฿</option>
+                                        <option value="1000-1999">1000-1999 ฿</option>
+                                        <option value="2000-2999">2000-2999 ฿</option>
+                                        <option value="3000-3999">3000-3999 ฿</option>
+                                        <option value="4000-4999">4000-4999 ฿</option>
+                                        <option value="5000">5000 ฿ ขึ้นไป</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="column ">
+                                จำนวนที่นั่ง<br>
                                 <div class="select ">
-                                    <select class="font ">
-                                        <option>จำนวนที่นั่ง</option>
-                                        <option>2 ที่นั่ง</option>
-                                        <option>4 ที่นั่ง</option>
-                                        <option>5 ที่นั่ง</option>
-                                        <option>6 ที่นั่ง</option>
-                                        <option>7 ที่นั่ง</option>
-                                        <option>9 ที่นั่ง</option>
+                                    <select v-model="sseat" class="font ">                                        
+                                        <option value="2">2 ที่นั่ง</option>
+                                        <option value="4">4 ที่นั่ง</option>
+                                        <option value="5">5 ที่นั่ง</option>
+                                        <option value="6">6 ที่นั่ง</option>
+                                        <option value="7">7 ที่นั่ง</option>
+                                        <option value="9">9 ที่นั่ง</option>
                                     </select>
                                 </div>
                             </div>

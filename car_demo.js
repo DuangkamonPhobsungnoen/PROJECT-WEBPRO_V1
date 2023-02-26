@@ -175,7 +175,13 @@ var app = new Vue({
             img: 'https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png',
             count: 0,
         }],
-        // check: 0
+        rent_dsend: '',
+        rent_dreturn: '',
+        rent_time: '',
+        sbrand: '',
+        sprice: 0,
+        sseat: 0,
+        check: 0
     },
     methods: {
         detailCar(item) {
@@ -191,9 +197,5 @@ var app = new Vue({
         //     return true
         // }
     },
-    // computed:{
-    //     hotcar(){
-    //         this.check += 1
-    //     }
-    // }
+    
 })
