@@ -238,6 +238,12 @@
     .box {
         box-shadow: none;
     }
+
+    .box-radius {
+        overflow: hidden;
+        border: 1.5px solid var(--color-green3);
+        border-radius: 10px;
+    }
     /* navbar */
     
     .border_t {

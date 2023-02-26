@@ -106,7 +106,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="button color-card-search has-text-white font " style="width: 100%; " type="submit ">ค้นหารถว่าง</button>
+                        <button @click="search()" class="button color-card-search has-text-white font " style="width: 100%; " type="submit ">ค้นหารถว่าง</button>
                     </div>
                 </div>
             </div>
@@ -178,7 +178,7 @@
                                         </div>
                                     </div>
                                     <footer class="card-footer ">
-                                        <a @click="detailCar(item) " class="card-footer-item is-color-green3 is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
+                                        <a @click="detailCar(item)" class="card-footer-item is-color-green3 is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
                                     </footer>
                                 </div>
                             </div>
