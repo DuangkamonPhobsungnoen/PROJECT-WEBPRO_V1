@@ -119,7 +119,7 @@
                 <div class="columns">
                     <div class="column">
                         <div class="is-multiline is-variable columns ">
-                            <div v-for="(item, index) in cars " id="card_product " class="column is-one-quarter">
+                            <div v-for="(item, index) in filter_car" id="card_product " class="column is-one-quarter">
                                 <div class="card has-text-centered is-border-radius ">
                                     <div class="card-image px-5 pt-2 ">
                                         <figure class="image is-4by3 ">
@@ -167,12 +167,26 @@
                 </div>
             </div>
     </footer>
+<script>
+    var app = new Vue({
+    el: '#app',
+    data: {
+        
+    },
+    filter_car:[],
+    create(){
+        const text = JSON.parse(localStorage.getItem("mycart"))
+        this.filter_car = text
+        console.log(text)
+    }
+    })
+</script>
 
 </body>
 
 
 <script src="car_demo.js "></script>
 <script src="navbar.js "></script>
-<script src="Q&A.js"></script>
+
 
 </html>

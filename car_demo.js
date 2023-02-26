@@ -181,7 +181,8 @@ var app = new Vue({
         sbrand: '',
         sprice: 0,
         sseat: 0,
-        check: 0
+        
+        // check: 0
     },
     methods: {
         detailCar(item) {
@@ -190,6 +191,14 @@ var app = new Vue({
             localStorage.setItem("mycart", myjson)
             location.href = "./detail_car.html"
         },
+        search(){
+            const res = this.cars.filter((item) => item.brand.includes(this.sbrand))
+
+            const myjson = JSON.stringify(res)
+            localStorage.setItem("mycart", myjson)
+            location.href = "./view_car.html"
+            console.log(res)
+        }
         // hotcar(index){
         //     // console.log(index)
         //     console.log(this.hothit[index].count)
