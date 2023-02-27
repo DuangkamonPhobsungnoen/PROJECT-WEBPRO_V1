@@ -162,15 +162,15 @@ var app = new Vue({
                 price: 15000
             },
         ],
-        hothit:[{
+        hothit: [{
             brand: 'Toyota',
             img: 'https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png',
             count: 0,
-        },{
+        }, {
             brand: 'Honda',
             img: 'https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png',
             count: 0,
-        } ,{
+        }, {
             brand: 'Nisson',
             img: 'https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png',
             count: 0,
@@ -181,7 +181,6 @@ var app = new Vue({
         sbrand: '',
         sprice: 0,
         sseat: 0,
-        
         // check: 0
     },
     methods: {
@@ -191,7 +190,7 @@ var app = new Vue({
             localStorage.setItem("mycart", myjson)
             location.href = "./detail_car.html"
         },
-        search(){
+        search() {
             const res = this.cars.filter((item) => item.brand.includes(this.sbrand))
 
             const myjson = JSON.stringify(res)
@@ -206,5 +205,5 @@ var app = new Vue({
         //     return true
         // }
     },
-    
+
 })
