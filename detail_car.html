@@ -15,7 +15,7 @@
     <div id="navbar">
         <navbar-div :links="links"></navbar-div>
     </div>
-    <div id="app">
+    <div id="rapp">
         <div class="container is-max-widescreen p-5">
             <!-- All other tile elements -->
             <div class=" p-5">
@@ -26,9 +26,15 @@
                     </div>
                     <!-- icon -->
                     <div class="column ml-4 mt-4 is-2 is-size-5">
-                        <img class="icon1 tobottom" src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607802408990/user.png" alt=""> {{store.seat}} ที่นั้ง<br>
-                        <img class="icon1 mt-3" src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607567540294/bag.png" alt=""> {{store.bag}} กระเป๋า<br>
-                        <img class="icon1 mt-3" src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607286509598/car-gear.png" alt=""> Auto
+                        <img class="icon1 tobottom"
+                            src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607802408990/user.png"
+                            alt=""> {{store.seat}} ที่นั้ง<br>
+                        <img class="icon1 mt-3"
+                            src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607567540294/bag.png"
+                            alt=""> {{store.bag}} กระเป๋า<br>
+                        <img class="icon1 mt-3"
+                            src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607286509598/car-gear.png"
+                            alt=""> Auto
                     </div>
                     <!-- sidecard -->
                     <div class="column is-4 is-size-5 mt-2">
@@ -69,30 +75,21 @@
             </div>
             <!-- rent button -->
             <div class="columns">
-                <div class="column"> <a href="view_car.html"><button class="button is-fullwidth is-large has-text-white font btn" type="submit ">เลือกรถคันอื่น</button></a></div>
-                <div class="column"> <a href="me_checkout.html"><button class="button is-fullwidth is-large has-text-white font btn" type="submit ">ทำการจอง</button></a></div>
+                <div class="column"> <a href="view_car.html"><button
+                            class="button is-fullwidth is-large has-text-white font btn"
+                            type="submit ">เลือกรถคันอื่น</button></a></div>
+                <div class="column"> <a @click="tocheckout()" href="me_checkout.html"><button
+                            class="button is-fullwidth is-large has-text-white font btn"
+                            type="submit ">ทำการจอง</button></a></div>
 
             </div>
 
         </div>
     </div>
-    <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                store: {}
-            },
-            created() {
-                const text = JSON.parse(localStorage.getItem("mycart"))
-                this.store = text
-                console.log(this.store)
-            }
-        })
-    </script>
 
 
 </body>
-<script src="car_demo.js "></script>
 <script src="navbar.js "></script>
+<script src="rental.js"></script>
 
 </html>

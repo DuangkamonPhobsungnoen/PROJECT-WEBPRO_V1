@@ -60,24 +60,24 @@
         </div>
     </section>
     <!-- Check out -->
-    <div class="columns">
+    <div id="rapp" class="columns">
         <div class="column is-half is-8 is-offset-2 pt-6">
             <div class="card has-text-centered p-5">
                 <div class="columns is-10 ">
                     <div class=" card-header-title columns is-7 ">
-                        <div class="column is-8 is-size-3">Toyota Fortuner
+                        <div class="column is-8 is-size-3">{{store.brand}} {{store.model}}
                             <div class="card-image image is-4by3 ">
-                                <img src="https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/Fortuner_2016-2018_VbSeQ0L.png "> </div>
+                                <img :src="store.img "> </div>
                         </div>
                         <div class="column pl-6">
                             <div class="column pt-6">
                                 <p class="subtitle is-size-7 column_number">
-                                    <img src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607802408990/user.png" height="20" width="20"><span class="pl-2">7 ที่นั้ง</span>
+                                    <img src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607802408990/user.png" height="20" width="20"><span class="pl-2">{{store.seat}} ที่นั้ง</span>
                                 </p>
                             </div>
                             <div class="column pt-5">
                                 <p class="subtitle is-size-7 column_number">
-                                    <img src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607567540294/bag.png" height="20" width="20"><span class="pl-2"> 2 กระเป๋า</span>
+                                    <img src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607567540294/bag.png" height="20" width="20"><span class="pl-2">{{store.bag}} กระเป๋า</span>
                                 </p>
                             </div>
                             <div class="column pt-5">
@@ -134,8 +134,8 @@
     </footer>
 </body>
 
+<script src="navbar.js"></script>
+<script src="rental.js"></script>
 
-<script src="car_demo.js "></script>
-<script src="navbar.js "></script>
 
 </html>
