@@ -175,14 +175,19 @@ var app = new Vue({
             img: 'https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png',
             count: 0,
         }],
+        day:[{
+            dsend:'',
+            dreturn:''
+        }],
         rent_dsend: '',
         rent_dreturn: '',
         rent_time: '',
         sbrand: '',
         sprice: 0,
         sseat: 0,
+        filter_car:[],
         // check: 0
-    },
+    },    
     methods: {
         detailCar(item) {
             console.log(item)
@@ -191,10 +196,17 @@ var app = new Vue({
             location.href = "./detail_car.html"
         },
         search() {
-            const res = this.cars.filter((item) => item.brand.includes(this.sbrand))
-
+            // if(this.sseat == 0){
+                const res = this.cars.filter((item) => 
+                item.brand.includes(this.sbrand))
+            // }
+            // else{
+            //     const res = this.cars.filter((item) => 
+            //     item.brand.includes(this.sbrand) && item.seat == this.sseat)
+            // }
+           
             const myjson = JSON.stringify(res)
-            localStorage.setItem("mycart", myjson)
+            localStorage.setItem("myfilter", myjson)
             location.href = "./view_car.html"
             console.log(res)
         }
@@ -205,5 +217,10 @@ var app = new Vue({
         //     return true
         // }
     },
+    created(){
+        const text = JSON.parse(localStorage.getItem("myfilter"))
+        this.filter_car = text
+        console.log(text)
+    }
 
 })

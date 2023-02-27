@@ -82,11 +82,10 @@
             data: {
                 store: {}
             },
-            // store:{},
             created() {
                 const text = JSON.parse(localStorage.getItem("mycart"))
                 this.store = text
-                console.log(this.store.model)
+                console.log(this.store)
             }
         })
     </script>
