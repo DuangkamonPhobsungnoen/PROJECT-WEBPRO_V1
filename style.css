@@ -291,39 +291,46 @@
     .card_dropdown1 {
         background: url("https://media.discordapp.net/attachments/1072181252964233328/1080042958549684255/9804688.png") no-repeat right;
         background-size: 60px;
-        border: 2px solid var(--color-blue2);
-        border-radius: 10px;
-        background-color: white;
+        width: 100%;
     }
     
     .card_dropdown2 {
         background: url("https://media.discordapp.net/attachments/1072181252964233328/1080046791292104724/9804666.png") no-repeat right;
         background-size: 60px;
-        border: 2px solid var(--color-blue2);
-        border-radius: 10px;
-        background-color: white;
     }
     
     .card_dropdown3 {
         background: url("https://media.discordapp.net/attachments/1072181252964233328/1080050969242517545/9786987.png") no-repeat right;
         background-size: 47px;
-        border: 2px solid var(--color-blue2);
-        border-radius: 10px;
-        background-color: white;
     }
     
     .card_dropdown4 {
         background: url("https://media.discordapp.net/attachments/1072181252964233328/1080049544974323712/3029811.png") no-repeat right;
         background-size: 47px;
-        border: 2px solid var(--color-blue2);
-        border-radius: 10px;
-        background-color: white;
     }
     
     .card_dropdown5 {
         background: url("https://cdn.discordapp.com/attachments/1072181252964233328/1080048788569329666/1611220.png") no-repeat right;
         background-size: 47px;
+    }
+    
+    .card_text {
+        opacity: 100%;
+        color: black;
+    }
+    
+    .card_text:hover {
+        color: black;
+        background-color: var(--color-blue2);
+    }
+    
+    .card_dropdown_h {
         border: 2px solid var(--color-blue2);
         border-radius: 10px;
         background-color: white;
+        font-size: 12px;
+    }
+    
+    .card_dropdown_h:hover {
+        background-color: var(--color-blue2);
     }
