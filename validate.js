@@ -1,21 +1,27 @@
 var app = new Vue({
     el: '#vapp',
     data: {
-        fname:'',
-        lname:'',
-        username:'',
-        passw:'',
-        passw2:'',
-        phone:'',
-        email:'',
-        error:{
-            fname:'',
-            lname:'',
-            username:'',
-            passw:'',
-            passw2:'',
-            phone:'',
-            email:'',
+        fname: '',
+        lname: '',
+        username: '',
+        passw: '',
+        passw2: '',
+        phone: '',
+        email: '',
+        error: {
+            fname: '',
+            lname: '',
+            username: '',
+            passw: '',
+            passw2: '',
+            phone: '',
+            email: '',
+        },
+        name: '',
+        numbercreditcard: '',
+        errorbill: {
+            name: '',
+            numbercreditcard: '',
         }
     },
     methods: {
@@ -23,71 +29,85 @@ var app = new Vue({
             const myjson = JSON.stringify(res)
             localStorage.setItem("mycart", myjson)
         },
-        validatefname(){
+        validatefname() {
             if (this.fname === '') {
                 this.error.fname = 'กรุณากรอกชื่อ'
                 return
-              }
-              this.error.fname = ''
+            }
+            this.error.fname = ''
         },
-        validatelname(){
+        validatelname() {
             if (this.lname === '') {
                 this.error.lname = 'กรุณากรอกนามสกุล'
                 return
-              }
-              this.error.lname = ''
+            }
+            this.error.lname = ''
         },
-        validateUsername(){
+        validateUsername() {
             if (this.username === '') {
                 this.error.username = 'กรุณากรอกชื่อผู้ใช้'
                 return
-              }
-              this.error.username = ''
+            }
+            this.error.username = ''
         },
         validatePassw() {
             if (this.passw === '') {
-              this.error.passw = 'กรุณากรอกรหัสผ่าน'
-              return
+                this.error.passw = 'กรุณากรอกรหัสผ่าน'
+                return
             }
-    
+
             if (this.passw.length < 6) {
-              this.error.passw = 'รหัสผ่านห้ามน้อยกว่า 6 ตัวอักษร'
-              return
-            }     
+                this.error.passw = 'รหัสผ่านห้ามน้อยกว่า 6 ตัวอักษร'
+                return
+            }
             this.error.passw = ''
         },
         validatePassw2() {
             if (this.passw2 === '') {
-            this.error.passw2 = 'กรุณากรอกยืนยันรหัสผ่าน'
-            return
+                this.error.passw2 = 'กรุณากรอกยืนยันรหัสผ่าน'
+                return
             }
-    
+
             if (this.passw2 !== this.passw) {
-            this.error.passw2 = 'รหัสผ่านไม่ตรงกัน'
-            return
+                this.error.passw2 = 'รหัสผ่านไม่ตรงกัน'
+                return
             }
-    
+
             this.error.passw2 = ''
         },
-        validateEmail(){
+        validateEmail() {
             if (this.email === '') {
                 this.error.email = 'กรุณากรอกอีเมล'
                 return
-              }
-              this.error.email = ''
+            }
+            this.error.email = ''
         },
-        validatePhone(){
+        validatePhone() {
             if (this.phone === '') {
                 this.error.phone = 'กรุณากรอกหมายเลขโทรศัพท์'
                 return
-              }
+            }
             if (this.phone.length !== 10) {
-            this.error.phone = 'กรุณากรอกหมายเลขโทรศัพท์ที่ถูกต้อง'
-            return
+                this.error.phone = 'กรุณากรอกหมายเลขโทรศัพท์ที่ถูกต้อง'
+                return
             }
             this.error.phone = ''
         },
-        submit(){
+        validateName() {
+            if (this.name === '') {
+                this.errorbill.name = 'กรุณากรอกชื่อบนบัตรเคดิต'
+                return
+            }
+            this.errorbill.name = ''
+        },
+        validateNumbercreditcard() {
+            if (this.numbercreditcard === '') {
+                this.errorbill.numbercreditcard = 'กรุณากรอกหมายเลขบัตร'
+                return
+            }
+            this.errorbill.numbercreditcard = ''
+        },
+        submit() {
             this.validatefname()
             this.validatelname()
             this.validateUsername()
@@ -96,19 +116,30 @@ var app = new Vue({
             this.validateEmail()
             this.validatePhone()
 
-            if (this.error.fname !== '' || this.error.lname !== '' ||  this.error.username !== '' || this.error.passw !== '' || this.error.passw2 !== '' || this.error.email !== '' || this.error.phone !== '') {
-                alert ('กรุณากรอกข้อมูลให้ถูกต้อง')
+            if (this.error.fname !== '' || this.error.lname !== '' || this.error.username !== '' || this.error.passw !== '' || this.error.passw2 !== '' || this.error.email !== '' || this.error.phone !== '') {
+                alert('กรุณากรอกข้อมูลให้ถูกต้อง')
                 return
-              }
+            }
             alert('ลงทะเบียนสำเร็จ')
             location.href = "./sign_in.html"
         },
+        submitbill() {
+            this.validateName()
+            this.validateNumbercreditcard()
+
+            if (this.errorbill.name !== '' || this.errorbill.numbercreditcard !== '') {
+                alert('กรุณากรอกข้อมูลให้ถูกต้อง')
+                return
+            }
+            alert('ชำระเงินสำเร็จ')
+            location.href = "./me_checkout.html"
+        },
         //page me
-        cusname(){
+        cusname() {
             const myjson = JSON.stringify(this.username)
             localStorage.setItem("myname", myjson)
         }
 
     },
-    
+
 })

@@ -16,7 +16,7 @@
     <div id="navbar">
         <navbar-div :links="links"></navbar-div>
     </div>
-    <div class="columns pt-5">
+    <div id="vapp" class="columns pt-5">
         <div class="column is-8 is-offset-4">
             <div class="columns is-flex is-flex-direction-column card font " style="width: 52%;">
                 <h1 class="card_bill">ช่องทางการชำระเงิน</h1>
@@ -34,37 +34,40 @@
                 </div>
                 <div class="column px-6">
                     <label>ชื่อบนบัตรเครดิต *</label>
-                    <input class="input input_username" type="text " placeholder="Name">
+                    <input v-model="name" class="input input_username" type="text" placeholder="Name" :class="{'is-danger': errorbill.name}" @input="validateName()">
+                    <span class="has-text-danger ertext ml-3">{{errorbill.name}}</span>
                 </div>
-                <div class="column px-6">
+                <div class="column px-6 ">
                     <label>หมายเลขบัตร *</label>
-                    <input class="input input_kd" type="text" placeholder="0123456789012345 ">
+                    <input v-model="numbercreditcard" class=" input input_kd " type="text " placeholder="0123456789012345 " :class="{'is-danger': errorbill.numbercreditcard}" @input="validateNumbercreditcard() ">
+                    <span class="has-text-danger ertext ml-3">{{errorbill.numbercreditcard}}</span>
                 </div>
 
-                <div class="columns px-6 pt-2">
-                    <div class="column">
+                <div class=" columns px-6 pt-2 ">
+                    <div class="column ">
                         <label>วันหมดอายุ *</label>
                         <input class="input input_calendar " type="text " placeholder="xx-xx-xxxx ">
                     </div>
-                    <div class="column">
+                    <div class="column ">
                         <label>CVC *</label>
                         <input class="input " type="text " placeholder="xxxx ">
                     </div>
 
                 </div>
 
-                <div class="column px-6">
-                    <a href="me_pickupcar.html"><button class="button is-fullwidth color_sign_blue font " type="submit ">ยืนยันการชำระเงิน</button></a>
+                <div class="column px-6 ">
+                    <a @click="submitbill() "><button class="button is-fullwidth color_sign_blue font " type="submit ">ยืนยันการชำระเงิน</button></a>
                     <p class="is-size-7 has-text-danger has-text-centered ">หมายเหตุ : หากยืนยันการชำระเงินสำเร็จแล้ว คุณจะไม่สามารถยกเลิกการจองได้</p>
                 </div>
                 <div class="column px-6 ">
                     <p class="line "></p>
                 </div>
                 <div class="column px-6 ">
-                    <a href="me_checkout.html"> <button class="button is-fullwidth color_sign_white font " type="submit ">ยกเลิกการชำระเงิน</button></a>
+                    <a href="me_checkout.html "> <button class="button is-fullwidth color_sign_white font " type="submit ">ยกเลิกการชำระเงิน</button></a>
                 </div>
             </div>
 </body>
 <script src="navbar.js "></script>
+<script src="validate.js "></script>
 
 </html>
