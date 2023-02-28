@@ -37,6 +37,13 @@ var app = new Vue({
               }
               this.error.lname = ''
         },
+        validateUsername(){
+            if (this.username === '') {
+                this.error.username = 'กรุณากรอกชื่อผู้ใช้'
+                return
+              }
+              this.error.username = ''
+        },
         validatePassw() {
             if (this.passw === '') {
               this.error.passw = 'กรุณากรอกรหัสผ่าน'
@@ -83,6 +90,7 @@ var app = new Vue({
         submit(){
             this.validatefname()
             this.validatelname()
+            this.validateUsername()
             this.validatePassw()
             this.validatePassw2()
             this.validateEmail()
@@ -93,6 +101,7 @@ var app = new Vue({
                 return
               }
             alert('ลงทะเบียนสำเร็จ')
+            location.href = "./sign_in.html"
         }
 
     },

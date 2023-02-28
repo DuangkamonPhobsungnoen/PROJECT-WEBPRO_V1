@@ -33,13 +33,13 @@
         opacity: 50%;
     }
     
-    .color_sign_in {
+    .color_sign_blue {
         color: white;
         background-color: var(--color-blue);
         border-radius: 2rem;
     }
     
-    .color_sign_up {
+    .color_sign_white {
         color: var(--color-blue);
         background-color: white;
         border-radius: 2rem;
@@ -61,6 +61,10 @@
         border: 2px solid var(--color-blue);
         border-radius: 1.5rem;
         width: 450px;
+    }
+
+    .bg_input{
+        background-color: var(--color-background);
     }
     
     .input_username {
