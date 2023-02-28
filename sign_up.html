@@ -18,7 +18,7 @@
     <div id="navbar">
         <navbar-div :links="links"></navbar-div>
       </div>
-    <div class="hero is-fullheight">
+    <div id="vapp" class="hero is-fullheight">
 
         <div class="hero-body is-justify-content-center is-align-items-center pt-0">
 
@@ -28,48 +28,66 @@
                     <h1 class="th1">SIGN UP</h1><br>
                     <div class="columns is-multiline px-5">
                         <div class="column is-half">
-                            <input class="input  " type="text " placeholder="First name ">
+                            <input v-model="fname" class="input" type="text" placeholder="First name "
+                                :class="{'is-danger': error.fname}">
+                            <span class="has-text-danger ertext ml-3">{{error.fname}}</span>
                         </div>
                         <div class="column  is-half">
-                            <input class="input " type="password " placeholder="Last name ">
+                            <input v-model="lname" class="input" type="text" placeholder="Last name "
+                            :class="{'is-danger': error.lname}">
+                            <span class="has-text-danger ertext ml-3">{{error.lname}}</span>
                         </div>
                     </div>
                     <div class="columns px-5">
                         <div class="column ">
-                            <input class="input input_username " type="text " placeholder="Username ">
+                            <input v-model="username" class="input input_username" type="text" placeholder="Username "
+                            :class="{'is-danger': error.username}">
+                            <span class="has-text-danger ertext ml-3">{{error.username}}</span>
                         </div>
                     </div>
 
                     <div class="columns is-multiline px-5">
                         <div class="column is-half">
-                            <input class="input input_password " type="password " placeholder="Password ">
+                            <input v-model="passw" class="input input_password" type="password" placeholder="Password "
+                            :class="{'is-danger': error.passw}"
+                            @input="validatePassw()">
+                            <span class="has-text-danger ertext ml-3">{{error.passw}}</span>
                         </div>
                         <div class="column  is-half">
-                            <input class="input input_password " type="password " placeholder="Confrim password ">
+                            <input v-model="passw2" class="input input_password" type="password" placeholder="Confrim password "
+                            :class="{'is-danger': error.passw2}"
+                            @input="validatePassw2()">
+                            <span class="has-text-danger ertext ml-3">{{error.passw2}}</span>
                         </div>
                     </div>
                     <div class="columns is-multiline px-5">
                         <div class="column is-half">
-                            <input class="input input_email" type="password " placeholder="Email">
+                            <input v-model="email" class="input input_email" type="text" placeholder="Email"
+                            :class="{'is-danger': error.email}">
+                            <span class="has-text-danger ertext ml-3">{{error.email}}</span>
                         </div>
                         <div class="column  is-half">
-                            <input class="input input_phone" type="password " placeholder="Phone ">
+                            <input v-model="phone" class="input input_phone" type="text" placeholder="Phone "
+                            :class="{'is-danger': error.phone}"
+                            @input="validatePhone()">
+                            <span class="has-text-danger ertext ml-3">{{error.phone}}</span>
                         </div>
                     </div>
 
+                   
                     <div class="column px-5 ">
-                        <button class="button is-fullwidth color_sign_in " type="submit ">Sign in</button>
+                        <button @click="submit()" class="button is-fullwidth color_sign_up " type="submit ">Sign up</button>
                     </div>
                     <div class="column px-5 ">
                         <p class="line "></p>
                     </div>
                     <div class="column px-5 ">
-                        <button class="button is-fullwidth color_sign_up " type="submit ">Sign up</button>
+                        <button class="button is-fullwidth color_sign_in " type="submit ">Sign in</button>
                     </div>
                 </div>
             </div>
         </div>
 </body>
 <script src="navbar.js"></script>
-
+<script src="validate.js"></script>
 </html>

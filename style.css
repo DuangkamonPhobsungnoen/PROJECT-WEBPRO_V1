@@ -126,6 +126,9 @@
         border-top-left-radius: 1.3rem;
         border-top-right-radius: 1.3rem;
     }
+    .ertext{
+        font-size: 0.7rem;
+    }
     /* color background */
     
     .is-gradient {
