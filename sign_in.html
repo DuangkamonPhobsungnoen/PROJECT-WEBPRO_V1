@@ -16,7 +16,7 @@
     <div id="navbar">
         <navbar-div :links="links"></navbar-div>
     </div>
-    <div class="hero is-fullheight">
+    <div id="vapp" class="hero is-fullheight">
         <div class="img_logo"></div>
         <div class="hero-body is-justify-content-center is-align-items-center">
             <div>
@@ -24,14 +24,14 @@
                 <div class="columns is-flex is-flex-direction-column card1">
                     <h1 class="th1">SIGN IN</h1>
                     <div class="column px-5">
-                        <input class="input input_username" type="text" placeholder="Username">
+                        <input v-model="username" class="input input_username" type="text" placeholder="Username">
                     </div>
                     <div class="column px-5">
                         <input class="input input_password" type="password" placeholder="Password">
                     </div>
                     <div class="column px-5">
                         <a href="home.html">
-                            <button class="button is-fullwidth color_sign_blue " type="submit">Sign in</button>
+                            <button @click="cusname()" class="button is-fullwidth color_sign_blue " type="submit">Sign in</button>
                         </a>
                         
                     </div>
@@ -49,5 +49,6 @@
         </div>
 </body>
 <script src="navbar.js"></script>
+<script src="validate.js"></script>
 
 </html>

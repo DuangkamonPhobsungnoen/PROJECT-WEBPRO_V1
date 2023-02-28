@@ -1,16 +1,19 @@
 var app = new Vue({
     el: '#rapp',
     data: {
-        store: {}
+        store: {},
+        myname:'',
     },
     created() {
         const text = JSON.parse(localStorage.getItem("mycart"))
         this.store = text
-        console.log(this.store)
+        // console.log(this.store)
+        const string = JSON.parse(localStorage.getItem("myname"))
+        this.myname = string
     },
     methods: {
         tocheckout() {
-            const myjson = JSON.stringify(res)
+            // const myjson = JSON.stringify(res)
             localStorage.setItem("mycart", myjson)
         }
 

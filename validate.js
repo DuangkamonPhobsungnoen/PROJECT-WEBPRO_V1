@@ -102,6 +102,11 @@ var app = new Vue({
               }
             alert('ลงทะเบียนสำเร็จ')
             location.href = "./sign_in.html"
+        },
+        //page me
+        cusname(){
+            const myjson = JSON.stringify(this.username)
+            localStorage.setItem("myname", myjson)
         }
 
     },
