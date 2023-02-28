@@ -3,6 +3,7 @@ var app = new Vue({
     data: {
         store: {},
         myname:'',
+        returnCar:false,
     },
     created() {
         const text = JSON.parse(localStorage.getItem("mycart"))
