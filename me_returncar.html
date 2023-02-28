@@ -62,7 +62,7 @@
     </section>
     <!-- Return car คืนรถ-->
     
-    <div v-if="returnCar == false" class="columns pb-6">
+    <div class="columns pb-6">
         <div class="column is-half is-8 is-offset-2 pt-6">
             <div class="card has-text-centered p-5">
                 <div class="columns is-10 ">
@@ -93,66 +93,12 @@
                         </div>
                     </div>
                     <div class="column is-4 ">
-                        <p class=" is-size-4" style="background-color: #99e2f2;">
-                            <b>คืนรถ</b></p>
-                        <div class="column p-5 is-size-6">
-                            <div class="column has-text-left">
-                                <p><b>การคืนรถ</b></p>
-                                <p>สนามบินสุวรรณภูมิ</p>
-                                <p>อ. 14 ก.พ. 10.00 น.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <footer class="columns">
-                    <div class="column is-size-6 ">ราคาสำหรับ 3 วัน 10768 บาท</div>
-                    <div class="column is-size-6 pl-6">
-                        <p class="subtitle is-size-6 column_number">
-                            <img src="https://media.discordapp.net/attachments/1072181252964233328/1079444615184257074/success_1.png" height="20" width="20"><span class="pl-2"> ชำระเงินสำเร็จแล้ว</span>
-                        </p>
-                    </div>
-                    <a class="column is-size-6 ">
-                        <button @click="returnCar = true" class="button btn has-text-white font" style="width: 100%; ">คืนรถ</button>
-                    </a>                  
-                </footer>
-            </div>
-
-        </div>
-    </div>
-    <!-- Return car กำลังดำเนินการ-->
-    <div v-if="returnCar == true" class="columns pb-6">
-        <div class="column is-half is-8 is-offset-2 pt-6">
-            <div class="card has-text-centered p-5">
-                <div class="columns is-10 ">
-                    <div class=" card-header-title columns is-7 ">
-                        <div class="column is-8 is-size-3">{{store.brand}} {{store.model}}
-                            <div class="card-image image is-4by3 ">
-                                <img :src="store.img "> </div>
-                        </div>
-                        <div class="column pl-6">
-                            <div class="column pt-6">
-                                <p class="subtitle is-size-7 column_number">
-                                    <img src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607802408990/user.png" height="20" width="20">
-                                    <span class="pl-2">{{store.seat}} ที่นั้ง</span>
-                                </p>
-                            </div>
-                            <div class="column pt-5">
-                                <p class="subtitle is-size-7 column_number">
-                                    <img src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607567540294/bag.png" height="20" width="20">
-                                    <span class="pl-2">{{store.bag}} กระเป๋า</span>
-                                </p>
-                            </div>
-                            <div class="column pt-5">
-                                <p class="subtitle is-size-7 column_number">
-                                    <img src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607286509598/car-gear.png" height="20" width="20">
-                                    <span class="pl-2">อัตโนมัติ</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column is-4 ">
-                        <p class=" is-size-4" style="background-color: #99e2f2;">
+                        <!-- return progress -->
+                        <p  v-if="returnCar == false" class=" is-size-4" style="background-color: #99e2f2;">
+                        <b>คืนรถ</b></p>
+                        <p v-else class=" is-size-4" style="background-color: #99e2f2;">
                             <b>กำลังดำเนินการ</b></p>
+                        
                         <div class="column p-5 is-size-6">
                             <div class="column has-text-left">
                                 <p><b>การคืนรถ</b></p>
@@ -169,9 +115,13 @@
                             <img src="https://media.discordapp.net/attachments/1072181252964233328/1079444615184257074/success_1.png" height="20" width="20"><span class="pl-2"> ชำระเงินสำเร็จแล้ว</span>
                         </p>
                     </div>
-                    <a class="column is-size-6 ">
-                        <button class="button btn has-text-white font" style="width: 100%;  opacity: 50%;">คืนรถ</button>
+                    <a v-if="returnCar == false" class="column is-size-6 ">
+                        <button @click="returnCar = true" class="button btn has-text-white font" style="width: 100%;">คืนรถ</button>
                     </a>
+                    <a v-else class="column is-size-6 ">
+                        <button class="button btn has-text-white font" style="width: 100%; opacity:40% ;">คืนรถ</button>
+                       
+                    </a>                  
                 </footer>
             </div>
 
