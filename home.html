@@ -282,7 +282,7 @@
             </div>
         </div>
         <!-- card other -->
-        <div class="column ">
+        <div class="column pl-6">
             <div class="container is-max-desktop px-6 ">
                 <div class="column ">
                     <P>
@@ -318,22 +318,21 @@
         </div>
     </div>
     <!-- Q&A -->
-    <div class="columns pl-6">
-        <div id="ques" class="container is-max-desktop">
-            <div class="column">
-                <p>คำถามและข้อสงสัย ในการใช้บริการเช่ารถยนตู้</p>
-                <div class="select column" v-for="quess in content" :key="quess.id " :value="quess.id ">
-                    <select class="font" style="width: 100%">
-                        <option  >
-                            {{quess.ask}}
-                        </option>
-                        <option >
-                            {{quess.ans}}
-                        </option>
-                    </select>
-
-                </div>
-            </div>
+    <div class="column pb-5  is-8 is-offset-one-fifth">
+        <div class="column card card_dropdown1">
+            หากเกิดอุบัติเหตุทำอย่างไร
+        </div>
+        <div class="column card card_dropdown2">
+            สามารถเดินทางออกนอกจังหวัดกรุงเทพมหานครได้หรือไม่
+        </div>
+        <div class="column card card_dropdown3">
+            ตรวจสอบค่าบริการอื่นๆที่ไม่ครอบคลุม
+        </div>
+        <div class="column card card_dropdown4">
+            วันหยุดยาวและเทศกาล ราคาเปลี่ยนแปลงหรือไม่
+        </div>
+        <div class="column card card_dropdown5">
+            หากชำระเงินแล้ว สามารถยกเลิกการจองรถได้หรือไม่
         </div>
     </div>
 
