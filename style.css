@@ -49,14 +49,12 @@
     
     .card1 {
         border-color: var(--color-blue);
-        border-color: var(--color-blue);
         border: 2px solid var(--color-blue);
         border-radius: 1.5rem;
         width: 305px;
     }
     
     .card2 {
-        border-color: var(--color-blue);
         border-color: var(--color-blue);
         border: 2px solid var(--color-blue);
         border-radius: 1.5rem;
