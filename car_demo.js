@@ -190,8 +190,10 @@ var app = new Vue({
         errorday: {
             rent_dsend: '',
             rent_dreturn: '',
+            rent_time: ''
         },
-        // check: 0
+        CheckDsend:'',
+       
     },
     methods: {
         detailCar(item) {
@@ -203,9 +205,8 @@ var app = new Vue({
         search() {
             this.validateRentDsend()
             this.validateRentDreturn()
-            this.validateRentTime()
-            if (this.errorday.rent_dsend !== '' || this.errorday.rent_dreturn !== '' || this.errorday.rent_time !== '') {
-                alert('กรุณากรอกข้อมูลให้ถูกต้อง')
+            if (this.errorday.rent_dsend !== '' || this.errorday.rent_dreturn !== '') {
+                alert('กรุณากรอกข้อมูลให้ครบถ้วน')
                 return
             }
             // if(this.sseat == 0){
@@ -222,45 +223,33 @@ var app = new Vue({
             location.href = "./view_car.html"
             console.log(res)
         },
-        // hotcar(index){
-        //     // console.log(index)
-        //     console.log(this.hothit[index].count)
-        //     this.hothit[index].count += 1
-        //     return true
-        // }
         validateRentDsend() {
-            if (this.rent_dsend === '') {
-                this.errorday.rent_dsend = 'กรุณากรอกวันรับรถ'
+            if (this.rent_dsend === '' || this.rent_time === '') {
+                this.errorday.rent_dsend = 'กรุณากรอกวันและเวลารับรถ'
                 return
             }
             const today = new Date()
-            const RentDsend = new Date(this.rent_dsend)
-            if (RentDsend < today) {
-                this.errorday.rent_dsend = 'กรุณาเลือกวันรับรถให้ถูกต้อง (ห้ามเลือกวันในอดีต)'
+            this.CheckDsend = new Date(this.rent_dsend)
+            if (this.CheckDsend < today) {
+                this.errorday.rent_dsend = 'ห้ามเลือกวันในอดีต'
                 return
             }
             this.errorday.rent_dsend = ''
         },
         validateRentDreturn() {
-            if (this.rent_dreturn === '') {
-                this.errorday.rent_dreturn = 'กรุณากรอกวันคืนรถ'
+            if (this.rent_dreturn === '' || this.rent_time === '') {
+                this.errorday.rent_dreturn = 'กรุณากรอกวันและเวลาคืนรถ'
                 return
             }
-            const today = new Date()
+            // const today = new Date()
             const RentDreturn = new Date(this.rent_dreturn)
-            if (RentDreturn < today) {
-                this.errorday.rent_dreturn = 'กรุณาเลือกวันคืนรถให้ถูกต้อง (ห้ามเลือกวันในอดีต)'
+            if (RentDreturn < this.CheckDsend) {
+                this.errorday.rent_dreturn = 'กรุณาเลือกวันหลังจากวันรับรถ'
                 return
             }
             this.errorday.rent_dreturn = ''
         },
-        validateRentTime() {
-            if (this.rent_time === '') {
-                this.errorday.rent_time = 'กรุณากรอกเวลารับรถและคืนรถ'
-                return
-            }
-            this.errorday.rent_time = ''
-        }
+        
     },
     created() {
         const text = JSON.parse(localStorage.getItem("myfilter"))

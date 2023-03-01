@@ -56,9 +56,10 @@
                             <div class="columns ">
                                 <div class="column is-6 ">
                                     วันและเวลารับรถ<br>
-                                    <input v-model="rent_dsend" class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019" :class="{ 'is-danger': errorday.rent_dsend} " @input="validateRentDsend()">
+                                    <input v-model="rent_dsend" class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019" :class="{ 'is-danger': errorday.rent_dsend} " @input="validateRentDsend()">                                    
                                     <input v-model="rent_time" class="cololr_input_card" type="time" id="appt " name="appt" min="09:00" max="18:00" required><br>
                                     <span class="has-text-danger ertext ml-3 ">{{errorday.rent_dsend}}</span>
+                                    
                                 </div>
                                 <div class="column is-6 ">
                                     วันและเวลาคืนรถ<br>
@@ -76,7 +77,7 @@
                                 รุ่นรถที่ต้องการ<br>
                                 <div class="select ">
                                     <select v-model="sbrand" class="font ">                                
-                                        <option v-for="item in brandcar" :key="item.id " :value="item.id">
+                                        <option v-for="item in brandcar" :key="item.id " :value="item">
                                             {{item}}
                                         </option>
                                     </select>
