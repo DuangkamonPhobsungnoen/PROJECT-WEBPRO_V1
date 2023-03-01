@@ -1,9 +1,6 @@
 var app = new Vue({
     el: '#app',
     data: {
-        brandcar: ['Toyota', 'Nissan', 'Honda', 'Mercedes Benz Sport', 'Hyundai', 'MG', 'BMW'],
-        pricecar: ['500-999', '1000-1999', '2000-2999', '3000-3999', '4000-4999', '5000'],
-        seatcar: ['2', '4', '5', '6', '7', '9'],
         cars: [{
                 id: 1,
                 brand: 'Toyota',
@@ -165,6 +162,7 @@ var app = new Vue({
                 price: 15000
             },
         ],
+
         hothit: [{
             hbrand: 'Toyota',
             hid: [1, 2, 3],
@@ -179,8 +177,10 @@ var app = new Vue({
             hbrand: 'Honda',
             hid: [12, 13, 14],
             img: 'https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png',
-
         }],
+        brandcar: ['Toyota', 'Nissan', 'Honda', 'Mercedes Benz Sport', 'Hyundai', 'MG', 'BMW'],
+        pricecar: ['500-999', '1000-1999', '2000-2999', '3000-3999', '4000-4999', '5000'],
+        seatcar: ['2', '4', '5', '6', '7', '9'],
         day: [{
             dsend: '',
             dreturn: ''
