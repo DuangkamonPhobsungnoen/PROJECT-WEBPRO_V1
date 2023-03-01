@@ -56,13 +56,16 @@
                             <div class="columns ">
                                 <div class="column is-6 ">
                                     วันและเวลารับรถ<br>
-                                    <input v-model="rent_dsend" class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019">
-                                    <input v-model="rent_time" class="cololr_input_card" type="time" id="appt " name="appt" min="09:00" max="18:00" required>
+                                    <input v-model="rent_dsend" class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019" :class="{ 'is-danger': errorday.rent_dsend} " @input="validateRentDsend()">
+                                    <input v-model="rent_time" class="cololr_input_card" type="time" id="appt " name="appt" min="09:00" max="18:00" required><br>
+                                    <span class="has-text-danger ertext ml-3 ">{{errorday.rent_dsend}}</span>
+
                                 </div>
                                 <div class="column is-6 ">
                                     วันและเวลาคืนรถ<br>
-                                    <input v-model="rent_dreturn" class="cololr_input_card" type="date" value="01/01/2023 " data-start-date="10/24/2019">
-                                    <input v-model="rent_time" class="cololr_input_card" type="time" id="appt " name="appt" min="09:00" max="18:00" required>
+                                    <input v-model="rent_dreturn" class="cololr_input_card" type="date" value="01/01/2023 " data-start-date="10/24/2019" :class="{ 'is-danger': errorday.rent_dreturn} " @input="validateRentDreturn()">
+                                    <input v-model="rent_time" class="cololr_input_card" type="time" id="appt " name="appt" min="09:00" max="18:00" required><br>
+                                    <span class="has-text-danger ertext ml-3 ">{{errorday.rent_dreturn}}</span>
                                 </div>
                             </div>
                         </p>
@@ -74,8 +77,8 @@
                                 รุ่นรถที่ต้องการ<br>
                                 <div class="select ">
                                     <select v-model="sbrand" class="font ">                                
-                                        <option v-for="item in cars " :key="item.id " :value="item.brand ">
-                                            {{item.brand}} {{item.model}}
+                                        <option v-for="item in brandcar" :key="item.id " :value="item">
+                                            {{item}}
                                         </option>
                                     </select>
                                 </div>
@@ -333,7 +336,7 @@
             <span class="card_text is-size-6">วันหยุดยาวและเทศกาล ราคาเปลี่ยนแปลงหรือไม่</span><br>อัตราค่าเช่ารถ และ ค่าบริการ อาจมีการเปลี่ยนแปลง ขึ้นอยู่กับร้านรถเช่าเป็นผู้พิจารณา
         </div>
         <div class="column card card_dropdown5 card_dropdown_h pr-6">
-            <span class="card_text is-size-6">หากชำระเงินแล้ว สามารถยกเลิกการจองรถได้หรือไม่</span><br>ไม่สามารถยกเลิกได้ เนื่องจากเป็นนโยบายของทางร่านเช่า
+            <span class="card_text is-size-6">หากชำระเงินแล้ว สามารถยกเลิกการจองรถได้หรือไม่</span><br>ไม่สามารถยกเลิกได้ เนื่องจากเป็นนโยบายของทางร้านนเช่า
         </div>
     </div>
 

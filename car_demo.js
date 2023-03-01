@@ -192,8 +192,8 @@ var app = new Vue({
             rent_dreturn: '',
             rent_time: ''
         },
-        CheckDsend:'',
-       
+        CheckDsend: '',
+
     },
     methods: {
         detailCar(item) {
@@ -249,7 +249,7 @@ var app = new Vue({
             }
             this.errorday.rent_dreturn = ''
         },
-        
+
     },
     created() {
         const text = JSON.parse(localStorage.getItem("myfilter"))
