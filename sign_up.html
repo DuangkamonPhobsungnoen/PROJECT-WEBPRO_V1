@@ -17,7 +17,7 @@
 <body>
     <div id="navbar">
         <navbar-div :links="links"></navbar-div>
-      </div>
+    </div>
     <div id="vapp" class="hero is-fullheight">
 
         <div class="hero-body is-justify-content-center is-align-items-center pt-0">
@@ -28,53 +28,43 @@
                     <h1 class="th1">SIGN UP</h1><br>
                     <div class="columns is-multiline px-5">
                         <div class="column is-half">
-                            <input v-model="fname" class="input bg_input" type="text" placeholder="First name "
-                                :class="{'is-danger': error.fname}">
+                            <input v-model="fname" class="input bg_input" type="text" placeholder="First name " :class="{'is-danger': error.fname}">
                             <span class="has-text-danger ertext ml-3">{{error.fname}}</span>
                         </div>
                         <div class="column  is-half">
-                            <input v-model="lname" class="input bg_input" type="text" placeholder="Last name "
-                            :class="{'is-danger': error.lname}">
+                            <input v-model="lname" class="input bg_input" type="text" placeholder="Last name " :class="{'is-danger': error.lname}">
                             <span class="has-text-danger ertext ml-3">{{error.lname}}</span>
                         </div>
                     </div>
                     <div class="columns px-5">
                         <div class="column ">
-                            <input v-model="username" class="input input_username" type="text" placeholder="Username "
-                            :class="{'is-danger': error.username}">
+                            <input v-model="username" class="input input_username" type="text" placeholder="Username " :class="{'is-danger': error.username}">
                             <span class="has-text-danger ertext ml-3">{{error.username}}</span>
                         </div>
                     </div>
 
                     <div class="columns is-multiline px-5">
                         <div class="column is-half">
-                            <input v-model="passw" class="input input_password" type="password" placeholder="Password "
-                            :class="{'is-danger': error.passw}"
-                            @input="validatePassw()">
+                            <input v-model="passw" class="input input_password" type="password" placeholder="Password " :class="{'is-danger': error.passw}" @input="validatePassw()">
                             <span class="has-text-danger ertext ml-3">{{error.passw}}</span>
                         </div>
                         <div class="column  is-half">
-                            <input v-model="passw2" class="input input_password" type="password" placeholder="Confrim password "
-                            :class="{'is-danger': error.passw2}"
-                            @input="validatePassw2()">
+                            <input v-model="passw2" class="input input_password" type="password" placeholder="Confrim password " :class="{'is-danger': error.passw2}" @input="validatePassw2()">
                             <span class="has-text-danger ertext ml-3">{{error.passw2}}</span>
                         </div>
                     </div>
                     <div class="columns is-multiline px-5">
                         <div class="column is-half">
-                            <input v-model="email" class="input input_email" type="text" placeholder="Email"
-                            :class="{'is-danger': error.email}">
+                            <input v-model="email" class="input input_email" type="text" placeholder="Email" :class="{'is-danger': error.email}">
                             <span class="has-text-danger ertext ml-3">{{error.email}}</span>
                         </div>
                         <div class="column  is-half">
-                            <input v-model="phone" class="input input_phone" type="text" placeholder="Phone "
-                            :class="{'is-danger': error.phone}"
-                            @input="validatePhone()">
+                            <input v-model="phone" class="input input_phone" type="text" placeholder="Phone " :class="{'is-danger': error.phone}" @input="validatePhone()">
                             <span class="has-text-danger ertext ml-3">{{error.phone}}</span>
                         </div>
                     </div>
 
-                   
+
                     <div class="column px-5 ">
                         <button @click="submit()" class="button is-fullwidth color_sign_blue " type="submit ">Sign up</button>
                     </div>
@@ -85,12 +75,13 @@
                         <a href="sign_in.html">
                             <button class="button is-fullwidth color_sign_white ">Sign in</button>
                         </a>
-                        
+
                     </div>
                 </div>
             </div>
         </div>
 </body>
 <script src="navbar.js"></script>
-<script src="validate.js"></script>
+<script src="./data/validate.js"></script>
+
 </html>
