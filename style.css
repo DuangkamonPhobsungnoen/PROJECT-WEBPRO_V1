@@ -11,6 +11,7 @@
         --color-green3: #41BEB1;
         --color-blue3: #E5F2FE;
         --color-card-search: #24A9B5;
+        --color-footer: linear-gradient(90deg, #41BEB1 0.97%, #3DB2BD 100%);
     }
     
     body {
@@ -152,6 +153,10 @@
     
     .is-color-transgreen {
         background-color: hsl(152, 63%, 65%, 50%);
+    }
+    
+    .is-color-footer {
+        background: var(--color-footer);
     }
     
     .cololr_input_card {
