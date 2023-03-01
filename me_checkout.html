@@ -62,7 +62,7 @@
                 </div>
             </section>
             <!-- Check out -->
-            <div class="columns pb-6">
+            <div v-if="cancel == false" class="columns pb-6">
                 <div class="column is-half is-8 is-offset-2 pt-6">
                     <div class="card has-text-centered p-5">
                         <div class="columns is-10 ">
@@ -111,8 +111,10 @@
                                 </div>
                             </div>
                             <div class="column is-1">
-                                <a href="detail_car.html"><img src="https://media.discordapp.net/attachments/1072181252964233328/1079348472068702238/delete_1.png"></a>
+                                <a @click="cancel = true"><img src="https://media.discordapp.net/attachments/1072181252964233328/1079348472068702238/delete_1.png"></a>
                             </div>
+                            <!-- confirm cancel -->
+                            
                         </div>
                         <footer class="columns">
                             <p class="column is-size-6">ราคาสำหรับ 3 วัน 10768 บาท</p>

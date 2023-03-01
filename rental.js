@@ -14,7 +14,8 @@ var app = new Vue({
             numbercreditcard: '',
             expirationdate: '',
             cvc: '',
-        }
+        },
+        cancel: false,
     },
     created() {
         const text = JSON.parse(localStorage.getItem("mycart"))
@@ -27,13 +28,14 @@ var app = new Vue({
         if(bool != null){
             this.checkoutCar = bool
         }        
-        localStorage.setItem("mybill", false)
+        // localStorage.setItem("mybill", false)
     },
     methods: {
         tocheckout() {
             // const myjson = JSON.stringify(res)
             localStorage.setItem("mycart", myjson)
         },
+       
         
     },
 
