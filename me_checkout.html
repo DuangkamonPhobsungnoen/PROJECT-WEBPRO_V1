@@ -114,14 +114,14 @@
                                 <a @click="cancel = true"><img src="https://media.discordapp.net/attachments/1072181252964233328/1079348472068702238/delete_1.png"></a>
                             </div>
                             <!-- confirm cancel -->
-                            
+
                         </div>
                         <footer class="columns">
                             <p class="column is-size-6">ราคาสำหรับ 3 วัน 10768 บาท</p>
                             <p class="column is-size-6 ">รวมที่ต้องชำระ : 10768 บาท</p>
                             <a href="bill.html" v-if="checkoutCar === false" class="column is-size-6">
                                 <button class="button btn has-text-white font" style="width: 100%;">ชำระเงิน</button>
-                            </a>                        
+                            </a>
                             <a v-if="checkoutCar === true" class="column is-size-6">
                                 <button class="button btn has-text-white font" style="width: 100%; opacity: 40%;">ชำระเงิน</button>
                             </a>
@@ -131,25 +131,13 @@
             </div>
         </div>
     </div>
-    <footer class="footer is-gradient ">
-        <div class="content has-text-white ">
-            <div class="columns ">
-                <div class="column is-9 ">
-                    <div class="is-size-5 has-text-weight-bold "> <img src="https://media.discordapp.net/attachments/1072181252964233328/1076461183864934431/9611156.png " height="25 " width="25 "> ChaoCarHUB <br><br></div>
-                    <p>
-                        จัดทำโดย <br> 64070149 ดวงกมล พบสูงเนิน <br>64070153 ทัตพร ตันนารัตน <br>เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา Web Programming <br>คณะเทคโนโลยีสารสนเทศสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-                    </p>
-                </div>
-                <div class="column ">
-                    <p>ติดตามเรา</p>
-                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077598053269254274/face_ig_tw.png ">
-                </div>
-            </div>
-    </footer>
+    <div id="footer">
+        <footer-div></footer-div>
+    </div>
 </body>
 
 <script src="navbar.js"></script>
 <script src="rental.js"></script>
-
+<script src="footer.js"></script>
 
 </html>
