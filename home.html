@@ -77,8 +77,8 @@
                                 รุ่นรถที่ต้องการ<br>
                                 <div class="select ">
                                     <select v-model="sbrand" class="font ">
-                                        <option v-for="item in brandcar" :key="item.id " :value="item">
-                                            {{item}}
+                                        <option v-for="brandcar in brandcar" :key="brandcar.id " :value="brandcar">
+                                            {{brandcar}}
                                         </option>
                                     </select>
                                 </div>
@@ -87,12 +87,9 @@
                                 ช่วงราคา<br>
                                 <div class="select ">
                                     <select v-model="sprice" class="font">
-                                        <option value="500-999">500-999 ฿</option>
-                                        <option value="1000-1999">1000-1999 ฿</option>
-                                        <option value="2000-2999">2000-2999 ฿</option>
-                                        <option value="3000-3999">3000-3999 ฿</option>
-                                        <option value="4000-4999">4000-4999 ฿</option>
-                                        <option value="5000">5000 ฿ ขึ้นไป</option>
+                                        <option v-for="pricecar in pricecar" :key="pricecar.id " :value="pricecar">
+                                            {{pricecar}} ฿
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -100,12 +97,9 @@
                                 จำนวนที่นั่ง<br>
                                 <div class="select ">
                                     <select v-model="sseat" class="font ">
-                                        <option value="2">2 ที่นั่ง</option>
-                                        <option value="4">4 ที่นั่ง</option>
-                                        <option value="5">5 ที่นั่ง</option>
-                                        <option value="6">6 ที่นั่ง</option>
-                                        <option value="7">7 ที่นั่ง</option>
-                                        <option value="9">9 ที่นั่ง</option>
+                                        <option v-for="seatcar in seatcar" :key="seatcar.id " :value="seatcar">
+                                            {{seatcar}} ที่นั่ง
+                                        </option>
                                     </select>
                                 </div>
                             </div>

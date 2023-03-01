@@ -2,6 +2,8 @@ var app = new Vue({
     el: '#app',
     data: {
         brandcar: ['Toyota', 'Nissan', 'Honda', 'Mercedes Benz Sport', 'Hyundai', 'MG', 'BMW'],
+        pricecar: ['500-999', '1000-1999', '2000-2999', '3000-3999', '4000-4999', '5000'],
+        seatcar: ['2', '4', '5', '6', '7', '9'],
         cars: [{
                 id: 1,
                 brand: 'Toyota',

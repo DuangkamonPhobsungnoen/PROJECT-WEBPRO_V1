@@ -53,27 +53,21 @@
                             1. ระบุวันเดินทาง
                         </p>
                         <p class="subtitle is-size-6 ">
-                        <div class="columns ">
-                            <div class="column is-6 ">
-                                วันและเวลารับรถ<br>
-                                <input v-model="rent_dsend" class="cololr_input_card" type="date" value="01/01/2023"
-                                    data-start-date="10/24/2019" :class="{ 'is-danger': errorday.rent_dsend} "
-                                    @input="validateRentDsend()">
-                                <input v-model="rent_time" class="cololr_input_card" type="time" id="appt " name="appt"
-                                    min="09:00" max="18:00" required><br>
-                                <span class="has-text-danger ertext ml-3 ">{{errorday.rent_dsend}}</span>
+                            <div class="columns ">
+                                <div class="column is-6 ">
+                                    วันและเวลารับรถ<br>
+                                    <input v-model="rent_dsend" class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019" :class="{ 'is-danger': errorday.rent_dsend} " @input="validateRentDsend()">
+                                    <input v-model="rent_time" class="cololr_input_card" type="time" id="appt " name="appt" min="09:00" max="18:00" required><br>
+                                    <span class="has-text-danger ertext ml-3 ">{{errorday.rent_dsend}}</span>
 
+                                </div>
+                                <div class="column is-6 ">
+                                    วันและเวลาคืนรถ<br>
+                                    <input v-model="rent_dreturn" class="cololr_input_card" type="date" value="01/01/2023 " data-start-date="10/24/2019" :class="{ 'is-danger': errorday.rent_dreturn} " @input="validateRentDreturn()">
+                                    <input v-model="rent_time" class="cololr_input_card" type="time" id="appt " name="appt" min="09:00" max="18:00" required><br>
+                                    <span class="has-text-danger ertext ml-3 ">{{errorday.rent_dreturn}}</span>
+                                </div>
                             </div>
-                            <div class="column is-6 ">
-                                วันและเวลาคืนรถ<br>
-                                <input v-model="rent_dreturn" class="cololr_input_card" type="date" value="01/01/2023 "
-                                    data-start-date="10/24/2019" :class="{ 'is-danger': errorday.rent_dreturn} "
-                                    @input="validateRentDreturn()">
-                                <input v-model="rent_time" class="cololr_input_card" type="time" id="appt " name="appt"
-                                    min="09:00" max="18:00" required><br>
-                                <span class="has-text-danger ertext ml-3 ">{{errorday.rent_dreturn}}</span>
-                            </div>
-                        </div>
                         </p>
                         <p class="title is-size-6 ">
                             2. ระบุรุ่นรถ/ช่วงราคา/จำนวนที่นั่งที่ต้องการ
@@ -83,8 +77,8 @@
                                 รุ่นรถที่ต้องการ<br>
                                 <div class="select ">
                                     <select v-model="sbrand" class="font ">
-                                        <option v-for="item in brandcar" :key="item.id " :value="item">
-                                            {{item}}
+                                        <option v-for="brandcar in brandcar" :key="brandcar.id " :value="brandcar">
+                                            {{brandcar}}
                                         </option>
                                     </select>
                                 </div>
@@ -93,12 +87,9 @@
                                 ช่วงราคา<br>
                                 <div class="select ">
                                     <select v-model="sprice" class="font">
-                                        <option value="500-999">500-999 ฿</option>
-                                        <option value="1000-1999">1000-1999 ฿</option>
-                                        <option value="2000-2999">2000-2999 ฿</option>
-                                        <option value="3000-3999">3000-3999 ฿</option>
-                                        <option value="4000-4999">4000-4999 ฿</option>
-                                        <option value="5000">5000 ฿ ขึ้นไป</option>
+                                        <option v-for="pricecar in pricecar" :key="pricecar.id " :value="pricecar">
+                                            {{pricecar}} ฿
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -106,18 +97,14 @@
                                 จำนวนที่นั่ง<br>
                                 <div class="select ">
                                     <select v-model="sseat" class="font ">
-                                        <option value="2">2 ที่นั่ง</option>
-                                        <option value="4">4 ที่นั่ง</option>
-                                        <option value="5">5 ที่นั่ง</option>
-                                        <option value="6">6 ที่นั่ง</option>
-                                        <option value="7">7 ที่นั่ง</option>
-                                        <option value="9">9 ที่นั่ง</option>
+                                        <option v-for="seatcar in seatcar" :key="seatcar.id " :value="seatcar">
+                                            {{seatcar}} ที่นั่ง
+                                        </option>
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        <button @click="search()" class="button color-card-search has-text-white font "
-                            style="width: 100%; " type="submit ">ค้นหารถว่าง</button>
+                        <button @click="search()" class="button color-card-search has-text-white font " style="width: 100%; " type="submit ">ค้นหารถว่าง</button>
                     </div>
                 </div>
             </div>
