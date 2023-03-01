@@ -19,9 +19,13 @@ var app = new Vue({
         },
         name: '',
         numbercreditcard: '',
+        expirationdate: '',
+        cvc: '',
         errorbill: {
             name: '',
             numbercreditcard: '',
+            expirationdate: '',
+            cvc: '',
         }
     },
     methods: {
@@ -107,6 +111,21 @@ var app = new Vue({
             }
             this.errorbill.numbercreditcard = ''
         },
+        validateExpirationDate() {
+            if (this.expirationdate === '') {
+                this.errorbill.expirationdate = 'กรุณากรอกวันหมดอายุ'
+                return
+            }
+            this.errorbill.expirationdate = ''
+        },
+        validateCvc() {
+            if (this.cvc === '') {
+                this.errorbill.cvc = 'กรุณากรอก CVC '
+                return
+            }
+
+            this.errorbill.cvc = ''
+        },
         submit() {
             this.validatefname()
             this.validatelname()
@@ -126,8 +145,10 @@ var app = new Vue({
         submitbill() {
             this.validateName()
             this.validateNumbercreditcard()
+            this.validateExpirationDate()
+            this.validateCvc()
 
-            if (this.errorbill.name !== '' || this.errorbill.numbercreditcard !== '') {
+            if (this.errorbill.name !== '' || this.errorbill.numbercreditcard !== '' || this.errorbill.expirationdate !== '' || this.errorbill.cvc != '') {
                 alert('กรุณากรอกข้อมูลให้ถูกต้อง')
                 return
             }
