@@ -165,19 +165,19 @@ var app = new Vue({
         ],
         hothit: [{
             hbrand: 'Toyota',
-            hid:[1,2,3],
+            hid: [1, 2, 3],
             img: 'https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png',
-            
+
         }, {
             hbrand: 'Nisson',
-            hid:[6,7,8],
+            hid: [6, 7, 8],
             img: 'https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png',
-            
+
         }, {
             hbrand: 'Honda',
-            hid:[12,13,14],
+            hid: [12, 13, 14],
             img: 'https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png',
-            
+
         }],
         day: [{
             dsend: '',

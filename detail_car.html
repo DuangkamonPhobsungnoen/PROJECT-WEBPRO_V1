@@ -26,15 +26,9 @@
                     </div>
                     <!-- icon -->
                     <div class="column ml-4 mt-4 is-2 is-size-5">
-                        <img class="icon1 tobottom"
-                            src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607802408990/user.png"
-                            alt=""> {{store.seat}} ที่นั้ง<br>
-                        <img class="icon1 mt-3"
-                            src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607567540294/bag.png"
-                            alt=""> {{store.bag}} กระเป๋า<br>
-                        <img class="icon1 mt-3"
-                            src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607286509598/car-gear.png"
-                            alt=""> Auto
+                        <img class="icon1 tobottom" src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607802408990/user.png" alt=""> {{store.seat}} ที่นั้ง<br>
+                        <img class="icon1 mt-3" src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607567540294/bag.png" alt=""> {{store.bag}} กระเป๋า<br>
+                        <img class="icon1 mt-3" src="https://cdn.discordapp.com/attachments/1072181252964233328/1078900607286509598/car-gear.png" alt=""> Auto
                     </div>
                     <!-- sidecard -->
                     <div class="column is-4 is-size-5 mt-2">
@@ -66,10 +60,24 @@
                     <div class="column is-6">
                         <p><b>การรับรถ</b></p>
                         <p>ส. 11 ก.พ. 10.00 น.</p>
+                        <div class="select">
+                            <select class="font">
+                                <option v-for="loca in locationcar" :key="loca.id" :value="loca">
+                                    {{loca}}
+                                </option>
+                            </select>
+                        </div>
                     </div>
                     <div class="column is-6">
                         <p><b>การคืนรถ</b></p>
                         <p>อ. 14 ก.พ. 10.00 น.</p>
+                        <div class="select">
+                            <select class="font">
+                                <option v-for="loca in locationcar" :key="loca.id" :value="loca">
+                                    {{loca}}
+                                </option>
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
