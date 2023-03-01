@@ -1,6 +1,7 @@
 var app = new Vue({
     el: '#app',
     data: {
+        brandcar: ['Toyota', 'Nissan', 'Honda', 'Mercedes Benz Sport', 'Hyundai', 'MG', 'BMW'],
         cars: [{
                 id: 1,
                 brand: 'Toyota',
@@ -154,8 +155,8 @@ var app = new Vue({
             },
             {
                 id: 18,
-                brand: 'BMW Series 7',
-                model: null,
+                brand: 'BMW',
+                model: 'Series 7',
                 img: 'https://car-with-driver.s3-ap-southeast-1.amazonaws.com/cars/bmw_series_7.png',
                 seat: 4,
                 bag: 2,
@@ -175,9 +176,9 @@ var app = new Vue({
             img: 'https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png',
             count: 0,
         }],
-        day:[{
-            dsend:'',
-            dreturn:''
+        day: [{
+            dsend: '',
+            dreturn: ''
         }],
         rent_dsend: '',
         rent_dreturn: '',
@@ -185,9 +186,13 @@ var app = new Vue({
         sbrand: '',
         sprice: 0,
         sseat: 0,
-        filter_car:[],
+        filter_car: [],
+        errorday: {
+            rent_dsend: '',
+            rent_dreturn: '',
+        },
         // check: 0
-    },    
+    },
     methods: {
         detailCar(item) {
             console.log(item)
@@ -196,28 +201,68 @@ var app = new Vue({
             location.href = "./detail_car.html"
         },
         search() {
+            this.validateRentDsend()
+            this.validateRentDreturn()
+            this.validateRentTime()
+            if (this.errorday.rent_dsend !== '' || this.errorday.rent_dreturn !== '' || this.errorday.rent_time !== '') {
+                alert('กรุณากรอกข้อมูลให้ถูกต้อง')
+                return
+            }
             // if(this.sseat == 0){
-                const res = this.cars.filter((item) => 
-                item.brand.includes(this.sbrand))
-            // }
-            // else{
-            //     const res = this.cars.filter((item) => 
-            //     item.brand.includes(this.sbrand) && item.seat == this.sseat)
-            // }
-           
+            const res = this.cars.filter((item) =>
+                    item.brand.includes(this.sbrand))
+                // }
+                // else{
+                //     const res = this.cars.filter((item) => 
+                //     item.brand.includes(this.sbrand) && item.seat == this.sseat)
+                // }
+
             const myjson = JSON.stringify(res)
             localStorage.setItem("myfilter", myjson)
             location.href = "./view_car.html"
             console.log(res)
-        }
+        },
         // hotcar(index){
         //     // console.log(index)
         //     console.log(this.hothit[index].count)
         //     this.hothit[index].count += 1
         //     return true
         // }
+        validateRentDsend() {
+            if (this.rent_dsend === '') {
+                this.errorday.rent_dsend = 'กรุณากรอกวันรับรถ'
+                return
+            }
+            const today = new Date()
+            const RentDsend = new Date(this.rent_dsend)
+            if (RentDsend < today) {
+                this.errorday.rent_dsend = 'กรุณาเลือกวันรับรถให้ถูกต้อง (ห้ามเลือกวันในอดีต)'
+                return
+            }
+            this.errorday.rent_dsend = ''
+        },
+        validateRentDreturn() {
+            if (this.rent_dreturn === '') {
+                this.errorday.rent_dreturn = 'กรุณากรอกวันคืนรถ'
+                return
+            }
+            const today = new Date()
+            const RentDreturn = new Date(this.rent_dreturn)
+            if (RentDreturn < today) {
+                this.errorday.rent_dreturn = 'กรุณาเลือกวันคืนรถให้ถูกต้อง (ห้ามเลือกวันในอดีต)'
+                return
+            }
+            this.errorday.rent_dreturn = ''
+        },
+        validateRentTime() {
+            if (this.rent_time === '') {
+                this.errorday.rent_time = 'กรุณากรอกเวลารับรถและคืนรถ'
+                return
+            }
+            this.errorday.rent_time = ''
+        }
     },
-    created(){
+    created() {
         const text = JSON.parse(localStorage.getItem("myfilter"))
         this.filter_car = text
         console.log(text)
