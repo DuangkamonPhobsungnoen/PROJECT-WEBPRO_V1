@@ -26,7 +26,8 @@ var app = new Vue({
             numbercreditcard: '',
             expirationdate: '',
             cvc: '',
-        }
+        },
+        bill: false,
     },
     methods: {
         tocheckout() {
@@ -153,6 +154,9 @@ var app = new Vue({
                 return
             }
             alert('ชำระเงินสำเร็จ')
+            this.bill = true
+            const myjson = JSON.stringify(this.bill)
+            localStorage.setItem("mybill", myjson)
             location.href = "./me_checkout.html"
         },
         //page me

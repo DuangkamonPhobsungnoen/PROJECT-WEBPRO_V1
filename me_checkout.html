@@ -118,14 +118,10 @@
                             <p class="column is-size-6">ราคาสำหรับ 3 วัน 10768 บาท</p>
                             <p class="column is-size-6 ">รวมที่ต้องชำระ : 10768 บาท</p>
                             <a href="bill.html" v-if="checkoutCar === false" class="column is-size-6">
-                                <button class="button btn has-text-white font" style="width: 100%;">คลิ้กเพื่อชำระเงิน</button>
-                            </a>
-                            <a v-else class="column is-size-6">
-                                <button class="button btn has-text-white font" style="width: 100%; opacity: 40%;">ชำระเงินแล้ว</button>
-                            </a>
-
-                            <a v-if="checkoutCar === false" class="column is-size-6">
-                                <button @click="checkoutCar = true" class="button btn has-text-white font" style="width: 100%;">คลิ้กเมื่อชำระเงินแล้ว</button>
+                                <button class="button btn has-text-white font" style="width: 100%;">ชำระเงิน</button>
+                            </a>                        
+                            <a v-if="checkoutCar === true" class="column is-size-6">
+                                <button class="button btn has-text-white font" style="width: 100%; opacity: 40%;">ชำระเงิน</button>
                             </a>
                         </footer>
                     </div>
