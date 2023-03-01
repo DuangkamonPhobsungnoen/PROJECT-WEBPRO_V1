@@ -2,13 +2,15 @@ var app = new Vue({
     el: '#rapp',
     data: {
         store: {},
-        myname:'',
-        returnCar:false,
+        myname: '',
+        returnCar: false,
+        checkoutCar: false,
+        test: false,
     },
     created() {
         const text = JSON.parse(localStorage.getItem("mycart"))
         this.store = text
-        // console.log(this.store)
+            // console.log(this.store)
         const string = JSON.parse(localStorage.getItem("myname"))
         this.myname = string
     },
@@ -19,5 +21,5 @@ var app = new Vue({
         }
 
     },
-    
+
 })
