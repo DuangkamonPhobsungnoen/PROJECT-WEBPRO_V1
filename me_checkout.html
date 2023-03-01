@@ -110,7 +110,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="column is-1">
+                            <div v-if="checkoutCar === false" class="column is-1">
                                 <a @click="cancel = true"><img src="https://media.discordapp.net/attachments/1072181252964233328/1079348472068702238/delete_1.png"></a>
                             </div>
                             <!-- confirm cancel -->

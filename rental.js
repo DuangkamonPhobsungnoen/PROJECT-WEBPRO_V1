@@ -28,14 +28,14 @@ var app = new Vue({
         if(bool != null){
             this.checkoutCar = bool
         }        
-        // localStorage.setItem("mybill", false)
+        localStorage.setItem("mybill", false)
     },
     methods: {
         tocheckout() {
             // const myjson = JSON.stringify(res)
             localStorage.setItem("mycart", myjson)
         },
-       
+      
         
     },
 

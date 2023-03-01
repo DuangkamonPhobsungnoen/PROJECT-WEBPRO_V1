@@ -19,28 +19,32 @@
         <section class="hero is-gradient is-medium">
             <div class="columns">
                 <div class="columns">
-                    <div class="hero-body ">
+                    <div class="hero-body">
                         <div class="column pl-6">
                             <p class="title is-size-4 has-text-white">
                                 ขั้นตอนง่ายๆในการใช้บริการเช่ารถ </p>
                             <div class="column">
                                 <p class="subtitle is-size-5 has-text-white">
-                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1076538656891871343/8921537.png " height="30 " width="30 "> ระบุวันเดินทาง
+                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1076538656891871343/8921537.png "
+                                        height="30 " width="30 "> ระบุวันเดินทาง
                                 </p>
                             </div>
                             <div class="column ">
                                 <p class="subtitle is-size-5 has-text-white ">
-                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1076542459863105676/8921602.png " height="30 " width="30 "> ระบุรุ่นรถ/ช่วงราคา/จำนวนที่นั่งที่ต้องการ
+                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1076542459863105676/8921602.png "
+                                        height="30 " width="30 "> ระบุรุ่นรถ/ช่วงราคา/จำนวนที่นั่งที่ต้องการ
                                 </p>
                             </div>
                             <div class="column ">
                                 <p class="subtitle is-size-5 has-text-white ">
-                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1076542609008365669/8921657.png " height="30 " width="30 "> กดค้นหารถ
+                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1076542609008365669/8921657.png "
+                                        height="30 " width="30 "> กดค้นหารถ
                                 </p>
                             </div>
                             <div class="column ">
                                 <p class="subtitle is-size-5 has-text-white ">
-                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1076542525931802734/8921717.png " height="30 " width="30 "> กดจองรถที่ต้องการ
+                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1076542525931802734/8921717.png "
+                                        height="30 " width="30 "> กดจองรถที่ต้องการ
                                 </p>
                             </div>
                         </div>
@@ -53,21 +57,27 @@
                             1. ระบุวันเดินทาง
                         </p>
                         <p class="subtitle is-size-6 ">
-                            <div class="columns ">
-                                <div class="column is-6 ">
-                                    วันและเวลารับรถ<br>
-                                    <input v-model="rent_dsend" class="cololr_input_card" type="date" value="01/01/2023" data-start-date="10/24/2019" :class="{ 'is-danger': errorday.rent_dsend} " @input="validateRentDsend()">
-                                    <input v-model="rent_time" class="cololr_input_card" type="time" id="appt " name="appt" min="09:00" max="18:00" required><br>
-                                    <span class="has-text-danger ertext ml-3 ">{{errorday.rent_dsend}}</span>
+                        <div class="columns ">
+                            <div class="column is-6 ">
+                                วันและเวลารับรถ<br>
+                                <input v-model="rent_dsend" class="cololr_input_card" type="date" value="01/01/2023"
+                                    data-start-date="10/24/2019" :class="{ 'is-danger': errorday.rent_dsend} "
+                                    @input="validateRentDsend()">
+                                <input v-model="rent_time" class="cololr_input_card" type="time" id="appt " name="appt"
+                                    min="09:00" max="18:00" required><br>
+                                <span class="has-text-danger ertext ml-3 ">{{errorday.rent_dsend}}</span>
 
-                                </div>
-                                <div class="column is-6 ">
-                                    วันและเวลาคืนรถ<br>
-                                    <input v-model="rent_dreturn" class="cololr_input_card" type="date" value="01/01/2023 " data-start-date="10/24/2019" :class="{ 'is-danger': errorday.rent_dreturn} " @input="validateRentDreturn()">
-                                    <input v-model="rent_time" class="cololr_input_card" type="time" id="appt " name="appt" min="09:00" max="18:00" required><br>
-                                    <span class="has-text-danger ertext ml-3 ">{{errorday.rent_dreturn}}</span>
-                                </div>
                             </div>
+                            <div class="column is-6 ">
+                                วันและเวลาคืนรถ<br>
+                                <input v-model="rent_dreturn" class="cololr_input_card" type="date" value="01/01/2023 "
+                                    data-start-date="10/24/2019" :class="{ 'is-danger': errorday.rent_dreturn} "
+                                    @input="validateRentDreturn()">
+                                <input v-model="rent_time" class="cololr_input_card" type="time" id="appt " name="appt"
+                                    min="09:00" max="18:00" required><br>
+                                <span class="has-text-danger ertext ml-3 ">{{errorday.rent_dreturn}}</span>
+                            </div>
+                        </div>
                         </p>
                         <p class="title is-size-6 ">
                             2. ระบุรุ่นรถ/ช่วงราคา/จำนวนที่นั่งที่ต้องการ
@@ -76,7 +86,7 @@
                             <div class="column ">
                                 รุ่นรถที่ต้องการ<br>
                                 <div class="select ">
-                                    <select v-model="sbrand" class="font ">                                
+                                    <select v-model="sbrand" class="font ">
                                         <option v-for="item in brandcar" :key="item.id " :value="item">
                                             {{item}}
                                         </option>
@@ -86,7 +96,7 @@
                             <div class="column ">
                                 ช่วงราคา<br>
                                 <div class="select ">
-                                    <select v-model="sprice" class="font">                                        
+                                    <select v-model="sprice" class="font">
                                         <option value="500-999">500-999 ฿</option>
                                         <option value="1000-1999">1000-1999 ฿</option>
                                         <option value="2000-2999">2000-2999 ฿</option>
@@ -99,7 +109,7 @@
                             <div class="column ">
                                 จำนวนที่นั่ง<br>
                                 <div class="select ">
-                                    <select v-model="sseat" class="font ">                                        
+                                    <select v-model="sseat" class="font ">
                                         <option value="2">2 ที่นั่ง</option>
                                         <option value="4">4 ที่นั่ง</option>
                                         <option value="5">5 ที่นั่ง</option>
@@ -110,7 +120,8 @@
                                 </div>
                             </div>
                         </div>
-                        <button @click="search()" class="button color-card-search has-text-white font " style="width: 100%; " type="submit ">ค้นหารถว่าง</button>
+                        <button @click="search()" class="button color-card-search has-text-white font "
+                            style="width: 100%; " type="submit ">ค้นหารถว่าง</button>
                     </div>
                 </div>
             </div>
@@ -119,23 +130,27 @@
         <div class="hero-body is-color-green2 ">
             <div class="columns is-5 is-size-6 has-text-centered ">
                 <div class="column ">
-                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077065590067433612/image_33.png " alt=" ">
+                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077065590067433612/image_33.png "
+                        alt=" ">
                     <p><b>รถเช่าคุณภาพมาตราฐาน<br> พร้อมให้บริการ</b>
                     </p>
                 </div>
                 <div class="column ">
-                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993867436202/image_34.png " alt=" ">
+                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993867436202/image_34.png "
+                        alt=" ">
                     <p><b>ราคาเข้าถึงง่าย
                             <br>สบายกระเป๋า </b>
                     </p>
 
                 </div>
                 <div class="column ">
-                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993666101278/image_38.png " alt=" ">
+                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993666101278/image_38.png "
+                        alt=" ">
                     <p><b>มีประกันค่าเสียหาย</b></p>
                 </div>
                 <div class="column ">
-                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993452195952/image_37.png " alt=" ">
+                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077066993452195952/image_37.png "
+                        alt=" ">
                     <p><b>มีเจ้าหน้าที่พร้อมดูแลคุณ
                             <br> ตลอดการเดินทาง
                         </b>
@@ -143,27 +158,29 @@
                 </div>
             </div>
         </div>
-        <!-- card Toyota -->
-        <div class="column ">
-            <div class="container is-max-desktop "> <b>
+        <!-- card car -->
+        <div class="container is-max-desktop ">
+        <div  class="column ">
+             <b>
                     รถเช่ายอดฮิต<br><br>
                 </b>
-                <div class="columns is-half ">
-                    <div class="column is-two-fifths ">
-                        <div class="column px-6 ">
-                            <div class="card-image ">
-                                <p>
-                                    <b class="is-size-3 ">Toyota</b>
-                                </p><br><br>
-                                <figure class="image is-3by3 ">
-                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png " alt="Placeholder image ">
-                                </figure>
-                            </div>
+                <div v-for="hitem in hothit" class="columns is-half ">
+                    <div class="column is-two-fifths px-6 is-vertical">
+                        <div class="card-image ">
+                            <p>
+                                <b class="is-size-3 ">{{hitem.hbrand}}</b>
+                            </p><br><br>
+                            <figure class="image is-3by3 ">
+                                <img src="https://media.discordapp.net/attachments/1072181252964233328/1077261540748701726/home_car.png "
+                                    alt="Placeholder image ">
+                            </figure>
                         </div>
-                    </div>
+                    </div>                
+                    
                     <div class="column ">
                         <div class="is-multiline is-variable columns is-1 ">
-                            <div v-for="(item, index) in cars " id="card_product " class="column is-one-third " v-if="item.id <= 3 ">
+                            <div v-for="item in cars " id="card_product " class="column is-one-third "
+                                v-if="hitem.hid.includes(item.id)">
                                 <div class="card has-text-centered is-border-radius ">
                                     <div class="card-image px-5 pt-2 ">
                                         <figure class="image is-4by3 ">
@@ -171,128 +188,34 @@
                                         </figure>
                                     </div>
                                     <div class="card-content ">
-                                        <div class="media ">
-                                            <div class="media-content ">
-                                                <p class="title is-size-6 limit_text ">{{item.brand}} {{item.model}}</p>
-                                                <p class="subtitle is-size-7 "> <img src="https://media.discordapp.net/attachments/1072181252964233328/1077073362708332614/image_18.png " alt=" ">
-                                                    <b>{{item.seat}} ที่นั้ง
-                                                        <br> เริ่มต้น {{item.price}} บาท/วัน</b>
-                                                </p>
-                                            </div>
-                                        </div>
+                                        <p class="title is-size-6 limit_text ">{{item.brand}} {{item.model}}</p>
+                                        <p class="subtitle is-size-7 "> <img
+                                                src="https://media.discordapp.net/attachments/1072181252964233328/1077073362708332614/image_18.png "
+                                                alt=" ">
+                                            <b>{{item.seat}} ที่นั้ง
+                                                <br> เริ่มต้น {{item.price}} บาท/วัน</b>
+                                        </p>
                                     </div>
                                     <footer class="card-footer ">
-                                        <a @click="detailCar(item)" class="card-footer-item is-color-green3 is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
+                                        <a @click="detailCar(item)"
+                                            class="card-footer-item is-color-green3 is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
                                     </footer>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- card Nissan -->
-        <div class="column ">
-            <div class="container is-max-desktop ">
-                <div class="columns is-half ">
-                    <div class="column is-two-fifths ">
-                        <div class="column px-6 ">
-                            <div class="card-image ">
-                                <p>
-                                    <b class="is-size-3 ">Nissan</b>
-                                </p><br><br>
-                                <figure class="image is-3by3 ">
-                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077263056326889543/gqdupg.png?width=1180&height=663 " alt="Placeholder image ">
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column ">
-                        <div class="is-multiline is-variable columns is-1 ">
-                            <div v-for="item in cars " id="card_product " class="column is-one-third " v-if="item.id >= 9 && item.id <= 11">
-                                <div class="card has-text-centered is-border-radius ">
-                                    <div class="card-image px-5 pt-2 ">
-                                        <figure class="image is-4by4 ">
-                                            <img :src='item.img' alt="Placeholder image ">
-                                        </figure>
-                                    </div>
-                                    <div class="card-content ">
-                                        <div class="media ">
-                                            <div class="media-content ">
-                                                <p class="title is-size-6 limit_text ">{{item.brand}} {{item.model}}</p>
-                                                <p class="subtitle is-size-7 "> <img src="https://media.discordapp.net/attachments/1072181252964233328/1077073362708332614/image_18.png " alt=" ">
-                                                    <b>{{item.seat}} ที่นั้ง
-                                                        <br> เริ่มต้น {{item.price}} บาท/วัน</b>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <footer class="card-footer ">
-                                        <a @click="detailCar(item) " class="card-footer-item is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
-                                    </footer>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- card Honda -->
-        <div class="column ">
-            <div class="container is-max-desktop ">
-                <div class="columns is-half ">
-                    <div class="column is-two-fifths ">
-                        <div class="column px-6 ">
-                            <div class="card-image ">
-                                <p>
-                                    <b class="is-size-3 ">Honda</b>
-                                </p><br><br>
-                                <figure class="image is-3by3 ">
-                                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077265050923962449/1-honda-city-can-tho-auto-removebg-preview.png " alt="Placeholder image ">
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column ">
-                        <div class="is-multiline is-variable columns is-1 ">
-
-                            <div v-for="item in cars " id="card_product " class="column is-one-third " v-if="item.id >= 12 && item.id <= 14">
-                                <div class="card has-text-centered is-border-radius ">
-                                    <div class="card-image px-5 pt-2 ">
-                                        <figure class="image is-4by4 ">
-                                            <img :src='item.img' alt="Placeholder image ">
-                                        </figure>
-                                    </div>
-                                    <div class="card-content ">
-                                        <div class="media ">
-                                            <div class="media-content ">
-                                                <p class="title is-size-6 limit_text ">{{item.brand}} {{item.model}}</p>
-                                                <p class="subtitle is-size-7 "> <img src="https://media.discordapp.net/attachments/1072181252964233328/1077073362708332614/image_18.png " alt=" ">
-                                                    <b>{{item.seat}} ที่นั้ง
-                                                        <br> เริ่มต้น {{item.price}} บาท/วัน</b>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <footer class="card-footer ">
-                                        <a @click="detailCar(item) " class="card-footer-item is-color-green3 is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
-                                    </footer>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </div>      
+       
         <!-- card other -->
-        <div class="column pl-6">
-            <div class="container is-max-desktop px-6 ">
+        <div class="column pl-6">            
                 <div class="column ">
                     <P>
                         <b class="is-size-3 ">Other</b>
                     </p><br>
                     <div class="is-multiline is-variable columns is-1 pl-6 ">
-                        <div v-for="item in cars " id="card_product " class="column is-one-quarter " v-if="(item.id>= 15 )">
+                        <div v-for="item in cars " id="card_product " class="column is-one-quarter "
+                            v-if="(item.id>= 15 )">
                             <div class="card has-text-centered is-border-radius ">
                                 <div class="card-image">
                                     <figure class="image is-4by4 ">
@@ -303,7 +226,9 @@
                                     <div class="media ">
                                         <div class="media-content ">
                                             <p class="title is-size-6 limit_text ">{{item.brand}} {{item.model}}</p>
-                                            <p class="subtitle is-size-7 "> <img src="https://media.discordapp.net/attachments/1072181252964233328/1077073362708332614/image_18.png " alt=" ">
+                                            <p class="subtitle is-size-7 "> <img
+                                                    src="https://media.discordapp.net/attachments/1072181252964233328/1077073362708332614/image_18.png "
+                                                    alt=" ">
                                                 <b>{{item.seat}} ที่นั้ง
                                                     <br> เริ่มต้น {{item.price}} บาท/วัน</b>
                                             </p>
@@ -311,7 +236,8 @@
                                     </div>
                                 </div>
                                 <footer class="card-footer ">
-                                    <a @click="detailCar(item)" class="card-footer-item is-color-green3 is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
+                                    <a @click="detailCar(item)"
+                                        class="card-footer-item is-color-green3 is-size-6 is-color-green3 has-text-white ">จองคันนี้</a>
                                 </footer>
                             </div>
                         </div>
@@ -323,20 +249,27 @@
     <!-- Q&A -->
     <div class="column pb-5 is-8 is-offset-2 ">
         <div class="column card card_dropdown1 card_dropdown_h pr-6">
-            <span class="card_text is-size-6">หากเกิดอุบัติเหตุทำอย่างไร</span><br>เนื่องจากเป็นการเช่ารถโดยท่านขับเอง หากเกิดอุบัติเหตุ ไม่ว่าเป็นฝ่ายถูกหรือฝ่ายผิด ผู้เช่าต้องรับผิดชอบค่าเสียหายทั้งหมดที่เกิดขึ้น
+            <span class="card_text is-size-6">หากเกิดอุบัติเหตุทำอย่างไร</span><br>เนื่องจากเป็นการเช่ารถโดยท่านขับเอง
+            หากเกิดอุบัติเหตุ ไม่ว่าเป็นฝ่ายถูกหรือฝ่ายผิด ผู้เช่าต้องรับผิดชอบค่าเสียหายทั้งหมดที่เกิดขึ้น
         </div>
 
         <div class=" column card card_dropdown2 card_dropdown_h pr-6">
-            <span class="card_text is-size-6">สามารถเดินทางออกนอกจังหวัดกรุงเทพมหานครได้หรือไม่</span><br>ท่านสามารถเดินทางออกอกจังหวัดได้ ภายในระยะเวลที่กำหนด (ทั้งนี้ระยะเวลาในการให้บริการ ขึ้นอยู่กับผู้ประกอบการ)
+            <span
+                class="card_text is-size-6">สามารถเดินทางออกนอกจังหวัดกรุงเทพมหานครได้หรือไม่</span><br>ท่านสามารถเดินทางออกอกจังหวัดได้
+            ภายในระยะเวลที่กำหนด (ทั้งนี้ระยะเวลาในการให้บริการ ขึ้นอยู่กับผู้ประกอบการ)
         </div>
         <div class="column card card_dropdown3 card_dropdown_h pr-6">
-            <span class="card_text is-size-6">ตรวจสอบค่าบริการอื่นๆที่ไม่ครอบคลุม</span><br>ค่าบริการอื่นๆ อาทิเช่น ค่าน้ำมัน ค่าทางด่วน ค่าจอดรถ ผู้เช่าชำระตามจริง ค่าบริการ นอกเวลาทำการ และ ค่านอกเวลาให้บริการ เริ่มต้นที่ 100 บาท/ชั่วโมง
+            <span class="card_text is-size-6">ตรวจสอบค่าบริการอื่นๆที่ไม่ครอบคลุม</span><br>ค่าบริการอื่นๆ อาทิเช่น
+            ค่าน้ำมัน ค่าทางด่วน ค่าจอดรถ ผู้เช่าชำระตามจริง ค่าบริการ นอกเวลาทำการ และ ค่านอกเวลาให้บริการ เริ่มต้นที่
+            100 บาท/ชั่วโมง
         </div>
         <div class="column card card_dropdown4 card_dropdown_h pr-6">
-            <span class="card_text is-size-6">วันหยุดยาวและเทศกาล ราคาเปลี่ยนแปลงหรือไม่</span><br>อัตราค่าเช่ารถ และ ค่าบริการ อาจมีการเปลี่ยนแปลง ขึ้นอยู่กับร้านรถเช่าเป็นผู้พิจารณา
+            <span class="card_text is-size-6">วันหยุดยาวและเทศกาล ราคาเปลี่ยนแปลงหรือไม่</span><br>อัตราค่าเช่ารถ และ
+            ค่าบริการ อาจมีการเปลี่ยนแปลง ขึ้นอยู่กับร้านรถเช่าเป็นผู้พิจารณา
         </div>
         <div class="column card card_dropdown5 card_dropdown_h pr-6">
-            <span class="card_text is-size-6">หากชำระเงินแล้ว สามารถยกเลิกการจองรถได้หรือไม่</span><br>ไม่สามารถยกเลิกได้ เนื่องจากเป็นนโยบายของทางร่านเช่า
+            <span class="card_text is-size-6">หากชำระเงินแล้ว
+                สามารถยกเลิกการจองรถได้หรือไม่</span><br>ไม่สามารถยกเลิกได้ เนื่องจากเป็นนโยบายของทางร่านเช่า
         </div>
     </div>
 
@@ -345,7 +278,9 @@
         <div class="content  has-text-white ">
             <div class="columns">
                 <div class="column is-9">
-                    <div class="is-size-5 has-text-weight-bold"> <img src="https://media.discordapp.net/attachments/1072181252964233328/1076461183864934431/9611156.png" height="25" width="25"> ChaoCarHUB <br><br></div>
+                    <div class="is-size-5 has-text-weight-bold"> <img
+                            src="https://media.discordapp.net/attachments/1072181252964233328/1076461183864934431/9611156.png"
+                            height="25" width="25"> ChaoCarHUB <br><br></div>
                     <p>
                         จัดทำโดย <br> 64070149 ดวงกมล พบสูงเนิน <br>64070153 ทัตพร ตันนารัตน
                         <br>เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา Web Programming
@@ -354,7 +289,8 @@
                 </div>
                 <div class="column">
                     <p>ติดตามเรา</p>
-                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1077598053269254274/face_ig_tw.png">
+                    <img
+                        src="https://media.discordapp.net/attachments/1072181252964233328/1077598053269254274/face_ig_tw.png">
                 </div>
             </div>
     </footer>
@@ -362,6 +298,5 @@
 </body>
 <script src="car_demo.js "></script>
 <script src="navbar.js "></script>
-<script src="Q&A.js"></script>
 
 </html>
