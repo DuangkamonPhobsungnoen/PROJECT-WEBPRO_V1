@@ -11,10 +11,10 @@
 </head>
 
 <body>
+    <div id="rapp">
     <div id="navbar">
         <navbar-div></navbar-div>
-    </div>
-    <div id="rapp">
+    </div>    
         <section class="hero is-success is-halfheight is-gradient">
             <div class="hero-body">
                 <div class="">
@@ -29,7 +29,6 @@
         </section>
 
         <!-- status bar-->
-        <div id="rapp">
             <section class="hero is-small border_td" style="background-color: var(--color-background);">
                 <div class="hero-body">
                     <div class="columns is-5 has-text-centered">
@@ -100,13 +99,13 @@
                                 <div class="column p-5 is-size-6">
                                     <div class="column has-text-left">
                                         <p><b>การรับรถ</b></p>
-                                        <p>สนามบินสุวรรณภูมิ
-                                            <p>ส. 11 ก.พ. 10.00 น.</p>
+                                        <p>{{rstation.st1}}
+                                            <p>{{reversdate}}  เวลา {{rentdate.time}} น.</p>
                                     </div>
                                     <div class="column has-text-left">
                                         <p><b>การคืนรถ</b></p>
-                                        <p>สนามบินสุวรรณภูมิ</p>
-                                        <p>อ. 14 ก.พ. 10.00 น.</p>
+                                        <p>{{rstation.st2}}</p>
+                                        <p>{{reversdate2}}  เวลา {{rentdate.time}} น.</p>
                                     </div>
                                 </div>
                             </div>

@@ -187,8 +187,6 @@ var app = new Vue({
             dsend: '',
             dreturn: '',
             time: '',
-            station1:'',
-            station2:''
         },
         sbrand: '',
         sprice: 0,
@@ -216,8 +214,9 @@ var app = new Vue({
                 alert('กรุณากรอกข้อมูลให้ครบถ้วน')
                 return
             }
+            // rent to json
             const detail = JSON.stringify(this.rent)
-            localStorage.setItem("myday", detail)
+            localStorage.setItem("rentDate", detail)
             // if(this.sseat == 0){
             const res = this.cars.filter((item) =>
                 item.brand.includes(this.sbrand))

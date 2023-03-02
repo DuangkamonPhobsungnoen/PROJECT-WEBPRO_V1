@@ -6,6 +6,15 @@ var app = new Vue({
         ],
         store: {},
         myname: '',
+        rentdate: {
+            // dsent:
+            // dreturn:
+            // time:
+        },
+        rstation: {
+            st1: 'สนามบินสุวรรณภูมิ',
+            st2: 'สนามบินสุวรรณภูมิ'
+        },
         returnCar: false,
         checkoutCar: false,
         name: '',
@@ -26,7 +35,13 @@ var app = new Vue({
 
         const string = JSON.parse(localStorage.getItem("myname"))
         this.myname = string
-            //checkbill
+
+        const date = JSON.parse(localStorage.getItem("rentDate"))
+        this.rentdate = date
+
+        const sta = JSON.parse(localStorage.getItem("rentStation"))
+        this.rstation = sta
+        //checkbill
         const bool = JSON.parse(localStorage.getItem("mybill"))
         if (bool != null) {
             this.checkoutCar = bool
@@ -35,11 +50,23 @@ var app = new Vue({
     },
     methods: {
         tocheckout() {
-            // const myjson = JSON.stringify(res)
-            localStorage.setItem("mycart", myjson)
+            const sta = JSON.stringify(this.rstation)
+            localStorage.setItem("rentStation", sta)
         },
 
 
     },
+    computed: {
+        reversdate() {
+            let re = this.rentdate.dsend.split('-')
+            console.log(re)
+            return re[2] + '/' + re[1] + '/' + re[0]
+        },
+        reversdate2() {
+            let re = this.rentdate.dreturn.split('-')
+            console.log(re)
+            return re[2] + '/' + re[1] + '/' + re[0]
+        },
+    }
 
 })

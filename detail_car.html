@@ -12,10 +12,11 @@
 </head>
 
 <body>
+    <div id="rapp">
     <div id="navbar">
         <navbar-div :links="links"></navbar-div>
     </div>
-    <div id="rapp">
+    
         <div class="container is-max-widescreen p-5">
             <!-- All other tile elements -->
             <div class=" p-5">
@@ -59,9 +60,9 @@
                 <div class="columns p-5 is-size-5">
                     <div class="column is-6">
                         <p><b>การรับรถ</b></p>
-                        <p>ส. 11 ก.พ. 10.00 น.</p>
+                        <p>{{reversdate}}  เวลา {{rentdate.time}} น.</p>
                         <div class="select">
-                            <select class="font">
+                            <select v-model="rstation.st1" class="font">
                                 <option v-for="loca in locationcar" :key="loca.id" :value="loca">
                                     {{loca}}
                                 </option>
@@ -70,14 +71,14 @@
                     </div>
                     <div class="column is-6">
                         <p><b>การคืนรถ</b></p>
-                        <p>อ. 14 ก.พ. 10.00 น.</p>
-                        <div class="select">
-                            <select class="font">
+                        <p>{{reversdate2}}  เวลา {{rentdate.time}} น.</p>
+                        <div class="select">                          
+                            <select v-model="rstation.st2" class="font">
                                 <option v-for="loca in locationcar" :key="loca.id" :value="loca">
                                     {{loca}}
                                 </option>
-                            </select>
-                        </div>
+                            </select>                            
+                        </div>        
                     </div>
                 </div>
             </div>
