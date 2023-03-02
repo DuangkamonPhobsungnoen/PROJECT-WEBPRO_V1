@@ -1,6 +1,6 @@
-  Vue.component('footer-div', {
-      name: 'footerF',
-      template: `<div> <br>
+Vue.component("footer-div", {
+    name: "footerF",
+    template: `<div> <br>
     <footer class="is-color-footer">
     <div class="column is-size-4 has-text-white">
         <p class="column_number">
@@ -43,9 +43,10 @@
                     Chaocarhub@gmail.com</span>
             </p>
         </div>
-</footer></div>`
-  })
-  new Vue({
-      el: "#footer",
-      data: {},
-  })
+    </div>
+</footer></div>`,
+});
+new Vue({
+    el: "#footer",
+    data: {},
+});
