@@ -63,7 +63,7 @@
                         <p>{{reversdate}}  เวลา {{rentdate.time}} น.</p> 
                         <p class="is-size-6"><b>สถานที่รับรถ</b></p>
                         <div class="select">
-                            <select v-model="station1" class="font">
+                            <select v-model="rstation.st1" class="font">
                                 <option v-for="loca in locationcar" :key="loca.id" :value="loca">
                                     {{loca}}
                                 </option>
@@ -75,7 +75,7 @@
                         <p>{{reversdate2}}  เวลา {{rentdate.time}} น.</p>
                         <p class="is-size-6"><b>สถานที่คืนรถ</b></p>
                         <div class="select">                          
-                            <select v-model="station2" class="font">
+                            <select v-model="rstation.st2" class="font">
                                 <option v-for="loca in locationcar" :key="loca.id" :value="loca">
                                     {{loca}}
                                 </option>

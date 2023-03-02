@@ -182,8 +182,8 @@ var app = new Vue({
         pricecar: ['500-999', '1000-1999', '2000-2999', '3000-3999', '4000-4999', '5000'],
         seatcar: ['2', '4', '5', '6', '7', '9'],
         // for JSON
-        
-        rent:{
+
+        rent: {
             dsend: '',
             dreturn: '',
             time: '',
@@ -198,8 +198,12 @@ var app = new Vue({
             rent_time: ''
         },
         CheckDsend: '',
-        CheckDreturn:'',
-        amountD:'',
+        CheckDreturn: '',
+        amountD: '',
+        rstation: {
+            st1: 'สนามบินสุวรรณภูมิ',
+            st2: 'สนามบินสุวรรณภูมิ',
+        },
 
     },
     methods: {
@@ -216,12 +220,15 @@ var app = new Vue({
                 alert('กรุณากรอกวันที่ และเวลารับรถ/คืนรถ')
                 return
             }
+            //for cardetail
+            const sta = JSON.stringify(this.rstation)
+            localStorage.setItem("rentStation", sta)
             // rent to json
             const detail = JSON.stringify(this.rent)
             localStorage.setItem("rentDate", detail)
             // find car
             const res = this.cars.filter((item) =>
-                item.brand.includes(this.sbrand))           
+                item.brand.includes(this.sbrand))
             //     const res = this.cars.filter((item) => 
             //     item.brand.includes(this.sbrand) && item.seat == this.sseat)           
 

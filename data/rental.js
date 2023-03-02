@@ -11,8 +11,8 @@ var app = new Vue({
             // dreturn:
             // time:
         },
-        station1:'',
-        station2:'',
+        // station1:'',
+        // station2:'',
         rstation: {
             st1: 'สนามบินสุวรรณภูมิ',
             st2: 'สนามบินสุวรรณภูมิ',
@@ -56,8 +56,8 @@ var app = new Vue({
     },
     methods: {
         tocheckout() {
-            this.rstation.st1 = this.station1
-            this.rstation.st2 = this.station2
+            // this.rstation.st1 = this.station1
+            // this.rstation.st2 = this.station2
             const sta = JSON.stringify(this.rstation)
             localStorage.setItem("rentStation", sta)
         },
