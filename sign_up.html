@@ -28,17 +28,17 @@
                     <h1 class="th1">SIGN UP</h1><br>
                     <div class="columns is-multiline px-5">
                         <div class="column is-half">
-                            <input v-model="fname" class="input bg_input" type="text" placeholder="First name " :class="{'is-danger': error.fname}">
+                            <input v-model="fname" class="input bg_input" type="text" placeholder="First name " :class="{'is-danger': error.fname}" @input="validatefname()">
                             <span class="has-text-danger ertext ml-3">{{error.fname}}</span>
                         </div>
                         <div class="column  is-half">
-                            <input v-model="lname" class="input bg_input" type="text" placeholder="Last name " :class="{'is-danger': error.lname}">
+                            <input v-model="lname" class="input bg_input" type="text" placeholder="Last name " :class="{'is-danger': error.lname}" @input="validatelname()">
                             <span class="has-text-danger ertext ml-3">{{error.lname}}</span>
                         </div>
                     </div>
                     <div class="columns px-5">
                         <div class="column ">
-                            <input v-model="username" class="input input_username" type="text" placeholder="Username " :class="{'is-danger': error.username}">
+                            <input v-model="username" class="input input_username" type="text" placeholder="Username " :class="{'is-danger': error.username}" @input="validateUsername()">
                             <span class="has-text-danger ertext ml-3">{{error.username}}</span>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="columns is-multiline px-5">
                         <div class="column is-half">
-                            <input v-model="email" class="input input_email" type="text" placeholder="Email" :class="{'is-danger': error.email}">
+                            <input v-model="email" class="input input_email" type="text" placeholder="Email" :class="{'is-danger': error.email}" @input="validateEmail()">
                             <span class="has-text-danger ertext ml-3">{{error.email}}</span>
                         </div>
                         <div class="column  is-half">

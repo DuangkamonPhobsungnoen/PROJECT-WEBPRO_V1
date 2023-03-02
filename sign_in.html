@@ -24,13 +24,15 @@
                 <div class="columns is-flex is-flex-direction-column card1">
                     <h1 class="th1">SIGN IN</h1>
                     <div class="column px-5">
-                        <input v-model="username" class="input input_username" type="text" placeholder="Username">
+                        <input v-model="username" class="input input_username" type="text" placeholder="Username" :class="{'is-danger': error.username}" @input="validateUsername()">
+                        <span class="has-text-danger ertext ml-3">{{error.username}}</span>
                     </div>
                     <div class="column px-5">
-                        <input class="input input_password" type="password" placeholder="Password">
+                        <input v-model="passw" class="input input_password" type="password" placeholder="Password" :class="{'is-danger': error.passw}" @input="validatePassw()">
+                        <span class="has-text-danger ertext ml-3">{{error.passw}}</span>
                     </div>
                     <div class="column px-5">
-                        <a href="me_checkout.html">
+                        <a>
                             <button @click="cusname()" class="button is-fullwidth color_sign_blue " type="submit">Sign in</button>
                         </a>
 

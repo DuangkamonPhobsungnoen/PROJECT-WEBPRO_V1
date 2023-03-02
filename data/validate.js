@@ -161,8 +161,15 @@ var app = new Vue({
         },
         //page me
         cusname() {
+            this.validateUsername()
+            this.validatePassw()
+            if (this.error.username !== '' || this.error.passw !== '') {
+                alert('กรุณากรอกข้อมูลให้ถูกต้อง')
+                return
+            }
             const myjson = JSON.stringify(this.username)
             localStorage.setItem("myname", myjson)
+            location.href = "./me_checkout.html"
         }
 
     },
