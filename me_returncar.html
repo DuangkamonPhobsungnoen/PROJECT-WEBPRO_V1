@@ -11,10 +11,11 @@
 </head>
 
 <body>
+    <div id="rapp">
     <div id="navbar">
         <navbar-div></navbar-div>
     </div>
-    <div id="rapp">
+    
         <section class="hero is-success is-halfheight is-gradient">
             <div class="hero-body">
                 <div class="">
@@ -101,14 +102,14 @@
                             <div class="column p-5 is-size-6">
                                 <div class="column has-text-left">
                                     <p><b>การคืนรถ</b></p>
-                                    <p>สนามบินสุวรรณภูมิ</p>
-                                    <p>อ. 14 ก.พ. 10.00 น.</p>
+                                    <p>{{rstation.st2}}</p>
+                                    <p>{{reversdate2}} {{rentdate.time}} น.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <footer class="columns">
-                        <div class="column is-size-6 ">ราคาสำหรับ 3 วัน 10768 บาท</div>
+                        <div class="column is-size-6 ">ราคาสำหรับ {{calday}} วัน {{totalprice}} บาท</div>
                         <div class="column is-size-6 pl-6">
                             <p class="subtitle is-size-6 column_number">
                                 <img src="https://media.discordapp.net/attachments/1072181252964233328/1079444615184257074/success_1.png" height="20" width="20"><span class="pl-2"> ชำระเงินสำเร็จแล้ว</span>

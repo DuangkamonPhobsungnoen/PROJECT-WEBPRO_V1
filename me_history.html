@@ -11,10 +11,11 @@
 </head>
 
 <body>
+    <div id="rapp">
     <div id="navbar">
         <navbar-div></navbar-div>
     </div>
-    <div id="rapp">
+    
         <section class="hero is-success is-halfheight is-gradient">
             <div class="hero-body">
                 <div class="">
@@ -97,20 +98,20 @@
                             <div class="column p-5 is-size-6">
                                 <div class="column has-text-left">
                                     <p><b>การรับรถ</b></p>
-                                    <p>สนามบินสุวรรณภูมิ
-                                        <p>ส. 11 ก.พ. 10.00 น.</p>
+                                    <p>{{rstation.st1}}
+                                        <p>{{reversdate}} {{rentdate.time}} น.</p>
                                 </div>
                                 <div class="column has-text-left">
                                     <p><b>การคืนรถ</b></p>
-                                    <p>สนามบินสุวรรณภูมิ</p>
-                                    <p>อ. 14 ก.พ. 10.00 น.</p>
+                                    <p>{{rstation.st2}}</p>
+                                    <p>{{reversdate2}} {{rentdate.time}} น.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <footer class="columns">
-                        <p class="column is-size-6">ราคาสำหรับ 3 วัน 10768 บาท</p>
-                        <p class="column is-size-6 ">รวมที่ต้องชำระ : 10768 บาท</p>
+                        <p class="column is-size-6">ราคาสำหรับ {{calday}} วัน {{totalprice}} บาท</p>
+                        <p class="column is-size-6 ">รวมที่ต้องชำระ : {{totalprice}} บาท</p>
                         <a href="detail_car.html" class="column is-size-6">
                             <button class="button btn has-text-white font" style="width: 100%;">จองอีกครั้ง</button>
                         </a>
