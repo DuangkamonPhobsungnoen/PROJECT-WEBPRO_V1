@@ -7,30 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>navbar</title>
+    <title>testnavbar</title>
 </head>
 
 <body>
-    <nav class="navbar border_t is-gradient" role="navigation" aria-label="main navigation">
+    <nav class="navbar border_t " role="navigation" aria-label="main navigation" style="background: var(--color-gradient);">
         <div class="navbar-brand">
-            <a class="navbar-item has-text-white is-size-4 has-text-weight-bold" href="">
+            <a class="navbar-item has-text-white is-size-5 has-text-weight-bold" href="">
                 Cha<img src="https://media.discordapp.net/attachments/1072181252964233328/1076461183864934431/9611156.png"> CarHUB
             </a>
+            <a role="button" class="navbar-burger has-text-centered" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <div class="is-size-7"><a href="index.html">HOME</a></div>
+                <div class="is-size-7"><a href="view_car.html">CAR</a></div>
+                <div class="is-size-7"><a href="me_checkout.html">ME</a></div>
+            </a>
         </div>
-        <div class="navbar-end has-text-centered">
-            <a role="button" class="navbar-burger " aria-label="menu" data-target="navbarBasicExample">
-                <a href="home.html" class="navbar-item">
-                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1073627391571808316/1177455.png">
-                </a>
-                <a href="view_car.html" class="navbar-item">
-                    <img src="https://media.discordapp.net/attachments/1072181252964233328/1073627928706949120/9610755.png">
-                </a>
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a href="me_checkout.html" class="navbar-item">
+        <div id="navbarBasicExample" class="navbar-menu ">
+            <div class="navbar-end ">
+                <div class="navbar-item">
+                    <a href="index.html">
+                        <img src="https://media.discordapp.net/attachments/1072181252964233328/1073627391571808316/1177455.png">
+                    </a>
+
+                </div>
+                <div class="navbar-item">
+                    <a href="view_car.html">
+                        <img src="https://media.discordapp.net/attachments/1072181252964233328/1073627928706949120/9610755.png">
+                    </a>
+
+                </div>
+                <div class="navbar-item has-dropdown is-hoverable has-text-centered">
+                    <a class="navbar-link" href="me_checkout.html">
                         <img src="https://media.discordapp.net/attachments/1072181252964233328/1073622193784754257/1177568.png">
                     </a>
-                    <div class="navbar-dropdown ">
-                        <a class="navbar-item ">
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
                             <a href="sign_in.html">
                                 <strong>Sign in</strong>
                             </a>
@@ -42,10 +53,6 @@
                         </a>
                     </div>
                 </div>
-            </a>
-            <div class="navbar-item">
-            </div>
-            <div class="navbar-item">
             </div>
         </div>
     </nav>
