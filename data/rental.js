@@ -40,10 +40,7 @@ var app = new Vue({
         this.rentdate = date
 
         const sta = JSON.parse(localStorage.getItem("rentStation"))
-        if (sta != null) {
-            this.checkoutCar = sta
-        }
-        // this.rstation = sta
+        this.rstation = sta
         //checkbill
         const bool = JSON.parse(localStorage.getItem("mybill"))
         if (bool != null) {
