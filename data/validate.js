@@ -28,6 +28,7 @@ var app = new Vue({
             cvc: '',
         },
         bill: false,
+        showname: '',
     },
     methods: {
         tocheckout() {
@@ -169,9 +170,15 @@ var app = new Vue({
             }
             const myjson = JSON.stringify(this.username)
             localStorage.setItem("myname", myjson)
+
             location.href = "./me_checkout.html"
         }
 
     },
+    // for me_checkout
+    created() {
+        this.showname = JSON.parse(localStorage.getItem("myname"))
+        console.log(this.showname)
+    }
 
 })

@@ -213,20 +213,17 @@ var app = new Vue({
             this.validateRentDsend()
             this.validateRentDreturn()
             if (this.errorday.rent_dsend !== '' || this.errorday.rent_dreturn !== '') {
-                alert('กรุณากรอกข้อมูลให้ครบถ้วน')
+                alert('กรุณากรอกวันที่ และเวลารับรถ/คืนรถ')
                 return
             }
             // rent to json
             const detail = JSON.stringify(this.rent)
             localStorage.setItem("rentDate", detail)
-            // if(this.sseat == 0){
+            // find car
             const res = this.cars.filter((item) =>
-                item.brand.includes(this.sbrand))
-            // }
-            // else{
+                item.brand.includes(this.sbrand))           
             //     const res = this.cars.filter((item) => 
-            //     item.brand.includes(this.sbrand) && item.seat == this.sseat)
-            // }
+            //     item.brand.includes(this.sbrand) && item.seat == this.sseat)           
 
             const myjson = JSON.stringify(res)
             localStorage.setItem("myfilter", myjson)

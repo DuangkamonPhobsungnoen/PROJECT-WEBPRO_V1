@@ -11,15 +11,15 @@
 </head>
 
 <body>
-    <div id="rapp">
+    
     <div id="navbar">
         <navbar-div></navbar-div>
     </div>    
-        <section class="hero is-success is-halfheight is-gradient">
+        <section id="vapp" class="hero is-success is-halfheight is-gradient">
             <div class="hero-body">
-                <div class="">
+                <div>
                     <p class="title">
-                        {{myname}}
+                        {{showname}}
                     </p>
                     <p class="subtitle">
                         Track your rental status here!
@@ -61,7 +61,8 @@
                 </div>
             </section>
             <!-- Check out -->
-            <div v-if="cancel == false" class="columns pb-6">
+        <div id="rapp">
+            <div v-if="cancel == false && store !== null" class="columns pb-6">
                 <div class="column is-half is-8 is-offset-2 pt-6">
                     <div class="card has-text-centered p-5">
                         <div class="columns is-10 ">
@@ -137,5 +138,6 @@
 <script src="./component/navbar.js"></script>
 <script src="./data/rental.js"></script>
 <script src="./component/footer.js"></script>
+<script src="./data/validate.js"></script>
 
 </html>
