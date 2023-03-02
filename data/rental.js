@@ -28,6 +28,8 @@ var app = new Vue({
             cvc: '',
         },
         cancel: false,
+        d1:0,
+        d2:0,
     },
     created() {
         const text = JSON.parse(localStorage.getItem("mycart"))
@@ -60,12 +62,20 @@ var app = new Vue({
         reversdate() {
             let re = this.rentdate.dsend.split('-')
             console.log(re)
+            this.d1 = re[2]
             return re[2] + '/' + re[1] + '/' + re[0]
         },
         reversdate2() {
             let re = this.rentdate.dreturn.split('-')
             console.log(re)
+            this.d2 = re[2]
             return re[2] + '/' + re[1] + '/' + re[0]
+        },
+        calday(){
+            return this.d2 - this.d1
+        },
+        totalprice(){
+            return this.calday * this.store.price
         },
     }
 

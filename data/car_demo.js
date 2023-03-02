@@ -198,6 +198,8 @@ var app = new Vue({
             rent_time: ''
         },
         CheckDsend: '',
+        CheckDreturn:'',
+        amountD:'',
 
     },
     methods: {
@@ -238,7 +240,7 @@ var app = new Vue({
             }
             const today = new Date()
             this.CheckDsend = new Date(this.rent.dsend)
-            if (this.CheckDsend < today) {
+            if (this.CheckDsend <= today) {
                 this.errorday.rent_dsend = 'ห้ามเลือกวันในอดีต'
                 return
             }
@@ -250,8 +252,8 @@ var app = new Vue({
                 return
             }
             // const today = new Date()
-            const RentDreturn = new Date(this.rent.dreturn)
-            if (RentDreturn < this.CheckDsend) {
+            this.CheckDreturn = new Date(this.rent.dreturn)
+            if (this.CheckDreturn < this.CheckDsend) {
                 this.errorday.rent_dreturn = 'กรุณาเลือกวันหลังจากวันรับรถ'
                 return
             }
