@@ -36,17 +36,20 @@ var app = new Vue({
         const string = JSON.parse(localStorage.getItem("myname"))
         this.myname = string
 
-        const date = JSON.parse(localStorage.getItem("rentDate"))
+        const date = JSON.parse(localStorage.getItem("rentDate"))        
         this.rentdate = date
 
         const sta = JSON.parse(localStorage.getItem("rentStation"))
-        this.rstation = sta
+        if (sta != null) {
+            this.checkoutCar = sta
+        }
+        // this.rstation = sta
         //checkbill
         const bool = JSON.parse(localStorage.getItem("mybill"))
         if (bool != null) {
             this.checkoutCar = bool
         }
-        localStorage.setItem("mybill", false)
+        // localStorage.setItem("mybill", false)
     },
     methods: {
         tocheckout() {
